@@ -1,0 +1,232 @@
+@charset "utf-8";
+
+/* ========================================
+   CSS Reset (HTML5 Doctor Reset v1.6.1)
+   + TCD Site Base Overrides
+======================================== */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul,
+li {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+/* ========================================
+   Site-specific Base Overrides
+   (from new_reset.css)
+======================================== */
+
+/* フォント・カラー基本設定 */
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+h3 {
+  line-height: 1;
+}
+
+/* ヘッダーリセット (base.cssの新ヘッダーと共存するため) */
+header {
+  width: auto;
+  padding: 0;
+  box-shadow: none;
+}
+
+header h1 {
+  float: none;
+  width: auto;
+  margin: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  header {
+    background-color: #FFF;
+  }
+}
+
+/* フッターリセット */
+footer {
+  width: auto;
+  padding: 0;
+  text-align: left;
+}
+
+/* レイアウト基本 */
+#tcd article {
+  padding-top: 160px;
+}
+
+#tcd article.pt_0 {
+  padding-top: 0;
+}
+
+#tcd article.pt_40 {
+  padding-top: 40px;
+}
+
+#tcd article#sing {
+  padding-top: 77px;
+}
+
+#page {
+  padding: 0;
+}
+
+/* Works詳細ページ */
+.new_case ._c-container {
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Brandig記事 */
+#tcd .new_case h2 {
+  padding: 0 0 10px;
+}
+
+/* リンク関連 */
+.serviceSet dl dt a {
+  background: url(/img_site/mother/common/icon_arrow_gray.png) no-repeat left 0.7em;
+}
+
+.serviceSet dl dt a:hover {
+  text-decoration: none;
+}
+
+#tcd .new_case ._c-row__col .thum a {
+  text-decoration: none;
+}
+
+/* フォント */
+#tcd .exp .expList div strong {
+  font-size: 1.4rem;
+}
+
+.think__nav_ttl a,
+.think__column_item a,
+#tcd nav.navigation .nav-previous a,
+#tcd nav.navigation .nav-next a {
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.think__nav_ttl a:hover,
+.think__column_item a:hover,
+#tcd nav.navigation .nav-previous a:hover,
+#tcd nav.navigation .nav-next a:hover {
+  text-decoration: none;
+}
+
+#tcd article#cate ._c-row__col .thum a:hover {
+  text-decoration: none;
+}
+
+
+/* About */
+#contents .about {
+  padding: 40px 0 0;
+}
+
+/* レスポンシブ基本 */
+@media only screen and (max-width: 767px) {
+  #wrap-wide {
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  #wrap-wide2 {
+    width: calc(100% - 40px);
+    margin: 0 auto;
+  }
+
+  #tcd article {
+    padding-top: 90px;
+  }
+
+  #tcd article.pt_0 {
+    padding-top: 0;
+  }
+
+  #tcd article.pt_40 {
+    padding-top: 54px;
+  }
+
+  #tcd article {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  #tcd article#sing {
+    padding-top: 54px;
+  }
+
+  #page {
+    padding: 0 5%;
+  }
+}

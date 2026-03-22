@@ -1,0 +1,71 @@
+<?php get_header("new"); ?>
+
+<div id="mainContents">
+
+  <section>
+
+    <div class="worksTyp01">
+      <ul>
+        <li><a href="/works/top/">WORKS TOP</a></li>
+        <li><a href="/works/corporate/">企業ブランディング</a></li>
+        <li><a href="/works/product/">商品ブランディング</a></li>
+        <li><a href="/works/service/">サービスブランディング</a></li>
+        <li><a href="/works/promotion/">ブランドプロモーション</a></li>
+        <li><a href="/works/industrial/">プロダクトデザイン</a></li>
+        <li><a href="/works/digital/">デジタルデザイン</a></li>
+        <li><a href="/works/naming_company/">ネーミング</a></li>
+      </ul>
+    </div>
+
+    <div class="worksTyp02">
+
+      <?php if (have_posts()) : ?>
+        <?php while (have_posts()) : the_post(); ?>
+        <div class="column">
+          <a href="<?php the_permalink(); ?>">
+            <div class="over filter">
+              <?php the_post_thumbnail(); ?>
+            </div>
+            <p><?php the_field('works_text01'); ?></p>
+            <h3><?php the_title(); ?></h3>
+          </a>
+        </div>
+        <?php endwhile; ?>
+      <?php endif; ?>
+
+    </div>
+
+    <?php if (function_exists('pagination')) {
+      pagination( $wp_query->max_num_pages, get_query_var( 'paged' ) );
+    } ?>
+
+  </section>
+</div>
+
+
+<script>
+$(function(){
+  //タグ表示のアクティブ対応
+  var tagURL = location.pathname;
+  var tagName = tagURL.replace("/works/","");
+
+
+  if(tagURL == "/works/top"){
+    $(".worksTyp01 li:eq(0)").addClass("active");
+  } else {
+    $(".worksTyp01 li").each(function(index, el) {
+      var listName = $(this).find("a").attr("href");
+      var listName_A = listName.replace("/works/","");
+      var listName_B = listName_A.replace("/","");
+
+      if(listName_B != ""){
+        if ( tagName.indexOf(listName_B) != -1) {
+          $(this).addClass("active");
+        }
+      }
+    });
+  }
+});
+</script>
+
+<?php get_footer("new"); ?>

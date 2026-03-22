@@ -1,0 +1,30 @@
+
+/**********************************************/
+@each $reset_name in $reset-tag{
+#{$reset_name}{
+margin:0;
+padding:0;
+list-style: none;
+}
+}
+
+@each $cfix_name in $cfix-id{
+##{$cfix_name}{
+*zoom : 1;
+}
+##{$cfix_name}:after{
+content : "";
+display : block;
+clear   : both;
+}
+}
+@each $cfix_name in $cfix-class{
+.#{$cfix_name}{
+*zoom : 1;
+}
+.#{$cfix_name}:after{
+content : "";
+display : block;
+clear   : both;
+}
+}
