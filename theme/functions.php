@@ -480,7 +480,7 @@ add_action('init', function() {
 // =============================================================================
 function tcd_enqueue_styles() {
     $uri = get_template_directory_uri();
-    $ver = '2.1';
+    $ver = '2.2';
 
     wp_enqueue_style('tcd-basis',       $uri . '/assets/css/vendor/basis.min.css',   array(),            $ver);
     wp_enqueue_style('tcd-drawer',      $uri . '/assets/css/vendor/drawer.css',       array(),            $ver);
