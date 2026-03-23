@@ -64,51 +64,29 @@
         <h2 class="h-label">TCDのブランディングサービス</h2>
         <h3 class="h-display">Branding Services</h3>
         
-        <div style=”width:816px;margin:0 auto;padding:50px 0 0;display:flex;justify-content:space-between;flex-wrap:wrap;”>
-
-          <div style=”width:388px;height:135px;margin:0 0 40px;text-align:center;”>
-            <a href=”/service/corporate_branding” style=”display:block;width:100%;height:100%;border:1px solid #C7C7BB;border-radius:8px;box-sizing:border-box;box-shadow:3px 3px 6px 3px rgba(0,0,0,0.1);transition:all 0.3s ease;text-decoration:none;”>
-              <h4 class=”h-section” style=”padding:32px 0 0;”>企業ブランディング</h4>
-              <p style=”padding:10px 0 0;font-size:1.4rem;font-weight:500;line-height:1.6;”>経営理念を軸に、企業の”らしさ”を再発見</p>
+        <div class=”columnBox”>
+          <?php
+          $service_posts = get_posts(array(
+            'post_type'      => 'service',
+            'posts_per_page' => -1,
+            'orderby'        => 'menu_order',
+            'order'          => 'ASC',
+          ));
+          foreach ($service_posts as $p) :
+            $excerpt = has_excerpt($p->ID)
+              ? get_the_excerpt($p)
+              : wp_trim_words(strip_tags(get_post_field('post_content', $p->ID)), 20, '');
+          ?>
+          <div class=”column”>
+            <a href=”<?php echo get_permalink($p->ID); ?>”>
+              <h4 class=”h-section”><?php echo esc_html($p->post_title); ?></h4>
+              <?php if ($excerpt) : ?>
+                <p><?php echo esc_html($excerpt); ?></p>
+              <?php endif; ?>
             </a>
           </div>
-
-          <div style=”width:388px;height:135px;margin:0 0 40px;text-align:center;”>
-            <a href=”/service/development” style=”display:block;width:100%;height:100%;border:1px solid #C7C7BB;border-radius:8px;box-sizing:border-box;box-shadow:3px 3px 6px 3px rgba(0,0,0,0.1);transition:all 0.3s ease;text-decoration:none;”>
-              <h4 class=”h-section” style=”padding:32px 0 0;”>商品開発・商品ブランディング</h4>
-              <p style=”padding:10px 0 0;font-size:1.4rem;font-weight:500;line-height:1.6;”>コンセプト立案から商品デザインまで</p>
-            </a>
-          </div>
-
-          <div style=”width:388px;height:135px;margin:0 0 40px;text-align:center;”>
-            <a href=”/service/innerbranding” style=”display:block;width:100%;height:100%;border:1px solid #C7C7BB;border-radius:8px;box-sizing:border-box;box-shadow:3px 3px 6px 3px rgba(0,0,0,0.1);transition:all 0.3s ease;text-decoration:none;”>
-              <h4 class=”h-section” style=”padding:32px 0 0;”>インナーブランディング支援</h4>
-              <p style=”padding:10px 0 0;font-size:1.4rem;font-weight:500;line-height:1.6;”>共感と行動を生み出す文化づくりを支援</p>
-            </a>
-          </div>
-
-          <div style=”width:388px;height:135px;margin:0 0 40px;text-align:center;”>
-            <a href=”/service/naming” style=”display:block;width:100%;height:100%;border:1px solid #C7C7BB;border-radius:8px;box-sizing:border-box;box-shadow:3px 3px 6px 3px rgba(0,0,0,0.1);transition:all 0.3s ease;text-decoration:none;”>
-              <h4 class=”h-section” style=”padding:32px 0 0;”>ネーミング開発</h4>
-              <p style=”padding:10px 0 0;font-size:1.4rem;font-weight:500;line-height:1.6;”>あらゆるネーミング開発に対応</p>
-            </a>
-          </div>
-
-          <div style=”width:388px;height:135px;margin:0 0 40px;text-align:center;”>
-            <a href=”/service/product_branding” style=”display:block;width:100%;height:100%;border:1px solid #C7C7BB;border-radius:8px;box-sizing:border-box;box-shadow:3px 3px 6px 3px rgba(0,0,0,0.1);transition:all 0.3s ease;text-decoration:none;”>
-              <h4 class=”h-section” style=”padding:32px 0 0;”>パッケージデザイン開発</h4>
-              <p style=”padding:10px 0 0;font-size:1.4rem;font-weight:500;line-height:1.6;”>消費者の心を動かす店頭体験を演出</p>
-            </a>
-          </div>
-
-          <div style=”width:388px;height:135px;margin:0 0 40px;text-align:center;”>
-            <a href=”/service/new_business” style=”display:block;width:100%;height:100%;border:1px solid #C7C7BB;border-radius:8px;box-sizing:border-box;box-shadow:3px 3px 6px 3px rgba(0,0,0,0.1);transition:all 0.3s ease;text-decoration:none;”>
-              <h4 class=”h-section” style=”padding:32px 0 0;”>新事業・スタートアップ支援</h4>
-              <p style=”padding:10px 0 0;font-size:1.4rem;font-weight:500;line-height:1.6;”>新たな事業やサービスの成功をサポート</p>
-            </a>
-          </div>
-
-        </div><br><br><br><br><br><br>
+          <?php endforeach; ?>
+        </div>
       </div>
     </section>
 
