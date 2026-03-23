@@ -194,7 +194,7 @@ src="https://www.facebook.com/tr?id=244904051893681&ev=PageView&noscript=1"
       <div id="headerSubArea">
         <nav>
           <ul>
-            <li><a href="/recruit/career.html">採用情報</a></li>
+            <li><a href="/recruit/">採用情報</a></li>
             <li><a href="/english.html">English</a></li>
           </ul>
         </nav>
@@ -231,7 +231,7 @@ src="https://www.facebook.com/tr?id=244904051893681&ev=PageView&noscript=1"
               <li><a href="/about/">About</a></li>
               <li><a href="/branding/">Magazine</a></li>
               <li><a href="https://desart.tcd.jp/" target="_blank">Art Business</a></li>
-              <li><a href="/recruit/career.html">Recruit</a></li>
+              <li><a href="/recruit/">Recruit</a></li>
               <li><a href="/english.html">English</a></li>
             </ul>
           </nav>

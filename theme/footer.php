@@ -84,7 +84,7 @@
 
       <div class="column">
         <ul>
-          <li><a href="/recruit/career.html">採用情報</a></li>
+          <li><a href="/recruit/">採用情報</a></li>
           <li><a href="/#p07">アクセス</a></li>
           <li><a href="/english.html">English</a></li>
         </ul>
