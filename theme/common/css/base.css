@@ -1282,6 +1282,18 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
   font-weight: 500;
   line-height: 1.6;
 }
+/* Service archive: 高さ可変タイル */
+#mainContents .layoutTyp03 .service-tiles .column {
+  height: auto;
+  min-height: 135px;
+  padding-bottom: 28px;
+}
+@media only screen and (max-width: 767px) {
+  #mainContents .layoutTyp03 .service-tiles .column {
+    height: auto;
+    min-height: 100px;
+  }
+}
 @media only screen and (max-width: 1266px) {
 #mainContents .layoutTyp03 {
     width: calc(100% - 40px);

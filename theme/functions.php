@@ -170,7 +170,7 @@ add_action('init', function() {
     'public'             => true,
     'has_archive'        => true,
     'rewrite'            => array('slug' => 'service', 'with_front' => false),
-    'supports'           => array('title', 'editor', 'thumbnail'),
+    'supports'           => array('title', 'editor', 'thumbnail', 'excerpt'),
     'show_ui'            => true,
     'show_in_nav_menus'  => true,
     'show_in_rest'       => true,
