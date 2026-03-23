@@ -1,41 +1,4 @@
 <?php get_header(); ?>
-<style>
-.layoutTyp03 .columnBox {
-  width: 816px !important;
-  margin: 0 auto !important;
-  padding: 50px 0 0 !important;
-  display: flex !important;
-  justify-content: space-between !important;
-  flex-wrap: wrap !important;
-}
-.layoutTyp03 .columnBox .column {
-  width: 388px !important;
-  height: 135px !important;
-  margin: 0 0 40px !important;
-  text-align: center !important;
-}
-.layoutTyp03 .columnBox .column:hover { opacity: 0.8; }
-.layoutTyp03 .columnBox .column a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  border: 1px solid #C7C7BB;
-  border-radius: 8px;
-  box-sizing: border-box;
-  box-shadow: 3px 3px 6px 3px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
-}
-.layoutTyp03 .columnBox .column a:hover { text-decoration: none; border: 1px solid #00ABD3; }
-.layoutTyp03 .columnBox .column h4 { padding: 32px 0 0; transition: all 0.3s ease; }
-.layoutTyp03 .columnBox .column a:hover h4 { color: #00ABD3; }
-.layoutTyp03 .columnBox .column p { padding: 15px 0 0; font-size: 1.4rem; font-weight: 500; line-height: 1.6; }
-@media (max-width: 767px) {
-  .layoutTyp03 .columnBox { width: 100%; padding: 40px 0 0; }
-  .layoutTyp03 .columnBox .column { width: 100%; height: 100px; margin: 0 0 25px; }
-  .layoutTyp03 .columnBox .column h4 { padding: 20px 0 0; font-size: 1.6rem; }
-  .layoutTyp03 .columnBox .column p { padding: 10px 0 0; font-size: 1.2rem; }
-}
-</style>
 
 <div id="topMv">
   <div class="videoArea">
@@ -64,7 +27,7 @@
         <h2 class="h-label">TCDのブランディングサービス</h2>
         <h3 class="h-display">Branding Services</h3>
         
-        <div class=”columnBox”>
+        <div class="columnBox">
           <?php
           $service_posts = get_posts(array(
             'post_type'      => 'service',
@@ -77,9 +40,9 @@
               ? get_the_excerpt($p)
               : wp_trim_words(strip_tags(get_post_field('post_content', $p->ID)), 20, '');
           ?>
-          <div class=”column”>
-            <a href=”<?php echo get_permalink($p->ID); ?>”>
-              <h4 class=”h-section”><?php echo esc_html($p->post_title); ?></h4>
+          <div class="column">
+            <a href="<?php echo get_permalink($p->ID); ?>">
+              <h4 class="h-section"><?php echo esc_html($p->post_title); ?></h4>
               <?php if ($excerpt) : ?>
                 <p><?php echo esc_html($excerpt); ?></p>
               <?php endif; ?>
