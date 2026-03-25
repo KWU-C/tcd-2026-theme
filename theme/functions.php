@@ -497,15 +497,19 @@ add_action('init', function() {
 // =============================================================================
 function tcd_enqueue_styles() {
     $uri = get_template_directory_uri();
-    $ver = '2.2';
+    $ver = '2.4';
 
-    wp_enqueue_style('tcd-basis',       $uri . '/assets/css/vendor/basis.min.css',   array(),            $ver);
-    wp_enqueue_style('tcd-drawer',      $uri . '/assets/css/vendor/drawer.css',       array(),            $ver);
-    wp_enqueue_style('tcd-slick',       $uri . '/assets/css/vendor/slick.css',        array(),            $ver);
-    wp_enqueue_style('tcd-slick-theme', $uri . '/assets/css/vendor/slick-theme.css',  array('tcd-slick'), $ver);
-    wp_enqueue_style('tcd-reset',       $uri . '/assets/css/reset.css',              array('tcd-basis'), $ver);
-    wp_enqueue_style('tcd-base',        $uri . '/common/css/base.css',               array('tcd-reset'), $ver);
-    wp_enqueue_style('tcd-site',        $uri . '/assets/css/site.css',               array('tcd-base'),  $ver);
+    wp_enqueue_style('tcd-basis',          $uri . '/assets/css/vendor/basis.min.css',   array(),             $ver);
+    wp_enqueue_style('tcd-drawer',         $uri . '/assets/css/vendor/drawer.css',       array(),             $ver);
+    wp_enqueue_style('tcd-slick',          $uri . '/assets/css/vendor/slick.css',        array(),             $ver);
+    wp_enqueue_style('tcd-slick-theme',    $uri . '/assets/css/vendor/slick-theme.css',  array('tcd-slick'),  $ver);
+    wp_enqueue_style('tcd-reset',          $uri . '/assets/css/reset.css',               array('tcd-basis'),  $ver);
+    wp_enqueue_style('tcd-base',           $uri . '/common/css/base.css',                array('tcd-reset'),  $ver);
+    wp_enqueue_style('tcd-page',           $uri . '/css/page.css',                       array('tcd-base'),   $ver);
+    wp_enqueue_style('tcd-page-branding',  $uri . '/css/page_branding.css',              array('tcd-base'),   $ver);
+    wp_enqueue_style('tcd-page-case',      $uri . '/css/page_case.css',                  array('tcd-base'),   $ver);
+    wp_enqueue_style('tcd-top',            $uri . '/css/top.css',                        array('tcd-base'),   $ver);
+    wp_enqueue_style('tcd-responsive-recovery', $uri . '/css/tcd-responsive-recovery.css', array('tcd-top'), filemtime(get_template_directory() . '/css/tcd-responsive-recovery.css'));
 }
 add_action('wp_enqueue_scripts', 'tcd_enqueue_styles');
 

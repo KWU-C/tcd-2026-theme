@@ -13,7 +13,7 @@
             'post_type'      => 'recruit',
             'posts_per_page' => -1,
             'orderby'        => 'date',
-            'order'          => 'ASC',
+            'order'          => 'DESC',
             'post_parent'    => 0,
           ));
           foreach ($recruit_posts as $p) {
@@ -31,14 +31,15 @@
             'post_type'      => 'recruit',
             'posts_per_page' => -1,
             'orderby'        => 'date',
-            'order'          => 'ASC',
+            'order'          => 'DESC',
             'post_parent'    => 0,
           ));
           while ($top_posts->have_posts()) : $top_posts->the_post(); ?>
-          <div class="column">
+          <div class="column c-card-tile">
             <a href="<?php the_permalink(); ?>">
               <?php the_post_thumbnail(); ?>
               <h3 class="h-card"><?php the_title(); ?></h3>
+              <p><?php echo wp_trim_words(get_the_content(), 34, '……続きを読む'); ?></p>
             </a>
           </div>
           <?php endwhile; wp_reset_postdata(); ?>

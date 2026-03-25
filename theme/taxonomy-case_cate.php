@@ -30,7 +30,7 @@
       <div class="worksTyp02">
         <?php if (have_posts()) : ?>
           <?php while (have_posts()) : the_post(); ?>
-          <div class="column">
+          <div class="column c-card-tile">
             <a href="<?php the_permalink(); ?>">
               <div class="over filter">
                 <?php the_post_thumbnail(); ?>

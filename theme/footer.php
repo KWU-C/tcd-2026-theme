@@ -66,7 +66,7 @@
             'post_type'      => 'about',
             'posts_per_page' => -1,
             'orderby'        => 'date',
-            'order'          => 'ASC',
+            'order'          => 'DESC',
           ));
           foreach ($footer_about_posts as $p) {
             echo '<li><a href="' . get_permalink($p->ID) . '">' . esc_html($p->post_title) . '</a></li>';

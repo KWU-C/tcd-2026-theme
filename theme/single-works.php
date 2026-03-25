@@ -37,7 +37,7 @@
       <?php while (have_posts()) : the_post(); $current_post_id = get_the_ID(); ?>
 
         <div class="worksTyp03">
-          <div class="column">
+          <div class="column c-card-tile">
 
             <?php if(get_field('works_img02')){ //画像が2つ以上ある場合 ?>
 
@@ -122,7 +122,7 @@
           if ($the_query->have_posts()) :
             while ($the_query->have_posts()) : $the_query->the_post();
           ?>
-          <div class="column">
+          <div class="column c-card-tile">
             <a href="<?php the_permalink(); ?>">
               <?php the_post_thumbnail(); ?>
               <p><?php the_title(); ?></p>

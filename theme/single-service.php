@@ -72,7 +72,7 @@
           if ($works_query->have_posts()) :
             while ($works_query->have_posts()) : $works_query->the_post();
           ?>
-          <div class="column">
+          <div class="column c-card-tile">
             <a href="<?php the_permalink(); ?>">
               <?php the_post_thumbnail(); ?>
               <p><?php the_title(); ?></p>

@@ -32,8 +32,8 @@
           $service_posts = get_posts(array(
             'post_type'      => 'service',
             'posts_per_page' => -1,
-            'orderby'        => 'menu_order',
-            'order'          => 'ASC',
+            'orderby'        => 'date',
+            'order'          => 'DESC',
           ));
           foreach ($service_posts as $p) :
             $excerpt = has_excerpt($p->ID)
@@ -41,8 +41,8 @@
               : wp_trim_words(strip_tags(get_post_field('post_content', $p->ID)), 20, '');
           ?>
           <div class="column">
-            <a href="<?php echo get_permalink($p->ID); ?>">
-              <h4 class="h-section"><?php echo esc_html($p->post_title); ?></h4>
+            <a class="c-card-tile" href="<?php echo get_permalink($p->ID); ?>">
+              <h3 class="h-section"><?php echo esc_html($p->post_title); ?></h3>
               <?php if ($excerpt) : ?>
                 <p><?php echo esc_html($excerpt); ?></p>
               <?php endif; ?>
@@ -97,26 +97,26 @@
         
         <div class="layoutTyp04_Inner">
         
-          <div class="column">
+          <div class="column c-card-tile">
             <a href="/works/corporate/nitto.html">
               <img src="/wp-content/uploads/2022/08/nitto_thum.jpg" alt="" />
-              <h4 class="h-label">日東電工株式会社 [大阪]</h4>
+              <p class="h-label">日東電工株式会社 [大阪]</p>
               <p>創業100周年へ向けた新たな挑戦、ニットーのブランディング</p>
             </a>
           </div>
 
-          <div class="column">
+          <div class="column c-card-tile">
             <a href="/works/product/kakitane.html">
               <img src="/wp-content/uploads/2022/06/kakitane_thumb-1.jpg" alt="" />
-              <h4 class="h-label">とよす株式会社 [大阪]</h4>
+              <p class="h-label">とよす株式会社 [大阪]</p>
               <p>日本初・柿の種専門店、かきたねキッチンのブランディング</p>
             </a>
           </div>
 
-          <div class="column">
+          <div class="column c-card-tile">
             <a href="/works/corporate/nobori_ltd.html">
               <img src="/wp-content/uploads/2022/08/nobori_thum.jpg" alt="" />
-              <h4 class="h-label">PSP株式会社 [東京]</h4>
+              <p class="h-label">PSP株式会社 [東京]</p>
               <p>医療情報共有サービス「NOBORI（ノボリ）」のブランディング</p>
             </a>
           </div>
@@ -144,7 +144,7 @@
           if ($the_query->have_posts()) :
            while ($the_query->have_posts()) : $the_query->the_post();
           ?>
-          <div class="column">
+          <div class="column c-card-tile">
             <a href="<?php the_permalink(); ?>">
             <?php the_post_thumbnail(); ?>
               <p><?php the_title(); ?></p>
@@ -174,15 +174,15 @@
         <div class="layoutTyp10_Inner">
 
           <div class="column">
-            <h4 class="h-section">東京支社</h4>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.400521643831!2d139.7630697757871!3d35.66713877259182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bdd84261e5f%3A0x4f8bc30f34032f62!2z44CSMTA0LTAwNjEg5p2x5Lqs6YO95Lit5aSu5Yy66YqA5bqn77yX5LiB55uu77yR77yW4oiS77yS77yR!5e0!3m2!1sja!2sjp!4v1719191157399!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <h3 class="h-section">東京支社</h3>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.400521643831!2d139.7630697757871!3d35.66713877259182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bdd84261e5f%3A0x4f8bc30f34032f62!2z44CSMTA0LTAwNjEg5p2x5Lqs6YO95Lit5aSu5Yy66YqA5bqn77yX5LiB55uu77yR77yW4oiS77yS77yR!5e0!3m2!1sja!2sjp!4v1719191157399!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             <h2 class="h-card">東京を中心とした東日本エリアの窓口</h2>
             <p>東京都中央区銀座7-16-21　銀座木挽ビル7F<br>
             Tel：03-6263-8330</p>
           </div>
 
           <div class="column">
-            <h4 class="h-section">芦屋本社</h4>
+            <h3 class="h-section">芦屋本社</h3>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3278.8584186594935!2d135.31448331563135!3d34.73396298042598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000f2dd0e04607b%3A0x9a844ac1fb2afdbe!2z77yI5qCq77yJ77y077yj77yk!5e0!3m2!1sja!2sjp!4v1613371111372!5m2!1sja!2sjp" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             <h2 class="h-card">大阪・兵庫を中心とした西日本エリアの窓口</h2>
             <p>兵庫県芦屋市春日町7-19　TCDビル<br>

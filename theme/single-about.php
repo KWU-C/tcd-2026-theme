@@ -12,7 +12,7 @@
             'post_type'      => 'about',
             'posts_per_page' => -1,
             'orderby'        => 'date',
-            'order'          => 'ASC',
+            'order'          => 'DESC',
           ));
           echo "<li><a href='/about/'>TOP</a></li>";
           foreach ($about_posts as $p) {

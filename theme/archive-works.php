@@ -26,7 +26,7 @@
 
       <?php if (have_posts()) : ?>
         <?php while (have_posts()) : the_post(); ?>
-        <div class="column">
+        <div class="column c-card-tile">
           <a href="<?php the_permalink(); ?>">
             <?php the_post_thumbnail(); ?>
             <p><?php the_field('works_text01'); ?></p>

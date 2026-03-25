@@ -12,7 +12,7 @@
             'post_type'      => 'recruit',
             'posts_per_page' => -1,
             'orderby'        => 'date',
-            'order'          => 'ASC',
+            'order'          => 'DESC',
             'post_parent'    => 0,
           ));
           echo "<li><a href='/recruit/'>TOP</a></li>";
