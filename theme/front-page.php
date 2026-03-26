@@ -100,7 +100,7 @@
           <div class="column c-card-tile">
             <a href="/works/corporate/nitto.html">
               <img src="/wp-content/uploads/2022/08/nitto_thum.jpg" alt="" />
-              <p class="h-label">日東電工株式会社 [大阪]</p>
+              <h4 class="h-label">日東電工株式会社 [大阪]</h4>
               <p>創業100周年へ向けた新たな挑戦、ニットーのブランディング</p>
             </a>
           </div>
@@ -108,7 +108,7 @@
           <div class="column c-card-tile">
             <a href="/works/product/kakitane.html">
               <img src="/wp-content/uploads/2022/06/kakitane_thumb-1.jpg" alt="" />
-              <p class="h-label">とよす株式会社 [大阪]</p>
+              <h4 class="h-label">とよす株式会社 [大阪]</h4>
               <p>日本初・柿の種専門店、かきたねキッチンのブランディング</p>
             </a>
           </div>
@@ -116,7 +116,7 @@
           <div class="column c-card-tile">
             <a href="/works/corporate/nobori_ltd.html">
               <img src="/wp-content/uploads/2022/08/nobori_thum.jpg" alt="" />
-              <p class="h-label">PSP株式会社 [東京]</p>
+              <h4 class="h-label">PSP株式会社 [東京]</h4>
               <p>医療情報共有サービス「NOBORI（ノボリ）」のブランディング</p>
             </a>
           </div>
