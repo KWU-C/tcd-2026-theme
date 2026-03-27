@@ -6,14 +6,14 @@
   <div class="column">
     <a href="/download">
       <h3>資料請求</h3>
-      <p>弊社の実績資料をダウンロードいただけます</p>
+      <p>実績資料をダウンロードいただけます</p>
     </a>
   </div>
 
   <div class="column">
     <a href="/contact">
       <h3>お問い合わせ</h3>
-      <p>まずは、お気軽にご相談・お問い合わせください</p>
+      <p>お気軽にご相談・お問い合わせください</p>
     </a>
   </div>
 </div>
@@ -118,7 +118,9 @@
       </ul>
     </div>
 
-    <small><a style="color:white;" href="https://www.tcd.jp/branding_tokyo/">© TCD Corporation Since 1971.</a></small>
+<small>
+  <a>© TCD Corporation Since 1971.</a>
+</small>
 
     <div id="pageup">
       <a href="#">
