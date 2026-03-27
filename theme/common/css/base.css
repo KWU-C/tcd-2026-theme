@@ -8,12 +8,12 @@
 
 html {
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 75%; /* 12px */
+  font-size: 75%; /* 10px */
   font-weight: 400;
 }
 @media only screen and (max-width: 767px) {
   html {
-    font-size: 62.5%; /* 10px */
+    font-size: 62.5%;
   }
 }
 /* font-family: 'Poppins', sans-serif; */
@@ -39,17 +39,21 @@ html {
 }
 
 :root {
-  --card-padding-x: 30px;
-  --card-padding-x-sp: 16px;
-  --card-title-padding-top: 30px;
-  --card-title-padding-bottom: 20px;
+  --card-padding-x: 25px;
+  --card-padding-bottom: 25px;
+  --card-title-padding-top: 25px;
+  --card-title-padding-bottom: 0px;
+  --card-text-padding-top: 10px;
+
+  --card-padding-x-sp: 20px;
+  --card-padding-bottom-sp: 20px;
   --card-title-padding-top-sp: 20px;
-  --card-title-padding-bottom-sp: 10px;
-  --card-text-padding-bottom-sp: 20px;
-  --card-title-size: 1.8rem;
-  --card-title-size-sp: 1.6rem;
-  --card-text-size: 1.6rem;
-  --card-text-size-sp: 1.4rem;
+  --card-title-padding-bottom-sp: 5px;
+  --card-text-padding-top-sp: 5px;
+
+  --card-radius: 8px;
+  --card-shadow: 3px 3px 6px 3px rgba(0, 0, 0, 0.1);
+  --card-bg: #FFF;
 }
 
 body {
@@ -105,60 +109,6 @@ body {
 }
 
 /*==========================================
- 共通カードUI
-===========================================*/
-:root {
-  --card-radius: 8px;
-  --card-bg: #FFF;
-  --card-shadow: 3px 3px 6px 3px rgba(0, 0, 0, 0.1);
-  --card-padding-x: 30px;
-  --card-padding-x-sp: 16px;
-  --card-title-size: 1.6rem;
-  --card-title-size-sp: 1.6rem;
-  --card-text-size: 1.4rem;
-  --card-text-size-sp: 1.3rem;
-  --card-text-line: 1.8;
-}
-
-.c-card-tile {
-  border-radius: var(--card-radius);
-  background-color: var(--card-bg);
-  box-shadow: var(--card-shadow);
-  overflow: hidden;
-}
-
-.c-card-tile:hover {
-  text-decoration: none;
-}
-
-.c-card-tile img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.c-card-title {
-  font-size: var(--card-title-size);
-  line-height: 1.6;
-}
-
-.c-card-text {
-  font-size: var(--card-text-size);
-  line-height: var(--card-text-line);
-}
-
-@media only screen and (max-width: 767px) {
-  .c-card-title {
-    font-size: var(--card-title-size-sp);
-  }
-
-  .c-card-text {
-    font-size: var(--card-text-size-sp);
-    line-height: 1.7;
-  }
-}
-
-/*==========================================
  ヘッダーのスタイル
 ===========================================*/
 header {
@@ -202,6 +152,11 @@ header.down #headerLogoArea img {
 header #header_SpIcon,
 header #header_SpMenu {
   display: none;
+}
+@media only screen and (min-width: 768px) {
+  header #header_SpMenu {
+    display: none !important;
+  }
 }
 @media only screen and (max-width: 767px) {
   header {
@@ -297,14 +252,14 @@ header #header_SpMenu {
     margin:  90px 5% 10px;
   }
   header #header_SpMenu #header_SpLink  ul li {
-    padding: 0 0 12px;
+    padding: 0 0 25px;
   }
   header #header_SpMenu #header_SpLink  ul li a {
     position: relative;
     font-family: 'Poppins', sans-serif;
     font-size: 3.4rem;
+    line-height: 1;
     font-weight: 100;
-    line-height: 1.4;
     color: #FFF;
   }
   header #header_SpMenu #header_SpLink  ul li a:hover {
@@ -588,7 +543,7 @@ header #headerContactArea li a:hover {
 ===========================================*/
 #footerContact {
   width: 816px;
-  height: 162px;
+  height: 120px;
   margin: 100px auto 0;
   display: flex;
   justify-content: space-between;
@@ -596,14 +551,17 @@ header #headerContactArea li a:hover {
 }
 #footerContact .column {
   width: 388px;
-  height: 162px;
+  height: 120px;
 }
 #footerContact .column a {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: relative;
   width: 388px;
-  height: 162px;
-  padding: 50px 0 0;
+  height: 120px;
+  padding: 0 20px;
   box-sizing: border-box;
   border-radius: 8px;
   background-color: #00ABD3;
@@ -620,7 +578,7 @@ header #headerContactArea li a:hover {
 #footerContact .column:nth-child(1) a::before {
   position: absolute;
   left: 120px;
-  top: 52px;
+  top: 32px;
   width: 18px;
   height: 24px;
   background-image: url("../img/icon05.svg");
@@ -630,7 +588,7 @@ header #headerContactArea li a:hover {
 #footerContact .column:nth-child(2) a::before {
   position: absolute;
   left: 89px;
-  top: 56px;
+  top: 35px;
   width: 25px;
   height: 18px;
   background-image: url("../img/icon06.svg");
@@ -638,14 +596,14 @@ header #headerContactArea li a:hover {
   content: "";
 }
 #footerContact .column h3 {
-  padding: 0 0 0 20px;
-  font-size: 2.6rem;
+  padding: 0;
+  font-size: 2.0rem;
   font-weight: 700;
   color: #FFF;
 }
 #footerContact .column p {
-  padding: 20px 0 0;
-  font-size: 1.6rem;
+  padding: 12px 0 0;
+  font-size: 1.4rem;
   font-weight: 700;
   color: #FFF;
   line-height: 1.4;
@@ -664,21 +622,21 @@ header #headerContactArea li a:hover {
   #footerContact .column a {
     width: 100%;
     height: 100px;
-    padding: 25px 0 0;
+    padding: 0 20px;
   }
   #footerContact .column:nth-child(1) a::before {
     left: 50%;
-    top: 27px;
+    top: 22px;
     width: 16px;
     height: 21px;
-    margin: 0 0 0 -61px;
+    margin: 0 0 0 -66px;
   }
   #footerContact .column:nth-child(2) a::before {
     left: 50%;
-    top: 31px;
+    top: 26px;
     width: 20px;
     height: 15px;
-    margin: 0 0 0 -85px;
+    margin: 0 0 0 -90px;
   }
   #footerContact .column h3 {
     font-size: 2.2rem;
@@ -772,9 +730,11 @@ footer #footerBody #footerLink .column ul li {
 }
 footer #footerBody #footerLink .column ul li a {
   position: relative;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   line-height: 1.4;
   color: #FFF;
+  display: flex;
+  align-items: center;
 }
 footer #footerBody #footerLink .column ul li:nth-child(1) {
   padding: 0 0 50px;
@@ -801,8 +761,8 @@ footer #footerBody #footerLink .column ul li a:hover::before {
   position: absolute;
   z-index: -1;
   left: -15px;
-  top: -6px;
-  width: 100%;
+  top: -10px;
+  width: 80%;
   height: 38px;
   padding: 0 30px 0 0;
   box-sizing: content-box;
@@ -820,7 +780,7 @@ footer #footerBody #footerLink .column ul li.typ02 a:hover::before {
 }
 
 footer #footerBody #footerUtility {
-  width: 280px;
+  width: 400px;
   margin: 0 auto;
   padding: 65px 0 0;
 }
@@ -838,7 +798,7 @@ footer #footerBody #footerUtility ul li a {
 footer #footerBody small {
   display: block;
   padding: 40px 0 100px;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   color: #FFF;
   text-align: center;
 }
@@ -1017,20 +977,20 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
   #mainContents .pt_60 { padding-top: 30px; }
   #mainContents .pt_80 { padding-top: 40px; }
   #mainContents .pt_100 { padding-top: 50px; }
-  #mainContents .pt_130 { padding-top: 65px; }
-  #mainContents .pt_150 { padding-top: 75px; }
+  #mainContents .pt_130 { padding-top: 60px; }
+  #mainContents .pt_150 { padding-top: 70px; }
   #mainContents .pt_200 { padding-top: 100px; }
 
   /* #mainContents .pb_10 { padding-bottom: 5px; }
-  #mainContents .pb_20 { padding-bottom: 10px; }
+  #mainContents .pb_20 { padding-bottom: 10px; } */
   #mainContents .pb_30 { padding-bottom: 15px; }
-  #mainContents .pb_40 { padding-bottom: 20px; } */
+  /* #mainContents .pb_40 { padding-bottom: 20px; } */
   #mainContents .pb_50 { padding-bottom: 25px; }
   #mainContents .pb_60 { padding-bottom: 30px; }
   #mainContents .pb_80 { padding-bottom: 40px; }
-  #mainContents .pb_100 { padding-bottom: 50px; }
+  #mainContents .pb_100 { padding-bottom: 30px; }
   #mainContents .pb_130 { padding-bottom: 65px; }
-  #mainContents .pb_150 { padding-bottom: 750px; }
+  #mainContents .pb_150 { padding-bottom: 75px; }
 
   #mainContents .mt_20 { margin-top: 10px; }
   #mainContents .mt_30 { margin-top: 15px; }
@@ -1101,11 +1061,13 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
 ===========================================*/
 #mainContents .linkTyp01 a {
   position: relative;
-  display: block;
+  display: flex;
+  align-items: center;     /* ← 縦中央 */
+  justify-content: center; /* ← 横中央（必要なら） */
   width: 235px;
   height: 60px;
   margin: 0 auto;
-  padding: 19px 10px 0 0px;
+  padding: 10px 10px 10px;
   box-sizing: border-box;
   border: 1px solid #484848;
   background-color: #484848;
@@ -1189,9 +1151,9 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
   .h-page { font-size: 2.4rem; }
 }
 
-/* D: .h-section — セクション内アイテム見出し h4 */
+/* D: .h-section — セクション内アイテム見出し（h3 / h4 共通） */
 .h-section {
-  font-size: 2.0rem;
+  font-size: 1.7rem;
   font-weight: 700;
   line-height: 1.4;
 }
@@ -1204,26 +1166,9 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
 
 /* E: .h-card — カード内タイトル h3 */
 .h-card {
-  font-size: var(--card-title-size);
+  font-size: 1.6rem;
   font-weight: 700;
-  line-height: 1.6;
-}
-@media only screen and (max-width: 767px) {
-  .h-card {
-    font-size: var(--card-title-size-sp);
-    line-height: 1.5;
-  }
-}
-
-.card-text {
-  font-size: var(--card-text-size);
   line-height: 1.8;
-}
-@media only screen and (max-width: 767px) {
-  .card-text {
-    font-size: var(--card-text-size-sp);
-    line-height: 1.7;
-  }
 }
 
 /* F: .h-sub — サブ見出し h2/h3 */
@@ -1236,7 +1181,7 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
 /* G: .h-label — セクション日本語ラベル（英語大見出しの上）/ 小見出し */
 .h-label {
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.4;
 }
 
@@ -1280,16 +1225,22 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
   }
   #mainContents .layoutTyp01 h1 {
     padding: 0 0 50px;
-  }
-  #mainContents .layoutTyp01 p {
+		}
+  #mainContents .layoutTyp01 h2 {
+    padding: 0 0 70px;
+		}
+#mainContents .layoutTyp01 h2 {
+  padding: 0 0 30px;
+			}
+}
+#mainContents .layoutTyp01 p {
     padding: 0 0 30px;
     font-size: 2.0rem;
   }
-}
 
 #mainContents .layoutTyp02 {
   position: relative;
-  width: 600px;
+  width: 700px;
   margin: 0 auto;
   padding: 200px 0 0;
 }
@@ -1323,11 +1274,11 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
     font-size: 5.8rem;
   }
   #mainContents .layoutTyp02 h2 {
-    padding: 0 0 50px;
+    padding: 0 0 30px;
   }
   #mainContents .layoutTyp02 p {
     padding: 0 0 30px;
-    font-size: 2.0rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -1336,8 +1287,19 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
   width: 1146px;
   margin: 0 auto;
 }
-#mainContents .layoutTyp03 h3 {
-  padding: 15px 0 0;
+#mainContents .layoutTyp03 .h-display {
+  padding-top: 10px;
+}
+#mainContents .layoutTyp03 .columnBox .column .h-section {
+  padding-top: var(--card-title-padding-top);
+}
+@media only screen and (max-width: 767px) {
+  #mainContents .layoutTyp03 .h-display {
+    padding-top: 15px;
+  }
+  #mainContents .layoutTyp03 .columnBox .column .h-section {
+    padding-top: var(--card-title-padding-top-sp);
+  }
 }
 #mainContents .layoutTyp03 .columnBox {
   width: 100%;
@@ -1360,29 +1322,31 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
 #mainContents .layoutTyp03 .columnBox .column a {
   display: block;
   width: 100%;
-  padding-bottom: 24px;
+  padding-bottom: var(--card-padding-bottom);
   border: 1px solid #C7C7BB;
-  border-radius: 8px;
+  border-radius: var(--card-radius);
+  background-color: var(--card-bg);
   box-sizing: border-box;
-  box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--card-shadow);
   transition: all 0.3s ease;
 }
 #mainContents .layoutTyp03 .columnBox .column a:hover {
   text-decoration: none;
   border: 1px solid #00ABD3;
 }
-#mainContents .layoutTyp03 .columnBox .column h3 {
-  padding: var(--card-title-padding-top) var(--card-padding-x) var(--card-title-padding-bottom);
-  font-size: 1.7rem;
-  font-weight: 700;
-  line-height: 1.4;
+#mainContents .layoutTyp03 .columnBox .column .h-section {
+  padding-top: var(--card-title-padding-top);
+  padding-right: var(--card-padding-x);
+  padding-left: var(--card-padding-x);
   transition: all 0.3s ease;
 }
-#mainContents .layoutTyp03 .columnBox .column a:hover h3 {
+#mainContents .layoutTyp03 .columnBox .column a:hover .h-section {
   color: #00ABD3;
 }
 #mainContents .layoutTyp03 .columnBox .column p {
-  padding: 15px 0 0;
+  padding-top: var(--card-text-padding-top);
+  padding-right: var(--card-padding-x);
+  padding-left: var(--card-padding-x);
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.6;
@@ -1413,14 +1377,14 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
     width: calc(100% - 40px);
     margin: 0 auto;
   }
-  #mainContents .layoutTyp03 h3 {
-    padding: 15px 0 0;
+  #mainContents .layoutTyp03 .h-display {
+    padding-top: 10px;
   }
   #mainContents .layoutTyp03 .columnBox {
     width: 100%;
-    padding: 40px 0 0;
+    padding: 30px 0 20px;
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 15px;
   }
   #mainContents .layoutTyp03 .columnBox .column {
     width: 100%;
@@ -1428,12 +1392,19 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
     min-height: 80px;
     margin: 0;
   }
-  #mainContents .layoutTyp03 .columnBox .column h3 {
-    padding: var(--card-title-padding-top-sp) var(--card-padding-x-sp) var(--card-title-padding-bottom-sp);
+  #mainContents .layoutTyp03 .columnBox .column a {
+    padding-bottom: var(--card-padding-bottom-sp);
+  }
+  #mainContents .layoutTyp03 .columnBox .column .h-section {
+    padding-top: var(--card-title-padding-top-sp);
+    padding-right: var(--card-padding-x-sp);
+    padding-left: var(--card-padding-x-sp);
     font-size: 1.6rem;
   }
   #mainContents .layoutTyp03 .columnBox .column p {
-    padding: 10px 0 0;
+    padding-top: var(--card-text-padding-top-sp);
+    padding-right: var(--card-padding-x-sp);
+    padding-left: var(--card-padding-x-sp);
     font-size: 1.2rem;
   }
 }
@@ -1444,22 +1415,28 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
   margin: 0 auto;
 }
 #mainContents .layoutTyp04 h3 {
-  padding: 15px 0 0;
+  padding-top: 15px;
+}
+@media only screen and (max-width: 767px) {
+#mainContents .layoutTyp04 h3 {
+  padding-top: 10px;
+}
 }
 #mainContents .layoutTyp04 .layoutTyp04_Inner {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  padding: 50px 0 0;
+  padding: 30px 0 0;
 }
 #mainContents .layoutTyp04 .layoutTyp04_Inner .column {
   position: relative;
   width: 346px;
-  height: 322px;
+  height: 310px;  
   margin: 0 54px 0 0;
-  border-radius: 8px;
-  background-color: #FFF;
-  box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, 0.1);
+  border-radius: var(--card-radius);
+  background-color: var(--card-bg);
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
 }
 #mainContents .layoutTyp04 .layoutTyp04_Inner .column:nth-child(3n) {
   margin: 0;
@@ -1471,18 +1448,27 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
   text-decoration: none;
 }
 #mainContents .layoutTyp04 .layoutTyp04_Inner .column img {
+  display: block;
   width: 100%;
   height: 178px;
   border-radius: 8px 8px 0 0;
   object-fit: cover;
 }
-#mainContents .layoutTyp04 .layoutTyp04_Inner .column h4 {
-  padding: 30px 30px 0;
+#mainContents .layoutTyp04 .layoutTyp04_Inner .column h4,
+#mainContents .layoutTyp04 .layoutTyp04_Inner .column p.h-label {
+  padding-top: var(--card-title-padding-top);
+  padding-right: var(--card-padding-x);
+  padding-bottom: var(--card-title-padding-bottom);
+  padding-left: var(--card-padding-x);
   font-size: 1.4rem;
+  line-height: 1.6;
 }
-#mainContents .layoutTyp04 .layoutTyp04_Inner .column p {
-  padding: 15px 30px 0;
-  font-size: 1.6rem;
+#mainContents .layoutTyp04 .layoutTyp04_Inner .column p:not(.h-label) {
+  padding-top: var(--card-text-padding-top);
+  padding-right: var(--card-padding-x);
+  padding-bottom: var(--card-padding-bottom);
+  padding-left: var(--card-padding-x);
+  font-size: 1.4rem;
   line-height: 1.8;
 }
 @media only screen and (max-width: 1266px) {
@@ -1495,25 +1481,43 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
     width: 30%;
     margin: 0 5% 0 0;
   }
-  #mainContents .layoutTyp04 .layoutTyp04_Inner .column h4 {
-    padding: 30px 30px 10px;
+  #mainContents .layoutTyp04 .layoutTyp04_Inner .column h4,
+  #mainContents .layoutTyp04 .layoutTyp04_Inner .column p.h-label {
+    padding-top: var(--card-title-padding-top);
+    padding-right: var(--card-padding-x);
+    padding-bottom: var(--card-title-padding-bottom);
+    padding-left: var(--card-padding-x);
   }
 }
 @media only screen and (max-width: 767px) {
   #mainContents .layoutTyp04 .layoutTyp04_Inner {
-    padding: 40px 0 0;
+    padding: 30px 0 0;
   }
   #mainContents .layoutTyp04 .layoutTyp04_Inner .column {
     float: none;
     width: 100%;
     height: auto;
-    margin: 0 0 40px;
+    margin: 0 0 20px;
   }
   #mainContents .layoutTyp04 .layoutTyp04_Inner .column:nth-child(3n) {
     margin: 0;
   }
-  #mainContents .layoutTyp04 .layoutTyp04_Inner .column p {
-    padding: 0 30px 30px;
+  #mainContents .layoutTyp04 .layoutTyp04_Inner .column h4,
+  #mainContents .layoutTyp04 .layoutTyp04_Inner .column p.h-label {
+    padding-top: var(--card-title-padding-top-sp);
+    padding-right: var(--card-padding-x-sp);
+    padding-bottom: var(--card-title-padding-bottom-sp);
+    padding-left: var(--card-padding-x-sp);
+    font-size: 1.4rem;
+    line-height: 1.5;
+  }
+  #mainContents .layoutTyp04 .layoutTyp04_Inner .column p:not(.h-label) {
+    padding-top: var(--card-text-padding-top-sp);
+    padding-right: var(--card-padding-x-sp);
+    padding-bottom: var(--card-padding-bottom-sp);
+    padding-left: var(--card-padding-x-sp);
+    font-size: 1.4rem;
+    line-height: 1.7;
   }
 }
 
@@ -1529,16 +1533,17 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  padding: 60px 0 0;
+  padding: 30px 0 0;
 }
 #mainContents .layoutTyp06 .layoutTyp06_Inner .column {
   position: relative;
   width: 346px;
-  height: 322px;
+  height: 310px;
   margin: 0 54px 65px 0;
-  border-radius: 8px;
-  background-color: #FFF;
-  box-shadow: 3px 3px 6px 3px rgba(0,0,0,0.1);
+  border-radius: var(--card-radius);
+  background-color: var(--card-bg);
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
 }
 #mainContents .layoutTyp06 .layoutTyp06_Inner .column:nth-child(3n) {
   margin: 0 0 80px 0;
@@ -1550,14 +1555,15 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
   text-decoration: none;
 }
 #mainContents .layoutTyp06 .layoutTyp06_Inner .column img {
+  display: block;
   width: 100%;
   height: 178px;
   border-radius: 8px 8px 0 0;
   object-fit: cover;
 }
 #mainContents .layoutTyp06 .layoutTyp06_Inner .column p {
-  padding: 30px 30px 0;
-  font-size: 1.6rem;
+  padding: var(--card-title-padding-top) var(--card-padding-x) var(--card-padding-bottom);
+  font-size: 1.4rem;
   line-height: 1.8;
 }
 @media only screen and (max-width: 1266px) {
@@ -1580,22 +1586,24 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
     padding: 0;
   }
   #mainContents .layoutTyp06 h3 {
-    padding: 15px 0 0;
+    padding: 10px 0 0;
   }
   #mainContents .layoutTyp06 .layoutTyp06_Inner {
-    padding: 40px 0 0;
+    padding: 30px 0 30px;
   }
   #mainContents .layoutTyp06 .layoutTyp06_Inner .column {
     float: none;
     width: 100%;
     height: auto;
-    margin: 0 0 40px 0;
+    margin: 0 0 20px;
   }
   #mainContents .layoutTyp06 .layoutTyp06_Inner .column:nth-child(3n) {
-    margin: 0 0 40px;
+    margin: 0 0 20px;
   }
   #mainContents .layoutTyp06 .layoutTyp06_Inner .column p {
-    padding: 20px 30px 30px;
+    padding: var(--card-title-padding-top-sp) var(--card-padding-x-sp) var(--card-padding-bottom-sp);
+    font-size: 1.4rem;
+    line-height: 1.7;
   }
 }
 
@@ -1617,9 +1625,10 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
   width: 346px;
   height: 467px;
   margin: 0 54px 65px 0;
-  border-radius: 8px;
-  background-color: #FFF;
-  box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, 0.1);
+  border-radius: var(--card-radius);
+  background-color: var(--card-bg);
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
 }
 #mainContents .layoutTyp07 .layoutTyp07_Inner .column:nth-child(3n) {
   margin: 0 0 80px 0;
@@ -1631,18 +1640,19 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
   text-decoration: none;
 }
 #mainContents .layoutTyp07 .layoutTyp07_Inner .column img {
+  display: block;
   width: 100%;
   height: auto;
   border-radius: 8px 8px 0 0;
 }
 #mainContents .layoutTyp07 .layoutTyp07_Inner .column h3 {
   padding: var(--card-title-padding-top) var(--card-padding-x) var(--card-title-padding-bottom);
-  font-size: var(--card-title-size);
+  font-size: 1.8rem;
   line-height: 1.6;
 }
 #mainContents .layoutTyp07 .layoutTyp07_Inner .column p {
-  padding: 0 var(--card-padding-x);
-  font-size: var(--card-text-size);
+  padding: 0 var(--card-padding-x) var(--card-padding-bottom);
+  font-size: 1.6rem;
   line-height: 1.8;
 }
 @media only screen and (max-width: 1266px) {
@@ -1678,12 +1688,12 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
   }
   #mainContents .layoutTyp07 .layoutTyp07_Inner .column h3 {
     padding: var(--card-title-padding-top-sp) var(--card-padding-x-sp) var(--card-title-padding-bottom-sp);
-    font-size: var(--card-title-size-sp);
+    font-size: 1.6rem;
     line-height: 1.5;
   }
   #mainContents .layoutTyp07 .layoutTyp07_Inner .column p {
-    padding: 0 var(--card-padding-x-sp) var(--card-text-padding-bottom-sp);
-    font-size: var(--card-text-size-sp);
+    padding: 0 var(--card-padding-x-sp) var(--card-padding-bottom-sp);
+    font-size: 1.4rem;
     line-height: 1.7;
   }
 }
@@ -1708,8 +1718,8 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
 #mainContents .layoutTyp08 {
   position: relative;
   width: 1200px;
-  margin: 60px auto 0;
-  padding: 100px 0;
+  margin: 40px auto 0;
+  padding: 0;
   background-color: #FFF;
   border-radius: 8px;
   box-shadow: 3px 3px 6px 3px rgba(0,0,0,0.1);
@@ -1721,7 +1731,6 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
 }
 #mainContents .layoutTyp08_Title p {
   position: absolute;
-  right: 0;
   top: -40px;
   font-size: 1.4rem;
 }
@@ -1732,11 +1741,11 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
   color: #C7C7BB;
 }
 #mainContents .layoutTyp08 .layoutTyp08_Inner {
-  width: 660px;
+  width: 800px;
   margin: 0 auto;
-  padding: 0;
+  padding: 50px 0;
 }
-#mainContents .layoutTyp08 .layoutTyp08_Inner blockquote {
+Contents .layoutTyp08 .layoutTyp08_Inner blockquote {
   position: relative;
   margin: 30px 0 30px;
   padding: 35px 35px 15px;
@@ -1803,7 +1812,7 @@ display: none;
   #mainContents .layoutTyp08 {
     width: 100%;
     margin: 15px 0;
-    padding: 50px 0;
+    padding: 0;
   }
   #mainContents .layoutTyp08_Title {
     width: 90%;
@@ -1814,7 +1823,7 @@ display: none;
   }
   #mainContents .layoutTyp08 .layoutTyp08_Inner {
     width: 90%;
-    padding: 50px 0;
+    padding: 30px 0;
   }
   #mainContents .layoutTyp08 .layoutTyp08_Sns {
     position: static;
@@ -1938,12 +1947,17 @@ display: none;
 }
 
 #mainContents .layoutTyp10 {
-  width: 1200px;
+  width: 1100px;
   margin: 0 auto;
+  padding: 100px 0 0;
 }
 #mainContents .layoutTyp10 h3 {
-  padding: 15px 0 0;
+  padding-top: 15px;
 }
+@media only screen and (max-width: 767px) {
+#mainContents .layoutTyp10 h3 {
+  padding-top: 10px;
+}}
 #mainContents .layoutTyp10 .layoutTyp10_Inner {
   display: flex;
   justify-content: space-between;
@@ -1953,7 +1967,8 @@ display: none;
   width: 520px;
 }
 #mainContents .layoutTyp10 .layoutTyp10_Inner h4 {
-  padding: 10px 0 20px;
+  padding-top: 10px;
+  padding-bottom: 20px;
 }
 #mainContents .layoutTyp10 .layoutTyp10_Inner iframe {
   width: 520px;
@@ -1966,7 +1981,7 @@ display: none;
   font-weight: 700;
 }
 #mainContents .layoutTyp10 .layoutTyp10_Inner p {
-  padding: 15px 0 0;
+  padding-top: 15px;
   font-size: 1.6rem;
   line-height: 1.8;
 }
@@ -1991,7 +2006,7 @@ display: none;
   }
   #mainContents .layoutTyp10 .layoutTyp10_Inner {
     flex-wrap: wrap;
-    padding: 40px 0 0;
+    padding: 20px 0 0;
   }
   #mainContents .layoutTyp10 .layoutTyp10_Inner .column {
     width: 100%;
@@ -2001,15 +2016,16 @@ display: none;
     padding: 0;
   }
   #mainContents .layoutTyp10 .layoutTyp10_Inner h4 {
-    padding: 10px 0 20px;
+    padding-top: 10px;
+    padding-bottom: 20px;
   }
   #mainContents .layoutTyp10 .layoutTyp10_Inner iframe {
     width: 100%;
     height: 400px;
   }
   #mainContents .layoutTyp10 .layoutTyp10_Inner p {
-    padding: 20px 0 0;
-    font-size: 1.4rem;
+    padding-top: 10px;
+    font-size: 1.6rem;
   }
 }
 
@@ -2547,18 +2563,9 @@ display: none;
 .worksTyp02 .column .over {
   position: relative;
 }
-.worksTyp02 .column .over::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.15);
-  opacity: 0.3;
-  mix-blend-mode: multiply;
-  content: '';
-}
+
 .worksTyp02 .column img {
+  display: block;
   width: 100%;
   height: 274px;
   object-fit: cover;
@@ -2606,7 +2613,7 @@ display: none;
   position: relative;
   width: 100%;
   height: 720px;
-  margin: 40px 0 120px;
+  margin: 0 0 120px;
   background-color: #EFEFEF;
 }
 .worksTyp03 .column .column_MV {
@@ -2661,6 +2668,7 @@ display: none;
     overflow: visible !important;
     opacity: 0;
   }
+
   .worksTyp03 .column .bx-wrapper .bx-pager {
     padding-top: 20px !important;
   }
@@ -2672,6 +2680,22 @@ display: none;
      width: 100%;
      height: auto;
   }
+}
+
+.worksTyp03 .column .column_MV a,
+.worksTyp03 .column .column_MV_NO {
+  position: relative;
+  display: block;
+}
+
+.worksTyp03 .column .column_MV a::after,
+.worksTyp03 .column .column_MV_NO::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.02);
+  pointer-events: none;
+  z-index: 2;
 }
 
 .worksTyp04 {
@@ -3539,3 +3563,41 @@ nav#pagination .flLink a:hover {
   }
 }
 
+
+.worksTyp02 .column .over {
+  position: relative;
+  overflow: hidden;
+}
+
+.worksTyp02 .column .over::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.12);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ============================================================
+   works詳細：見出しバー（インラインスタイル移行用）
+   ============================================================ */
+.c-heading-bar {
+  width: 100%;
+  height: 40px;
+  background-color: #F0F0F0;
+  margin-bottom: 10px;
+  padding: 11px 0 0 10px;
+  text-align: left;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #000;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 767px) {
+  .c-heading-bar {
+    height: auto;
+    padding: 10px;
+    font-size: 1.4rem;
+  }
+}
