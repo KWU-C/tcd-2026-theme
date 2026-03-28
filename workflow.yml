@@ -1,0 +1,51 @@
+# tcd-2026-theme 作業ポリシー
+
+project:
+  name: tcd-2026-theme
+  preview: https://2026.tcd.jp/
+
+paths:
+  local: ~/Documents/tcd-2026-theme/
+  github: https://github.com/KWU-C/tcd-2026-theme.git (main)
+  server: /home/users/2/tcdadmin/web/2026.tcd.jp/wp-content/themes/tcd/
+
+server:
+  host: ssh-tcdsite.heteml.net
+  port: 2222
+  user: tcdadmin
+  sftp_password: fv1aSqBEtve8OH3NtdRm9a7mixu0cBr9
+
+mac_setup:
+  description: "新しいMacで初回のみ実施"
+  steps:
+    - git clone https://github.com/KWU-C/tcd-2026-theme.git ~/Documents/tcd-2026-theme
+    - "VS Code拡張: SFTP (liximomo) をインストール"
+    - ".vscode/sftp.json は git管理外（各自設定）"
+
+daily_workflow:
+  step_1:
+    name: "最新取得（必須）"
+    command: git pull
+  step_2:
+    name: "ローカル編集"
+    note: "uploadOnSaveでサーバーへ自動反映"
+  step_3:
+    name: "ブラウザ確認"
+    url: https://2026.tcd.jp/
+  step_4:
+    name: "問題なければcommit & push"
+    commands:
+      - git add .
+      - git commit -m "変更内容を簡潔に"
+      - git push
+
+rules:
+  - "作業前に必ずgit pull"
+  - "サーバーの既存変更を上書きしない（pull前に編集しない）"
+  - "commit・pushは確認後のみ"
+  - "Git管理外ディレクトリは触らない"
+
+prohibited:
+  - "git pullせずに編集開始"
+  - "commitせずに放置"
+  - "ファイルコピーで同期（履歴が壊れる）"
