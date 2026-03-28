@@ -2154,6 +2154,8 @@ display: none;
   line-height: var(--lh-body);
 }
 .detail__main_cont p {
+  font-size: var(--font-body);
+  line-height: var(--lh-body);
   margin: 0 0 1em;
 }
 .detail__main_cont p a:link,
@@ -2613,12 +2615,12 @@ display: none;
   border-radius: 8px 8px 0 0;
 }
 .worksTyp02 .column p {
-  padding: 15px 20px 0;
+  padding: 20px 30px 0;
   font-size: var(--font-body-small);
   line-height: var(--lh-ui);
 }
 .worksTyp02 .column h3 {
-  padding: 8px 20px 20px;
+  padding: 8px 30px 20px;
   font-size: var(--font-heading-card);
   line-height: var(--lh-body-tight);
 }
@@ -2734,7 +2736,7 @@ display: none;
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.02);
+  background: rgba(0, 0, 0, 0.05);
   pointer-events: none;
   z-index: 2;
 }
