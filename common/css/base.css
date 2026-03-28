@@ -38,6 +38,23 @@ html {
   overflow: auto;
 }
 
+/* ==========================================
+   Typography Rule
+
+   ■ 基本
+   - 本文：var(--font-body)
+   - UI：var(--font-ui)
+   - 見出し：専用変数
+
+   ■ 禁止
+   - 新規での rem直指定
+   - line-height の固定値
+
+   ■ 例外
+   - デザイン上明確な理由がある場合のみ固定値許可
+   - 例外には必ずコメントを残す
+
+   ========================================== */
 :root {
   --card-padding-x: 25px;
   --card-padding-bottom: 25px;
@@ -54,14 +71,37 @@ html {
   --card-radius: 8px;
   --card-shadow: 3px 3px 6px 3px rgba(0, 0, 0, 0.1);
   --card-bg: #FFF;
+
+  /* タイポグラフィ変数 */
+  --font-body: 1.6rem;
+  --font-body-small: 1.4rem;
+  --font-body-large: 1.8rem;
+
+  --font-ui: 1.6rem;
+  --font-ui-small: 1.4rem;
+  --font-ui-large: 1.8rem; /* 主要導線・グローバルナビ・大UI要素 */
+  --font-caption-small: 1.2rem; /* SP注釈・補助ラベル */
+  --font-caption: 1.3rem;
+  --font-heading-emphasis: 2.0rem;
+
+  --font-heading-page: 3.0rem;
+  --font-heading-section: 1.7rem;
+  --font-heading-card: 1.6rem;
+
+  --lh-body: 1.9;
+  --lh-body-tight: 1.6;
+  --lh-ui: 1.4;
+  --lh-ui-tight: 1.2; /* Poppins英字見出し・SP字詰め */
+  --lh-body-relaxed: 1.75; /* 詳細コンテンツの段落・定義リスト */
+  --lh-body-loose: 1.7; /* SPカード本文 */
 }
 
 body {
   overflow: hidden;
 	min-width: 1250px;
   -webkit-text-size-adjust: 100%;
-  font-size: 1.6rem;
-  line-height: 1.9;
+  font-size: var(--font-body);
+  line-height: var(--lh-body);
 }
 @media only screen and (max-width: 1266px) {
   body {
@@ -257,8 +297,8 @@ header #header_SpMenu {
   header #header_SpMenu #header_SpLink  ul li a {
     position: relative;
     font-family: 'Poppins', sans-serif;
-    font-size: 3.4rem;
-    line-height: 1;
+    font-size: 3.4rem; /* exception: SPメニュー大タイトル（Poppins） */
+    line-height: 1; /* exception: Poppinsキャッチコピー字詰め */
     font-weight: 100;
     color: #FFF;
   }
@@ -301,16 +341,16 @@ header #header_SpMenu {
     text-decoration: none;
   }
   header #header_SpMenu #header_SpContact01 h3 {
-    font-size: 2.2rem;
+    font-size: 2.2rem; /* exception: SPコンタクトブロック見出し */
     font-weight: 100;
     color: #FFF;
   }
   header #header_SpMenu #header_SpContact01 p {
     padding: 15px 0 0;
-    font-size: 1.4rem;
+    font-size: var(--font-ui-small);
     font-weight: 700;
     color: #FFF;
-    line-height: 1.4;
+    line-height: var(--lh-ui);
   }
 
   header #header_SpMenu #header_SpContact02 {
@@ -338,16 +378,16 @@ header #header_SpMenu {
     text-decoration: none;
   }
   header #header_SpMenu #header_SpContact02 h3 {
-    font-size: 2.2rem;
+    font-size: 2.2rem; /* exception: SPコンタクトブロック見出し */
     font-weight: 100;
     color: #FFF;
   }
   header #header_SpMenu #header_SpContact02 p {
     padding: 15px 0 0;
-    font-size: 1.4rem;
+    font-size: var(--font-ui-small);
     font-weight: 700;
     color: #FFF;
-    line-height: 1.4;
+    line-height: var(--lh-ui);
   }
 
   header #header_SpMenu #header_SpSns {
@@ -369,7 +409,6 @@ header #header_SpMenu {
   header #header_SpMenu #header_SpSns ul li img {
     width: 48px;
     height: 48px;
-    ]
   }
 }
 
@@ -400,7 +439,7 @@ header #headerGlobalArea li a {
   position: relative;
   display: block;
   font-family: 'Poppins', sans-serif;
-  font-size: 1.8rem;
+  font-size: var(--font-ui-large); /* Poppinsグローバルナビ */
   font-weight: 400;
   color: #1a1a1a;
   transition: all 0.3s;
@@ -453,7 +492,7 @@ header #headerSubArea li a {
   position: relative;
   display: block;
   padding: 5px 0;
-  font-size: 1.4rem;
+  font-size: var(--font-ui-small);
   font-weight: 400;
   color: #1a1a1a;
   transition: all 0.3s;
@@ -504,7 +543,7 @@ header #headerContactArea li a {
   padding: 5px 15px 5px 28px;
   background-color: #00ABD3;
   border-radius: 3px;
-  font-size: 1.4rem;
+  font-size: var(--font-ui-small);
   font-weight: 700;
   color: #FFF;
   transition: all 0.3s ease;
@@ -597,16 +636,16 @@ header #headerContactArea li a:hover {
 }
 #footerContact .column h3 {
   padding: 0;
-  font-size: 2.0rem;
+  font-size: var(--font-heading-emphasis);
   font-weight: 700;
   color: #FFF;
 }
 #footerContact .column p {
   padding: 12px 0 0;
-  font-size: 1.4rem;
+  font-size: var(--font-ui-small);
   font-weight: 700;
   color: #FFF;
-  line-height: 1.4;
+  line-height: var(--lh-ui);
 }
 @media only screen and (max-width: 767px) {
   #footerContact {
@@ -639,11 +678,11 @@ header #headerContactArea li a:hover {
     margin: 0 0 0 -90px;
   }
   #footerContact .column h3 {
-    font-size: 2.2rem;
+    font-size: 2.2rem; /* exception: フッターコンタクトSP見出し */
   }
   #footerContact .column p {
     padding: 15px 0 0;
-    font-size: 1.4rem;
+    font-size: var(--font-body-small);
   }
 }
 footer {
@@ -730,8 +769,8 @@ footer #footerBody #footerLink .column ul li {
 }
 footer #footerBody #footerLink .column ul li a {
   position: relative;
-  font-size: 1.4rem;
-  line-height: 1.4;
+  font-size: var(--font-ui-small);
+  line-height: var(--lh-ui);
   color: #FFF;
   display: flex;
   align-items: center;
@@ -740,7 +779,7 @@ footer #footerBody #footerLink .column ul li:nth-child(1) {
   padding: 0 0 50px;
 }
 footer #footerBody #footerLink .column ul li:nth-child(1) a {
-  font-size: 1.8rem;
+  font-size: var(--font-ui-large); /* フッターナビ大リンク */
   font-weight: 400;
 }
 footer #footerBody #footerLink .column:nth-child(5) {
@@ -751,7 +790,7 @@ footer #footerBody #footerLink .column:nth-child(5) ul li:nth-child(1) {
 }
 footer #footerBody #footerLink .column:nth-child(5) ul li:nth-child(1) a {
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 1.6rem;
+  font-size: var(--font-ui);
 }
 footer #footerBody #footerLink .column ul li a:hover {
   text-decoration: none;
@@ -790,7 +829,7 @@ footer #footerBody #footerUtility ul {
   list-style-type: none;
 }
 footer #footerBody #footerUtility ul li a {
-  font-size: 1.3rem;
+  font-size: var(--font-caption);
   font-weight: 500;
   color: #FFF;
 }
@@ -798,7 +837,7 @@ footer #footerBody #footerUtility ul li a {
 footer #footerBody small {
   display: block;
   padding: 40px 0 100px;
-  font-size: 1.4rem;
+  font-size: var(--font-ui-small);
   color: #FFF;
   text-align: center;
 }
@@ -846,12 +885,12 @@ footer #footerBody small {
     padding: 50px 0 0;
   }
   footer #footerBody #footerUtility ul li a {
-    font-size: 1.2rem;
+    font-size: var(--font-caption-small);
   }
 
   footer #footerBody small {
     padding: 40px 0 50px;
-    font-size: 1.2rem;
+    font-size: var(--font-caption-small);
   }
 }
 
@@ -1024,6 +1063,7 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
 /*==========================================
  共通 P
 ===========================================*/
+/* legacy: compatibility only / deprecated / 新規使用禁止 / 将来削除候補 */
 #mainContents p.f_13 { font-size: 1.3rem; }
 #mainContents p.f_14 { font-size: 1.4rem; }
 #mainContents p.f_15 { font-size: 1.5rem; }
@@ -1034,9 +1074,10 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
 #mainContents p.f_24 { font-size: 2.4rem; }
 #mainContents p.f_26 { font-size: 2.6rem; }
 
-#mainContents p.fl_14 { line-height: 1.4; }
-#mainContents p.fl_16 { line-height: 1.6; }
-#mainContents p.fl_18 { line-height: 1.8; }
+/* legacy: compatibility only / deprecated / 新規使用禁止 / 将来削除候補 */
+#mainContents p.fl_14 { line-height: var(--lh-ui); }
+#mainContents p.fl_16 { line-height: var(--lh-body-tight); }
+#mainContents p.fl_18 { line-height: var(--lh-body); }
 
 #mainContents p.center { text-align: center; }
 #mainContents p.right { text-align: right; }
@@ -1071,7 +1112,7 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
   box-sizing: border-box;
   border: 1px solid #484848;
   background-color: #484848;
-  font-size: 2.0rem;
+  font-size: 2.0rem; /* exception: 汎用CTAボタン固定サイズ */
   color: #FFF;
   text-align: center;
   transition: all 0.3s;
@@ -1117,72 +1158,72 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
 /* A: .h-display — Poppins 大見出し（セクション英語タイトル / ヒーローh1） */
 .h-display {
   font-family: 'Poppins', sans-serif;
-  font-size: 3.8rem;
+  font-size: 3.8rem; /* exception: Poppins大見出し（ブランドタイポグラフィ） */
   font-weight: 600;
-  line-height: 1.2;
+  line-height: var(--lh-ui-tight);
 }
 @media only screen and (max-width: 1266px) {
-  .h-display { font-size: 3.04rem; }
+  .h-display { font-size: 3.04rem; /* exception: Poppins大見出しレスポンシブ */ }
 }
 @media only screen and (max-width: 767px) {
-  .h-display { font-size: 2.6rem; }
+  .h-display { font-size: 2.6rem; /* exception: Poppins大見出しSP */ }
 }
 
 /* B: .h-hero — 大見出し日本語（ページ冒頭タグライン） */
 .h-hero {
-  font-size: 3.4rem;
+  font-size: 3.4rem; /* exception: Poppinsヒーロー見出し */
   font-weight: 600;
-  line-height: 1.4;
+  line-height: var(--lh-ui);
 }
 @media only screen and (max-width: 1266px) {
-  .h-hero { font-size: 2.72rem; line-height: 1.3; }
+  .h-hero { font-size: 2.72rem; /* exception: Poppinsヒーロー1266px */ line-height: 1.3; /* exception: hero見出し1266px字詰め（--lh-ui-tightより緩め）*/ }
 }
 @media only screen and (max-width: 767px) {
-  .h-hero { font-size: 2.2rem; line-height: 1.2; }
+  .h-hero { font-size: 2.2rem; /* exception: PoppinsヒーローSP */ line-height: var(--lh-ui-tight); }
 }
 
 /* C: .h-page — ページタイトル h1 */
 .h-page {
-  font-size: 3.0rem;
+  font-size: var(--font-heading-page);
   font-weight: 700;
-  line-height: 1.4;
+  line-height: var(--lh-ui);
 }
 @media only screen and (max-width: 767px) {
-  .h-page { font-size: 2.4rem; }
+  .h-page { font-size: 2.4rem; /* exception: ページタイトルSP縮小 */ }
 }
 
 /* D: .h-section — セクション内アイテム見出し（h3 / h4 共通） */
 .h-section {
-  font-size: 1.7rem;
+  font-size: var(--font-heading-section);
   font-weight: 700;
-  line-height: 1.4;
+  line-height: var(--lh-ui);
 }
 @media only screen and (max-width: 1266px) {
-  .h-section { font-size: 1.6rem; }
+  .h-section { font-size: var(--font-heading-card); }
 }
 @media only screen and (max-width: 767px) {
-  .h-section { font-size: 1.6rem; }
+  .h-section { font-size: var(--font-heading-card); }
 }
 
 /* E: .h-card — カード内タイトル h3 */
 .h-card {
-  font-size: 1.6rem;
+  font-size: var(--font-body);
   font-weight: 700;
-  line-height: 1.8;
+  line-height: var(--lh-body);
 }
 
-/* F: .h-sub — サブ見出し h2/h3 */
+/* F: .h-sub — サブ見出し h2/h3 (1.8rem は heading-section に近いが Poppinsなし本文大で共用) */
 .h-sub {
-  font-size: 1.8rem;
+  font-size: var(--font-body-large);
   font-weight: 700;
-  line-height: 1.4;
+  line-height: var(--lh-ui);
 }
 
 /* G: .h-label — セクション日本語ラベル（英語大見出しの上）/ 小見出し */
 .h-label {
-  font-size: 1.4rem;
+  font-size: var(--font-ui-small);
   font-weight: 600;
-  line-height: 1.4;
+  line-height: var(--lh-ui);
 }
 
 /*==========================================
@@ -1200,7 +1241,7 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
   top: -11px;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
-  font-size: 10.0rem;
+  font-size: 10.0rem; /* exception: 装飾背景テキスト（視覚効果） */
   color: #F4F4F0;
   content: "Who we are";
 }
@@ -1210,7 +1251,7 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
 #mainContents .layoutTyp01 p {
   padding: 0 0 30px;
   font-weight: 700;
-  font-size: 2.2rem;
+  font-size: 2.2rem; /* exception: layoutTyp01セクションh2固定 */
 }
 @media only screen and (max-width: 767px) {
   #mainContents .layoutTyp01 {
@@ -1221,7 +1262,7 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
   #mainContents .layoutTyp01::before {
     left: -20px;
     top: -5px;
-    font-size: 5.8rem;
+    font-size: 5.8rem; /* exception: 装飾背景テキストSP */
   }
   #mainContents .layoutTyp01 h1 {
     padding: 0 0 50px;
@@ -1235,7 +1276,7 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
 }
 #mainContents .layoutTyp01 p {
     padding: 0 0 30px;
-    font-size: 2.0rem;
+    font-size: var(--font-heading-emphasis);
   }
 
 #mainContents .layoutTyp02 {
@@ -1250,7 +1291,7 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
   top: -11px;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
-  font-size: 10.0rem;
+  font-size: 10.0rem; /* exception: 装飾背景テキスト（視覚効果） */
   color: #FFF;
   content: "What we do";
 }
@@ -1260,7 +1301,7 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
 #mainContents .layoutTyp02 p {
   padding: 0 0 30px;
   font-weight: 700;
-  font-size: 2.0rem;
+  font-size: var(--font-heading-emphasis);
 }
 @media only screen and (max-width: 767px) {
   #mainContents .layoutTyp02 {
@@ -1271,14 +1312,14 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
   #mainContents .layoutTyp02::before {
     left: -20px;
     top: -5px;
-    font-size: 5.8rem;
+    font-size: 5.8rem; /* exception: 装飾背景テキストSP */
   }
   #mainContents .layoutTyp02 h2 {
     padding: 0 0 30px;
   }
   #mainContents .layoutTyp02 p {
     padding: 0 0 30px;
-    font-size: 1.6rem;
+    font-size: var(--font-body);
   }
 }
 
@@ -1347,9 +1388,9 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
   padding-top: var(--card-text-padding-top);
   padding-right: var(--card-padding-x);
   padding-left: var(--card-padding-x);
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
   font-weight: 500;
-  line-height: 1.6;
+  line-height: var(--lh-body-tight);
 }
 /* Service archive: 高さ可変タイル */
 #mainContents .layoutTyp03 .service-tiles .column {
@@ -1399,13 +1440,13 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
     padding-top: var(--card-title-padding-top-sp);
     padding-right: var(--card-padding-x-sp);
     padding-left: var(--card-padding-x-sp);
-    font-size: 1.6rem;
+    font-size: var(--font-body);
   }
   #mainContents .layoutTyp03 .columnBox .column p {
     padding-top: var(--card-text-padding-top-sp);
     padding-right: var(--card-padding-x-sp);
     padding-left: var(--card-padding-x-sp);
-    font-size: 1.2rem;
+    font-size: var(--font-caption-small);
   }
 }
 
@@ -1460,16 +1501,16 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
   padding-right: var(--card-padding-x);
   padding-bottom: var(--card-title-padding-bottom);
   padding-left: var(--card-padding-x);
-  font-size: 1.4rem;
-  line-height: 1.6;
+  font-size: var(--font-ui-small);
+  line-height: var(--lh-body-tight);
 }
 #mainContents .layoutTyp04 .layoutTyp04_Inner .column p:not(.h-label) {
   padding-top: var(--card-text-padding-top);
   padding-right: var(--card-padding-x);
   padding-bottom: var(--card-padding-bottom);
   padding-left: var(--card-padding-x);
-  font-size: 1.4rem;
-  line-height: 1.8;
+  font-size: var(--font-body-small);
+  line-height: var(--lh-body);
 }
 @media only screen and (max-width: 1266px) {
   #mainContents .layoutTyp04 {
@@ -1508,16 +1549,16 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
     padding-right: var(--card-padding-x-sp);
     padding-bottom: var(--card-title-padding-bottom-sp);
     padding-left: var(--card-padding-x-sp);
-    font-size: 1.4rem;
-    line-height: 1.5;
+    font-size: var(--font-ui-small);
+    line-height: 1.5; /* exception: SP縦幅制約（lh-body-tightより少し広め）*/
   }
   #mainContents .layoutTyp04 .layoutTyp04_Inner .column p:not(.h-label) {
     padding-top: var(--card-text-padding-top-sp);
     padding-right: var(--card-padding-x-sp);
     padding-bottom: var(--card-padding-bottom-sp);
     padding-left: var(--card-padding-x-sp);
-    font-size: 1.4rem;
-    line-height: 1.7;
+    font-size: var(--font-body-small);
+    line-height: var(--lh-body-loose);
   }
 }
 
@@ -1563,8 +1604,8 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
 }
 #mainContents .layoutTyp06 .layoutTyp06_Inner .column p {
   padding: var(--card-title-padding-top) var(--card-padding-x) var(--card-padding-bottom);
-  font-size: 1.4rem;
-  line-height: 1.8;
+  font-size: var(--font-body-small);
+  line-height: var(--lh-body);
 }
 @media only screen and (max-width: 1266px) {
   #mainContents .layoutTyp06 {
@@ -1602,8 +1643,8 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
   }
   #mainContents .layoutTyp06 .layoutTyp06_Inner .column p {
     padding: var(--card-title-padding-top-sp) var(--card-padding-x-sp) var(--card-padding-bottom-sp);
-    font-size: 1.4rem;
-    line-height: 1.7;
+    font-size: var(--font-body-small);
+    line-height: var(--lh-body-loose);
   }
 }
 
@@ -1647,13 +1688,13 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
 }
 #mainContents .layoutTyp07 .layoutTyp07_Inner .column h3 {
   padding: var(--card-title-padding-top) var(--card-padding-x) var(--card-title-padding-bottom);
-  font-size: 1.8rem;
-  line-height: 1.6;
+  font-size: var(--font-body-large);
+  line-height: var(--lh-body-tight);
 }
 #mainContents .layoutTyp07 .layoutTyp07_Inner .column p {
   padding: 0 var(--card-padding-x) var(--card-padding-bottom);
-  font-size: 1.6rem;
-  line-height: 1.8;
+  font-size: var(--font-body);
+  line-height: var(--lh-body);
 }
 @media only screen and (max-width: 1266px) {
   #mainContents .layoutTyp07 {
@@ -1688,13 +1729,13 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
   }
   #mainContents .layoutTyp07 .layoutTyp07_Inner .column h3 {
     padding: var(--card-title-padding-top-sp) var(--card-padding-x-sp) var(--card-title-padding-bottom-sp);
-    font-size: 1.6rem;
-    line-height: 1.5;
+    font-size: var(--font-heading-card);
+    line-height: 1.5; /* exception: SP縦幅制約（lh-body-tightより少し広め）*/
   }
   #mainContents .layoutTyp07 .layoutTyp07_Inner .column p {
     padding: 0 var(--card-padding-x-sp) var(--card-padding-bottom-sp);
-    font-size: 1.4rem;
-    line-height: 1.7;
+    font-size: var(--font-body-small);
+    line-height: var(--lh-body-loose);
   }
 }
 #mainContents .layoutTyp07_Inner #brandingMv {
@@ -1732,10 +1773,10 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
 #mainContents .layoutTyp08_Title p {
   position: absolute;
   top: -40px;
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
 }
 .service-title {
-  font-size: 2.0rem;
+  font-size: var(--font-heading-emphasis);
   font-weight: 700;
   text-align: center;
   color: #C7C7BB;
@@ -1782,7 +1823,7 @@ Contents .layoutTyp08 .layoutTyp08_Inner blockquote {
   top: 0;
 }
 #mainContents .layoutTyp08 .layoutTyp08_bottom .layoutTyp08_link01 a {
-  font-size: 1.8rem;
+  font-size: var(--font-ui-large); /* UI導線：記事下部の一覧・戻るリンク */
   text-decoration: underline;
   color: #1a1a1a;
 }
@@ -1801,8 +1842,8 @@ Contents .layoutTyp08 .layoutTyp08_Inner blockquote {
   border-bottom: none;
 }
 #mainContents .layoutTyp08 .layoutTyp08_bottom .layoutTyp08_List ul li a {
-  font-size: 1.8rem;
-  line-height: 1.8;
+  font-size: var(--font-body-large); /* 関連記事リンク：本文寄り読み導線 */
+  line-height: var(--lh-body);
   color: #1a1a1a;
 }
 #mainContents .layoutTyp08 .layoutTyp08_bottom .layoutTyp08_List ul li a br {
@@ -1819,7 +1860,7 @@ display: none;
   }
   #mainContents .layoutTyp08_Title p {
     top: -25px;
-    font-size: 1.3rem;
+    font-size: var(--font-caption);
   }
   #mainContents .layoutTyp08 .layoutTyp08_Inner {
     width: 90%;
@@ -1842,7 +1883,7 @@ display: none;
     padding: 0 0 15px;
   }
   #mainContents .layoutTyp08 .layoutTyp08_bottom .layoutTyp08_List ul li a {
-    font-size: 1.4rem;
+    font-size: var(--font-body-small);
   }
 }
 
@@ -1859,7 +1900,7 @@ display: none;
   padding: 17px 0 0;
   box-sizing: border-box;
   background-color: #484848;
-  font-size: 1.6rem;
+  font-size: var(--font-ui);
   color: #FFF;
   text-align: center;
   transition: all 0.3s;
@@ -1904,7 +1945,7 @@ display: none;
   border: 1px solid #949495;
   border-radius: 4px;
   background-color: #FFF;
-  font-size: 1.45rem;
+  font-size: 1.45rem; /* exception: タグ絞り込みUI視認サイズ固定 */
   text-align: center;
 }
 #mainContents .layoutTyp09 ul li a:hover {
@@ -1933,7 +1974,7 @@ display: none;
     padding: 3px 10px 3px;
     border: 1px solid #949495;
     border-radius: 4px;
-    font-size: 1.3rem;
+    font-size: var(--font-caption);
     text-align: center;
   }
   #mainContents .layoutTyp09 ul li a:hover {
@@ -1977,13 +2018,13 @@ display: none;
 }
 #mainContents .layoutTyp10 .layoutTyp10_Inner h2 {
   padding: 20px 0 0;
-  font-size: 1.6rem;
+  font-size: var(--font-heading-card);
   font-weight: 700;
 }
 #mainContents .layoutTyp10 .layoutTyp10_Inner p {
   padding-top: 15px;
-  font-size: 1.6rem;
-  line-height: 1.8;
+  font-size: var(--font-body);
+  line-height: var(--lh-body);
 }
 @media only screen and (max-width: 1266px) {
   #mainContents .layoutTyp10 {
@@ -2025,7 +2066,7 @@ display: none;
   }
   #mainContents .layoutTyp10 .layoutTyp10_Inner p {
     padding-top: 10px;
-    font-size: 1.6rem;
+    font-size: var(--font-body);
   }
 }
 
@@ -2046,17 +2087,17 @@ display: none;
   width: 122px;
   padding: 20px 5px;
   box-sizing: border-box;
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
   font-weight: normal;
   text-align: left;
-  line-height: 1.8;
+  line-height: var(--lh-body);
 }
 #mainContents .table_typ01 table tr td {
   padding: 20px 20px;
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
   background-color: #FFF;
   vertical-align: middle;
-  line-height: 1.8;
+  line-height: var(--lh-body);
 }
 
 @media only screen and (max-width: 767px) {
@@ -2066,11 +2107,11 @@ display: none;
   #mainContents .table_typ01 table tr th {
     width: 95px;
     padding: 10px 15px;
-    font-size: 1.3rem;
+    font-size: var(--font-caption);
   }
   #mainContents .table_typ01 table tr td {
     padding: 10px 10px;
-    font-size: 1.3rem;
+    font-size: var(--font-caption);
   }
 }
 
@@ -2085,7 +2126,7 @@ display: none;
   background-color: #f0f0f0;
 }
 #mainContents .indexTyp01 h3 {
-  font-size: 1.6rem;
+  font-size: var(--font-heading-card);
   font-weight: 400;
 }
 #mainContents .indexTyp01 ul li {
@@ -2103,14 +2144,14 @@ display: none;
   margin-bottom: 4em;
 }
 .detail__main_cont h2 {
-  font-size: 2.4rem;
-  line-height: 2;
+  font-size: var(--font-heading-section);
+  line-height: var(--lh-body);
   margin-top: 2.5em;
   margin-bottom: 0.5em;
 }
 .detail__main_cont h3 {
-  font-size: 2.2rem;
-  line-height: 2;
+  font-size: var(--font-heading-card);
+  line-height: var(--lh-body);
 }
 .detail__main_cont p {
   margin: 0 0 1em;
@@ -2142,10 +2183,10 @@ display: none;
   margin: 4em 0;
   padding: 1.5em 0.5em;
   width: 100%;
-  line-height: 2em;
+  line-height: 2em; /* exception: CVボタン縦余白確保（em指定でfont-size倍率固定）*/
   color: #37ab86;
   text-align: center;
-  font-size: 1.8rem;
+  font-size: var(--font-body-large);
   background-color: #edf7f3;
 }
 .detail__main_cont .cv_btn img {
@@ -2168,7 +2209,7 @@ display: none;
 .detail__main_cont .colum_wrap p.sub {
   font-weight: bold;
   color: #999999;
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
 }
 .detail__main_cont .colum_wrap .colum dl {
   border-bottom: 1px solid #eee;
@@ -2183,7 +2224,7 @@ display: none;
 .detail__main_cont .colum_wrap .colum dd {
   width: 75%;
   float: left;
-  line-height: 1.75em;
+  line-height: var(--lh-body-relaxed);
 }
 .detail__main_cont .colum_wrap .colum dd a:link,
 .detail__main_cont .colum_wrap .colum dd a:visited {
@@ -2200,7 +2241,7 @@ display: none;
 .detail__main_cont .prof p.sub {
   font-weight: bold;
   color: #999999;
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
 }
 .detail__main_cont .prof dl {
   margin-top: 1em;
@@ -2208,17 +2249,17 @@ display: none;
   padding: 0 2em;
 }
 .detail__main_cont .prof dl dt {
-  font-size: 1.8rem;
+  font-size: var(--font-body-large);
   padding: 0;
   margin: 0;
 }
 .detail__main_cont .prof dl dd {
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
   padding: 0;
   margin: 0;
 }
 .detail__main_cont .prof p {
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
   padding: 0 2em 0;
 }
 @media only screen and (max-width: 767px) {
@@ -2227,11 +2268,11 @@ display: none;
     height: auto;
   }
   .detail__main_cont h2 {
-    font-size: 2.2rem;
+    font-size: 2.2rem; /* exception: detail h2レスポンシブ縮小 */
     padding: 0;
   }
   .detail__main_cont h3 {
-    font-size: 1.8rem;
+    font-size: var(--font-body-large);
     padding: 0;
   }
   .detail__main_cont .colum_wrap {
@@ -2240,8 +2281,8 @@ display: none;
     padding: 0.5em 0 1em;
   }
   .detail__main_cont .colum_wrap .colum dd {
-    font-size: 1.4rem;
-    line-height: 1.5em;
+    font-size: var(--font-body-small);
+    line-height: 1.5em; /* exception: SP詳細カラム説明文の行間制約 */
   }
   .detail__main_cont .prof dl {
     padding: 0;
@@ -2252,12 +2293,12 @@ display: none;
 }
 
 .detail__main_cont .indexTyp01 {
-  line-height: 1.4;
+  line-height: var(--lh-ui);
 }
 #mainContents .indexTyp01 ul li a {
-  font-size: 1.6rem;
+  font-size: var(--font-ui);
   font-weight: 400;
-  line-height: 1.4;
+  line-height: var(--lh-ui);
   color: #1a1a1a;
 }
 @media only screen and (max-width: 767px) {
@@ -2265,7 +2306,7 @@ display: none;
     padding: 20px;
   }
   #mainContents .indexTyp01 ul li a {
-    line-height: 1.2;
+    line-height: var(--lh-ui-tight);
   }
 }
 
@@ -2280,12 +2321,12 @@ display: none;
   border: 1px solid #949495;
 }
 .detail__main_cont .profileType01 {
-  line-height: 1.4;
+  line-height: var(--lh-ui);
 }
 #mainContents .profileType01 p.text01 {
   margin: 0;
   padding: 0 0 5px;
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
 }
 #mainContents .profileType01 h3 {
   margin: 0;
@@ -2297,7 +2338,7 @@ display: none;
 }
 #mainContents .profileType01 p.text02 {
   margin: 0;
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
 }
 @media only screen and (max-width: 767px) {
   #mainContents .profileType01 {
@@ -2503,7 +2544,7 @@ display: none;
   padding: 6px 7px 8px;
   border: 1px solid #CECACA;
   border-radius: 6px;
-  font-size: 1.3rem;
+  font-size: var(--font-caption);
   color: #1a1a1a;
   transition: all 0.3s ease;
 }
@@ -2531,7 +2572,7 @@ display: none;
   }
   .worksTyp01 ul li a {
     padding: 5px 7px 6px;
-    font-size: 1.1rem;
+    font-size: 1.1rem; /* exception: Works一覧リンクSP最小 */
   }
 }
 
@@ -2573,13 +2614,13 @@ display: none;
 }
 .worksTyp02 .column p {
   padding: 15px 20px 0;
-  font-size: 1.4rem;
-  line-height: 1.4;
+  font-size: var(--font-body-small);
+  line-height: var(--lh-ui);
 }
 .worksTyp02 .column h3 {
   padding: 8px 20px 20px;
-  font-size: 1.6rem;
-  line-height: 1.6;
+  font-size: var(--font-heading-card);
+  line-height: var(--lh-body-tight);
 }
 @media only screen and (max-width: 1266px) {
   .worksTyp02 {
@@ -2703,13 +2744,14 @@ display: none;
   margin: 0 auto 120px;
 }
 .worksTyp04 .titleBox p {
-  font-size: 1.2rem;
-  line-height: 1.4;
+  font-size: var(--font-caption-small);
+
+  line-height: var(--lh-ui);
 }
 .worksTyp04 .titleBox h3 {
   padding: 5px 0 0;
-  font-size: 2.0rem;
-  line-height: 1.4;
+  font-size: var(--font-heading-card);
+  line-height: var(--lh-ui);
 }
 .worksTyp04 .entryBox {
   padding: 30px 0 0;
@@ -2734,7 +2776,7 @@ display: none;
   padding: 17px 0 0;
   box-sizing: border-box;
   background-color: #484848;
-  font-size: 1.6rem;
+  font-size: var(--font-ui);
   color: #FFF;
   text-align: center;
   transition: all 0.3s;
@@ -2761,10 +2803,10 @@ display: none;
     margin: 0 auto 60px;
   }
   .worksTyp04 .titleBox p {
-    font-size: 1.2rem;
+    font-size: var(--font-caption-small);
   }
   .worksTyp04 .titleBox h3 {
-    font-size: 1.6rem;
+    font-size: var(--font-heading-card);
   }
   .worksTyp04 .link01 {
     margin: 60px auto 0;
@@ -2794,7 +2836,7 @@ display: none;
   padding: 13px 0 0;
   box-sizing: border-box;
   background-color: #EFEFEF;
-  font-size: 1.3rem;
+  font-size: var(--font-caption);
 }
 .worksTyp05 ul li.active a,
 .worksTyp05 ul li a:hover {
@@ -2842,12 +2884,13 @@ display: none;
   width: 600px;
 }
 .worksTyp06 .column .column_R h3 {
-  font-size: 2.0rem;
-  line-height: 1.4;
+  font-size: 2.0rem; /* exception: 大型カード見出し（視認性優先） */
+
+  line-height: var(--lh-ui);
 }
 .worksTyp06 .column .column_R p {
   padding: 10px 0 0;
-  font-size: 1.6rem;
+  font-size: var(--font-body);
 }
 @media only screen and (max-width: 767px) {
   .worksTyp06 {
@@ -2868,10 +2911,10 @@ display: none;
     width: 100%;
   }
   .worksTyp06 .column .column_R h3 {
-    font-size: 1.8rem;
+    font-size: var(--font-body-large);
   }
   .worksTyp06 .column .column_R p {
-    font-size: 1.4rem;
+    font-size: var(--font-body-small);
   }
 }
 
@@ -2895,7 +2938,7 @@ nav#pagination ul li a {
   width: 40px;
   height: 40px;
   padding: 11px 0 0 0;
-  font-size: 1.6rem;
+  font-size: var(--font-ui);
   text-align: center;
   display: block;
   text-decoration: none;
@@ -2965,7 +3008,7 @@ nav#pagination .flLink a {
   display: block;
   padding: 0 30px;
   width: 180px;
-  font-size: 1.7rem;
+  font-size: var(--font-heading-section);
   text-align: center;
 }
 nav#pagination .flLink a:nth-child(1)::before {
@@ -2996,7 +3039,7 @@ nav#pagination .flLink a:hover {
     width: 30px;
     height: 30px;
     padding: 7px 0 0 0;
-    font-size: 1.4rem;
+    font-size: var(--font-body-small);
   }
 
   nav#pagination ul li.prev {
@@ -3013,7 +3056,7 @@ nav#pagination .flLink a:hover {
   }
   nav#pagination .flLink a {
     padding: 0 20px;
-    font-size: 1.4rem;
+    font-size: var(--font-body-small);
   }
 }
 
@@ -3027,20 +3070,20 @@ nav#pagination .flLink a:hover {
 }
 #mainContents .contactTyp01 h1 {
   padding: 0 0 50px;
-  font-size: 4.0rem;
+  font-size: 4.0rem; /* exception: ContactページH1固定 */
   font-weight: 700;
   text-align: center;
   color: #C7C7BB;
-  line-height: 1.4;
+  line-height: var(--lh-ui);
 }
 #mainContents .contactTyp01 h2 {
   padding: 40px 0 10px;
-  font-size: 1.6rem;
+  font-size: var(--font-heading-card);
   font-weight: 700;
 }
 #mainContents .contactTyp01 p {
-  font-size: 1.6rem;
-  line-height: 1.8;
+  font-size: var(--font-body);
+  line-height: var(--lh-body);
 }
 #mainContents .contactTyp01 .textBox {
   width: 100%;
@@ -3056,8 +3099,8 @@ nav#pagination .flLink a:hover {
   width: 47%
 }
 #mainContents .contactTyp01 .textBox .column p {
-  font-size: 1.4rem;
-  line-height: 1.8;
+  font-size: var(--font-body-small);
+  line-height: var(--lh-body);
 }
 #mainContents .contactTyp01 .link01 {
   width: 235px;
@@ -3072,7 +3115,7 @@ nav#pagination .flLink a:hover {
   box-sizing: border-box;
   background-color: #00ABD3;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-  font-size: 1.6rem;
+  font-size: var(--font-ui);
   color: #FFF;
   text-align: center;
   transition: all 0.3s;
@@ -3088,12 +3131,12 @@ nav#pagination .flLink a:hover {
     padding: 50px 0;
   }
   #mainContents .contactTyp01 h1 {
-    font-size: 3.6rem;
-    line-height: 1.6;
+    font-size: 3.6rem; /* exception: ContactページH1固定SP */
+    line-height: var(--lh-body-tight);
   }
   #mainContents .contactTyp01 p {
-    font-size: 1.4rem;
-    line-height: 1.8;
+    font-size: var(--font-body-small);
+    line-height: var(--lh-body);
   }
   #mainContents .contactTyp01 .textBox {
     margin: 20px 0 0;
@@ -3112,17 +3155,17 @@ nav#pagination .flLink a:hover {
 }
 #mainContents .contactTyp02 h2 {
   padding: 0 0 40px;
-  font-size: 2.6rem;
+  font-size: 2.6rem; /* exception: Contact h2固定 */
   font-weight: 700;
 }
 #mainContents .contactTyp02 h3 {
   padding: 0 0 5px;
-  font-size: 1.6rem;
+  font-size: var(--font-heading-card);
   font-weight: 700;
-  line-height: 1.4;
+  line-height: var(--lh-ui);
 }
 #mainContents .contactTyp02 p {
-  font-size: 1.6rem;
+  font-size: var(--font-body);
   font-weight: 300;
 }
 #mainContents .contactTyp02 p a {
@@ -3139,16 +3182,16 @@ nav#pagination .flLink a:hover {
 }
 #mainContents .contactTyp02 .checkBox02 {
   padding: 20px 0 30px 0;
-  font-size: 1.6rem;
+  font-size: var(--font-ui);
   font-weight: 500;
-  line-height: 1.4;
+  line-height: var(--lh-ui);
 }
 #mainContents .contactTyp02 .checkBox02 span {
   padding: 0 0 15px;
 }
 #mainContents .contactTyp02 .checkBox02 span.error {
   padding: 5px 0 0;
-  font-size: 1.6rem;
+  font-size: var(--font-ui);
   color: #B70000;
   display: block;
 }
@@ -3167,25 +3210,25 @@ nav#pagination .flLink a:hover {
   position: relative;
   width: 240px;
   padding: 0 0 20px;
-  font-size: 1.6rem;
+  font-size: var(--font-ui);
   font-weight: 700;
   text-align: left;
   vertical-align: middle;
-  line-height:  1.4;
+  line-height: var(--lh-ui);
 }
 #mainContents .contactTyp02 table th span {
   margin: 0 0 0 10px;
   padding: 2px 15px 3px;
   border-radius: 30px;
   background-color: #E17E5E;
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
   font-weight: 700;
   color: #FFF;
 }
 #mainContents .contactTyp02 table td {
   padding: 0 0 20px;
-  font-size: 1.5rem;
-  line-height: 1.4;
+  font-size: 1.5rem; /* exception: フォームtdベースサイズ */
+  line-height: var(--lh-ui);
   /* font-weight: 700; */
 }
 #mainContents .contactTyp02 table td span.mwform-checkbox-field label,
@@ -3205,7 +3248,7 @@ nav#pagination .flLink a:hover {
   background-color: #F3F4F5;
   box-sizing: border-box;
   border-radius: 3px;
-  font-size: 1.6rem;
+  font-size: var(--font-ui);
   font-weight: 400;
 }
 #mainContents .contactTyp02 table td input[type="text"]::placeholder,
@@ -3236,7 +3279,7 @@ nav#pagination .flLink a:hover {
   background-color: #F3F4F5;
   box-sizing: border-box;
   border-radius: 3px;
-  font-size: 1.8rem;
+  font-size: var(--font-body-large);
   font-weight: 700;
 }
 #mainContents .contactTyp02 table td select::placeholder {
@@ -3253,9 +3296,9 @@ nav#pagination .flLink a:hover {
   box-sizing: border-box;
   border-radius: 3px;
   resize: none;
-  font-size: 1.6rem;
+  font-size: var(--font-ui);
   font-weight: 400;
-  line-height: 1.6;
+  line-height: var(--lh-body-tight);
 }
 #mainContents .contactTyp02 table td textarea.typ02 {
   height: 100px;
@@ -3268,8 +3311,8 @@ nav#pagination .flLink a:hover {
   padding: 20px 0 30px 328px;
 }
 #mainContents .contactTyp02 .checkBox label {
-  font-size: 1.3rem;
-  line-height: 1.4;
+  font-size: var(--font-caption);
+  line-height: var(--lh-ui);
 }
 #mainContents .contactTyp02 .checkBox input[type="checkbox"] {
   margin: -2px 7px 0 0;
@@ -3285,7 +3328,7 @@ nav#pagination .flLink a:hover {
   height: 60px;
   background-color: #00B4D8;
   border: none;
-  font-size: 2.0rem;
+  font-size: 2.0rem; /* exception: お問い合わせ送信ボタン視認サイズ固定 */
   color: #FFF;
   cursor: pointer;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
@@ -3305,10 +3348,10 @@ nav#pagination .flLink a:hover {
   }
   #mainContents .contactTyp02 h2 {
     padding: 40px 0 20px;
-    font-size: 2.3rem;
+    font-size: 2.3rem; /* exception: Contact h2固定SP */
   }
   #mainContents .contactTyp02 p {
-    font-size: 1.4rem;
+    font-size: var(--font-body-small);
   }
   #mainContents .contactTyp02 .download_Select {
     margin: 30px 0 0;
@@ -3320,7 +3363,7 @@ nav#pagination .flLink a:hover {
   }
   #mainContents .contactTyp02 .checkBox02 span {
     padding: 0 0 10px;
-    font-size: 1.4rem;
+    font-size: var(--font-body-small);
   }
   #mainContents .contactTyp02 table th {
     display: block;
@@ -3349,7 +3392,7 @@ nav#pagination .flLink a:hover {
 }
 #mainContents .mw_wp_form .error {
   padding: 5px 0 0;
-  font-size: 1.6rem;
+  font-size: var(--font-ui);
   color: #B70000;
   display: block;
 }
@@ -3365,9 +3408,9 @@ nav#pagination .flLink a:hover {
 #mainContents .mw_wp_form_preview .contactTyp02 table tr th,
 #mainContents .mw_wp_form_preview .contactTyp02 table tr td {
   padding: 20px 0;
-  font-size: 1.8rem;
+  font-size: var(--font-body-large);
   vertical-align: middle;
-  line-height: 1.6;
+  line-height: var(--lh-body-tight);
 }
 #mainContents .mw_wp_form_preview .contactTyp02 table td .formBox::after {
   display: none;
@@ -3376,7 +3419,7 @@ nav#pagination .flLink a:hover {
   margin: 60px 0 0;
   padding: 20px 0;
   border-top: 1px solid #B4B4B4;
-  font-size: 1.6rem;
+  font-size: var(--font-heading-card);
   font-weight: 700;
 }
 @media only screen and (max-width: 767px) {
@@ -3395,22 +3438,22 @@ nav#pagination .flLink a:hover {
 }
 #mainContents .utilityLayout01 h2 {
   padding: 0 0 35px;
-  font-size: 2.0rem;
+  font-size: var(--font-heading-emphasis);
   font-weight: 700;
 }
 #mainContents .utilityLayout01 h3 {
   padding: 0 0 15px;
-  font-size: 2.0rem;
+  font-size: var(--font-heading-emphasis);
   font-weight: 700;
 }
 #mainContents .utilityLayout01 p {
   padding: 0 0 50px;
-  font-size: 1.8rem;
+  font-size: var(--font-body-large);
   font-weight: 400;
 }
 #mainContents .utilityLayout01 p.text_Right {
   padding: 0 0 70px;
-  font-size: 1.6rem;
+  font-size: var(--font-body);
   font-weight: 400;
   text-align: right;
 }
@@ -3419,7 +3462,7 @@ nav#pagination .flLink a:hover {
 }
 #mainContents .utilityLayout01 h4 {
   padding: 0 0 15px;
-  font-size: 2.0rem;
+  font-size: var(--font-heading-emphasis);
   font-weight: 700;
 }
 @media only screen and (max-width: 767px) {
@@ -3429,26 +3472,26 @@ nav#pagination .flLink a:hover {
   }
   #mainContents .utilityLayout01 h2 {
     padding: 0 0 30px;
-    font-size: 1.6rem;
+    font-size: var(--font-heading-card);
   }
   #mainContents .utilityLayout01 h3 {
     padding: 0 0 10px;
-    font-size: 1.6rem;
+    font-size: var(--font-heading-card);
   }
   #mainContents .utilityLayout01 p {
     padding: 0 0 40px;
-    font-size: 1.4rem;
+    font-size: var(--font-body-small);
   }
   #mainContents .utilityLayout01 p.text_Right {
     padding: 0 0 40px;
-    font-size: 1.3rem;
+    font-size: var(--font-caption);
   }
   #mainContents .utilityLayout01 .textBox {
     padding: 0 0 0 20px;
   }
   #mainContents .utilityLayout01 h4 {
     padding: 0 0 10px;
-    font-size: 1.6rem;
+    font-size: var(--font-heading-card);
   }
 }
 
@@ -3461,7 +3504,7 @@ nav#pagination .flLink a:hover {
   padding: 70px 0 70px;
 }
 #mainContents .downloadTyp01 h1 {
-  font-size: 2.0rem;
+  font-size: var(--font-heading-card);
   font-weight: 700;
   text-align: center;
   color: #C7C7BB;
@@ -3469,7 +3512,7 @@ nav#pagination .flLink a:hover {
 #mainContents .downloadTyp01 h2 {
   padding: 20px 0 0;
   font-family: 'Poppins', sans-serif;
-  font-size: 6.4rem;
+  font-size: 6.4rem; /* exception: DownloadページH1固定 */
   font-weight: 700;
   text-align: center;
   color: #C7C7BB;
@@ -3478,7 +3521,7 @@ nav#pagination .flLink a:hover {
   width: 640px;
   margin: 0 auto;
   padding: 40px 0 0;
-  font-size: 1.6rem;
+  font-size: var(--font-body);
   font-weight: 500;
 }
 #mainContents .downloadTyp01 .columnBox {
@@ -3499,16 +3542,17 @@ nav#pagination .flLink a:hover {
 }
 #mainContents .downloadTyp01 .columnBox .column h3 {
   padding: 15px 0 0;
-  font-size: 2.0rem;
+  font-size: 2.0rem; /* exception: Downloadカード見出し（本文より強調） */
+
   font-weight: 700;
-  line-height: 1.6;
+  line-height: var(--lh-body-tight);
 }
 #mainContents .downloadTyp01 .columnBox .column p {
   width: auto;
   padding: 15px 0 0;
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
   font-weight: 500;
-  line-height: 1.8;
+  line-height: var(--lh-body);
 }
 #mainContents .downloadTyp01 .pageDownLink {
   display: none;
@@ -3519,15 +3563,15 @@ nav#pagination .flLink a:hover {
     padding: 50px 0 0;
   }
   #mainContents .downloadTyp01 h1 {
-    font-size: 1.8rem;
+    font-size: var(--font-body-large);
   }
   #mainContents .downloadTyp01 h2 {
     padding: 20px 0 0;
-    font-size: 5.6rem;
+    font-size: 5.6rem; /* exception: Downloadページ大数字SP */
   }
   #mainContents .downloadTyp01 p {
     width: 100%;
-    font-size: 1.6rem;
+    font-size: var(--font-body);
   }
   #mainContents .downloadTyp01 .columnBox {
     width: 100%;
@@ -3542,11 +3586,11 @@ nav#pagination .flLink a:hover {
   }
   #mainContents .downloadTyp01 .columnBox .column h3 {
     padding: 15px 0 0;
-    font-size: 1.6rem;
+    font-size: var(--font-heading-card);
   }
   #mainContents .downloadTyp01 .columnBox .column p {
     padding: 10px 0 0;
-    font-size: 1.2rem;
+    font-size: var(--font-caption-small);
   }
   #mainContents .downloadTyp01 .pageDownLink {
     display: block;
@@ -3588,7 +3632,7 @@ nav#pagination .flLink a:hover {
   margin-bottom: 10px;
   padding: 11px 0 0 10px;
   text-align: left;
-  font-size: 1.6rem;
+  font-size: var(--font-ui);
   font-weight: 700;
   color: #000;
   box-sizing: border-box;
@@ -3598,6 +3642,6 @@ nav#pagination .flLink a:hover {
   .c-heading-bar {
     height: auto;
     padding: 10px;
-    font-size: 1.4rem;
+    font-size: var(--font-body-small);
   }
 }
