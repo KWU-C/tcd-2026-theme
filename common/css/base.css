@@ -73,9 +73,9 @@ html {
   --card-bg: #FFF;
 
   /* タイポグラフィ変数 */
-  --font-body: 1.6rem;
+  --font-body: 1.8rem;
   --font-body-small: 1.4rem;
-  --font-body-large: 1.8rem;
+  --font-body-large: 2.0rem;
 
   --font-ui: 1.6rem;
   --font-ui-small: 1.4rem;
@@ -1762,7 +1762,7 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
   position: relative;
   width: 1200px;
   margin: 40px auto 0;
-  padding: 0;
+  padding: 100px 0 100px;
   background-color: #FFF;
   border-radius: 8px;
   box-shadow: 3px 3px 6px 3px rgba(0,0,0,0.1);
