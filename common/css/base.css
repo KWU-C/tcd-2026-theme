@@ -3736,21 +3736,47 @@ nav#pagination .flLink a:hover {
   }
 }
 
-.AboutTyp03 .expList > div > ul {
+.AboutTyp03 .expList {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin: 10px 0 0;
-  padding: 0;
-  list-style: none;
+  gap: 32px 40px;
+  align-items: flex-start;
 }
 
-.AboutTyp03 .expList > div > ul > li {
+.AboutTyp03 .expList > div {
+  width: calc((100% - 80px) / 3);
+  min-width: 220px;
+}
+
+.AboutTyp03 .expList > div strong {
+  display: block;
+  margin: 0 0 10px;
+}
+
+.AboutTyp03 .expList > div ul {
   margin: 0;
-  padding: 6px 12px;
-  border: 1px solid #949495;
-  border-radius: 4px;
-  line-height: 1.4;
+  padding-left: 1.2em;
+}
+
+.AboutTyp03 .expList > div ul li {
+  display: list-item;
+  margin: 0 0 4px;
+}
+
+.AboutTyp03 .expList .btmTxt {
+  width: 100%;
+  margin: 20px 0 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .AboutTyp03 .expList {
+    display: block;
+  }
+
+  .AboutTyp03 .expList > div {
+    width: 100%;
+    margin: 0 0 24px;
+  }
 }
 
 /* ============================================================
