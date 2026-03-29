@@ -3661,3 +3661,82 @@ nav#pagination .flLink a:hover {
     font-size: var(--font-body);
   }
 }
+
+/* ============================================================
+   会社情報・採用概要：dl/dt/dd 2カラムリスト
+   ============================================================ */
+.c-info-list {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  border-top: 1px solid #ddd;
+}
+
+.c-info-list dt,
+.c-info-list dd {
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.c-info-list dt {
+  font-weight: 700;
+}
+
+.c-info-list dd {
+  margin: 0;
+}
+
+/* 所在地ネストdl（about/index 用） */
+.c-info-list dd dl {
+  margin-bottom: 1em;
+}
+
+.c-info-list dd dl:last-child {
+  margin-bottom: 0;
+}
+
+.c-info-list dd dl dt {
+  font-weight: normal;
+  width: 325px;
+  float: left;
+  margin: 0;
+  padding: 0;
+  border: none;
+  line-height: 1.65em;
+}
+
+.c-info-list dd dl dd {
+  width: 180px;
+  float: right;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.c-info-list dd dl dd img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+  .c-info-list {
+    grid-template-columns: 1fr;
+  }
+
+  .c-info-list dt {
+    padding: 16px 0 6px;
+    border-bottom: none;
+  }
+
+  .c-info-list dd {
+    padding: 0 0 16px;
+  }
+
+  .c-info-list dd dl dt,
+  .c-info-list dd dl dd {
+    float: none;
+    width: 100%;
+  }
+
+  .c-info-list dd dl dd {
+    margin-top: 8px;
+  }
+}
