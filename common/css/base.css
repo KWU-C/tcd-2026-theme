@@ -2318,6 +2318,57 @@ display: none;
 /*==========================================
  プロフィール
 ===========================================*/
+/* profile: dt/dd 2column */
+#tcd .profile dl dt,
+#tcd dl.profile dt {
+  width: 160px;
+  float: left;
+  clear: both;
+  font-weight: 700;
+  padding: 16px 0 0;
+  margin: 0 0 16px;
+  border-top: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+#tcd .profile dl dd,
+#tcd dl.profile dd {
+  width: calc(100% - 160px);
+  float: left;
+  padding: 16px 0 0;
+  margin: 0 0 16px;
+  border-top: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+#tcd .profile dl::after,
+#tcd dl.profile::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+@media only screen and (max-width: 767px) {
+  #tcd .profile dl dt,
+  #tcd dl.profile dt,
+  #tcd .profile dl dd,
+  #tcd dl.profile dd {
+    width: 100%;
+    float: none;
+    margin: 0;
+  }
+
+  #tcd .profile dl dt,
+  #tcd dl.profile dt {
+    padding: 12px 0 6px;
+  }
+
+  #tcd .profile dl dd,
+  #tcd dl.profile dd {
+    padding: 0 0 12px;
+  }
+}
+
 #mainContents .profileType01 {
   width: 100%;
   margin: 30px 0 30px;
