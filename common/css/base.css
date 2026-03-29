@@ -3713,6 +3713,29 @@ nav#pagination .flLink a:hover {
   }
 }
 
+/* capability: horizontal list */
+.capability ul,
+.capability-list ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.capability ul li,
+.capability-list ul li {
+  display: inline-block;
+}
+
+@media only screen and (max-width: 767px) {
+  .capability ul,
+  .capability-list ul {
+    gap: 6px;
+  }
+}
+
 /* ============================================================
    会社情報・採用概要：外側dl/dt/dd 2カラム
    ============================================================ */
