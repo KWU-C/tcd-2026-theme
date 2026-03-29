@@ -3713,12 +3713,28 @@ nav#pagination .flLink a:hover {
   }
 }
 
+#AboutArea02 .AboutTyp02,
+#AboutArea02 .AboutMv01 {
+  width: 1200px;
+  max-width: none;
+}
+
+#AboutArea02 .AboutTyp02 {
+  margin-left: -200px;
+}
+
+#AboutArea02 .AboutMv01 img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .AboutTyp03 .expList {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   column-gap: 40px;
-  row-gap: 32px;
-  margin: 0 0 40px;
+  row-gap: 0;
+  margin: 0;
   align-items: start;
 }
 
@@ -3732,12 +3748,14 @@ nav#pagination .flLink a:hover {
 }
 
 .AboutTyp03 .expList > div ul {
-  margin: 0 0 20px;
-  padding-left: 1.2em;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
 }
 
 .AboutTyp03 .expList > div ul li {
   margin: 0 0 6px;
+  list-style: none;
 }
 
 .AboutTyp03 .btmTxt {
