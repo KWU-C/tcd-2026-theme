@@ -3741,31 +3741,31 @@ nav#pagination .flLink a:hover {
   flex-wrap: wrap;
   gap: 32px 40px;
   align-items: flex-start;
+  margin: 0 0 40px;
 }
 
 .AboutTyp03 .expList > div {
-  width: calc((100% - 80px) / 3);
-  min-width: 220px;
+  flex: 1 1 30%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .AboutTyp03 .expList > div strong {
   display: block;
-  margin: 0 0 10px;
+  margin: 0 0 12px;
 }
 
 .AboutTyp03 .expList > div ul {
-  margin: 0;
+  margin: 0 0 20px;
   padding-left: 1.2em;
 }
 
 .AboutTyp03 .expList > div ul li {
-  display: list-item;
-  margin: 0 0 4px;
+  margin: 0 0 6px;
 }
 
-.AboutTyp03 .expList .btmTxt {
-  width: 100%;
-  margin: 20px 0 0;
+.AboutTyp03 .btmTxt {
+  margin: 10px 0 0;
 }
 
 @media only screen and (max-width: 767px) {
