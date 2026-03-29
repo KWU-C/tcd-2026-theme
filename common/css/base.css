@@ -3713,41 +3713,17 @@ nav#pagination .flLink a:hover {
   }
 }
 
-/* capability: horizontal list */
-.capability ul,
-.capability-list ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.capability ul li,
-.capability-list ul li {
-  display: inline-block;
-}
-
-@media only screen and (max-width: 767px) {
-  .capability ul,
-  .capability-list ul {
-    gap: 6px;
-  }
-}
-
 .AboutTyp03 .expList {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 32px 40px;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 40px;
+  row-gap: 32px;
   margin: 0 0 40px;
+  align-items: start;
 }
 
 .AboutTyp03 .expList > div {
-  flex: 1 1 30%;
   min-width: 0;
-  box-sizing: border-box;
 }
 
 .AboutTyp03 .expList > div strong {
@@ -3770,12 +3746,8 @@ nav#pagination .flLink a:hover {
 
 @media only screen and (max-width: 767px) {
   .AboutTyp03 .expList {
-    display: block;
-  }
-
-  .AboutTyp03 .expList > div {
-    width: 100%;
-    margin: 0 0 24px;
+    grid-template-columns: 1fr;
+    row-gap: 24px;
   }
 }
 
