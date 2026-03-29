@@ -3736,7 +3736,7 @@ nav#pagination .flLink a:hover {
   }
 }
 
-.AboutTyp03 .expList ul {
+.AboutTyp03 .expList > div > ul {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -3745,7 +3745,7 @@ nav#pagination .flLink a:hover {
   list-style: none;
 }
 
-.AboutTyp03 .expList ul li {
+.AboutTyp03 .expList > div > ul > li {
   margin: 0;
   padding: 6px 12px;
   border: 1px solid #949495;
