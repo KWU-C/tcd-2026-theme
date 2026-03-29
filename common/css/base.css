@@ -3663,16 +3663,17 @@ nav#pagination .flLink a:hover {
 }
 
 /* ============================================================
-   会社情報・採用概要：dl/dt/dd 2カラムリスト
+   会社情報・採用概要：外側dl/dt/dd 2カラム
    ============================================================ */
 .c-info-list {
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 220px 1fr;
   border-top: 1px solid #ddd;
 }
 
 .c-info-list dt,
 .c-info-list dd {
+  margin: 0;
   padding: 20px 0;
   border-bottom: 1px solid #ddd;
 }
@@ -3682,38 +3683,46 @@ nav#pagination .flLink a:hover {
 }
 
 .c-info-list dd {
+  min-width: 0;
+}
+
+/* ============================================================
+   about/index 活動拠点：入れ子dl専用
+   ============================================================ */
+.c-info-sublist {
   margin: 0;
+  padding: 0;
 }
 
-/* 所在地ネストdl（about/index 用） */
-.c-info-list dd dl {
-  margin-bottom: 1em;
+.c-info-sublist::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
-.c-info-list dd dl:last-child {
-  margin-bottom: 0;
+.c-info-sublist dt,
+.c-info-sublist dd {
+  margin: 0;
+  padding: 0 0 20px;
+  border: none;
 }
 
-.c-info-list dd dl dt {
-  font-weight: normal;
-  width: 325px;
+.c-info-sublist dt {
   float: left;
-  margin: 0;
-  padding: 0;
-  border: none;
-  line-height: 1.65em;
+  width: calc(100% - 220px);
+  font-weight: 400;
+  line-height: 1.65;
 }
 
-.c-info-list dd dl dd {
-  width: 180px;
+.c-info-sublist dd {
   float: right;
-  margin: 0;
-  padding: 0;
-  border: none;
+  width: 180px;
 }
 
-.c-info-list dd dl dd img {
+.c-info-sublist dd img {
+  display: block;
   width: 100%;
+  height: auto;
 }
 
 @media only screen and (max-width: 767px) {
@@ -3730,13 +3739,13 @@ nav#pagination .flLink a:hover {
     padding: 0 0 16px;
   }
 
-  .c-info-list dd dl dt,
-  .c-info-list dd dl dd {
+  .c-info-sublist dt,
+  .c-info-sublist dd {
     float: none;
     width: 100%;
   }
 
-  .c-info-list dd dl dd {
+  .c-info-sublist dd {
     margin-top: 8px;
   }
 }
