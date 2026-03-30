@@ -125,6 +125,7 @@
           <div class="column c-card-tile">
             <a href="<?php the_permalink(); ?>">
               <?php the_post_thumbnail(); ?>
+              <h4 class="h-label"><?php the_field('works_text01'); ?></h4>
               <p><?php the_title(); ?></p>
             </a>
           </div>
