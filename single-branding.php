@@ -39,7 +39,7 @@
           }
           ?>
 
-          <div class="layoutTyp08_Title">
+          <div class="layoutTyp08_Title pt_100">
             <p><?php the_time('Y.m.d'); ?></p>
             <h1 class="h-page"><?php echo $page_title; ?></h1>
           </div>

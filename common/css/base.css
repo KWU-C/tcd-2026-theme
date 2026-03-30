@@ -58,15 +58,15 @@ html {
 :root {
   --card-padding-x: 25px;
   --card-padding-bottom: 25px;
-  --card-title-padding-top: 25px;
+  --card-title-padding-top: 10px;
   --card-title-padding-bottom: 0px;
-  --card-text-padding-top: 10px;
+  --card-text-padding-top: 0px;
 
   --card-padding-x-sp: 20px;
-  --card-padding-bottom-sp: 20px;
-  --card-title-padding-top-sp: 20px;
+  --card-padding-bottom-sp: 5px;
+  --card-title-padding-top-sp: 10px;
   --card-title-padding-bottom-sp: 5px;
-  --card-text-padding-top-sp: 5px;
+  --card-text-padding-top-sp: 0px;
 
   --card-radius: 8px;
   --card-shadow: 3px 3px 6px 3px rgba(0, 0, 0, 0.1);
@@ -82,7 +82,7 @@ html {
   --font-ui-large: 1.8rem; /* 主要導線・グローバルナビ・大UI要素 */
   --font-caption-small: 1.2rem; /* SP注釈・補助ラベル */
   --font-caption: 1.3rem;
-  --font-heading-emphasis: 2.0rem;
+  --font-heading-emphasis: 3.0rem;
 
   --font-heading-page: 3.0rem;
   --font-heading-section: 1.7rem;
@@ -96,6 +96,18 @@ html {
   --lh-body-loose: 1.7; /* SPカード本文 */
 
   --lh-note: 2.0; /* works補足テキスト（情報リスト） */
+}
+
+ul, li {
+  list-style: none;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+  margin: 0;
+  padding: 0;
+  background: transparent;
 }
 
 body {
@@ -883,7 +895,7 @@ footer #footerBody small {
   }
 
   footer #footerBody #footerUtility {
-    width: 260px;
+    width: 300px;
     padding: 50px 0 0;
   }
   footer #footerBody #footerUtility ul li a {
@@ -1736,8 +1748,6 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
 .service-title {
   font-size: var(--font-heading-emphasis);
   font-weight: 700;
-  text-align: center;
-  color: #C7C7BB;
 }
 #mainContents .layoutTyp08 .layoutTyp08_Inner {
   width: 800px;
@@ -1817,7 +1827,7 @@ display: none;
     width: 90%;
   }
   #mainContents .layoutTyp08_Title p {
-    top: -25px;
+    top: 40px;
     font-size: var(--font-caption);
   }
   #mainContents .layoutTyp08 .layoutTyp08_Inner {
@@ -2630,7 +2640,7 @@ display: none;
   line-height: var(--lh-ui);
 }
 .worksTyp02 .column h3 {
-  padding: 8px 30px 20px;
+  padding: 0 30px 20px;
   font-size: var(--font-heading-card);
   line-height: var(--lh-body-tight);
 }
@@ -2668,9 +2678,10 @@ display: none;
   height: 720px;
   margin: 0 0 120px;
   background-color: #EFEFEF;
+  top: -100px;
 }
 .worksTyp03 .column .column_MV {
-  margin-left: calc((100vw - 960px) / 2);
+  margin-left: 120px; /* (1200px container - 960px image) / 2 */
   overflow: visible !important;
   opacity: 0;
 }
@@ -2746,7 +2757,7 @@ display: none;
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(0, 0, 0, 0.03);
   pointer-events: none;
   z-index: 2;
 }
@@ -3653,7 +3664,7 @@ nav#pagination .flLink a:hover {
   height: 40px;
   background-color: #F0F0F0;
   margin-bottom: 20px;
-  padding: 3px 0 0 15px;
+  padding: 7px 0 0 15px;
   text-align: left;
   font-size: var(--font-ui-large);
   font-weight: 700;
@@ -3731,7 +3742,7 @@ nav#pagination .flLink a:hover {
 .c-info-list {
   display: grid;
   grid-template-columns: 220px 1fr;
-  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
 
 .c-info-list dt,
@@ -3831,8 +3842,26 @@ nav#pagination .flLink a:hover {
   opacity: 0.8;
 }
 
-#tcd article.post {
+#tcd article {
+  padding-top: 160px;
+}
+#tcd article.post,
+#tcd article.pt_0 {
   padding-top: 0;
+}
+#tcd article.pt_40 {
+  padding-top: 40px;
+}
+@media only screen and (max-width: 767px) {
+  #tcd article {
+    padding-top: 90px;
+  }
+  #tcd article.pt_0 {
+    padding-top: 0;
+  }
+  #tcd article.pt_40 {
+    padding-top: 54px;
+  }
 }
 
 #tcd img.img_center {
@@ -5681,7 +5710,7 @@ dl.task dd {
    対象: .layoutTyp08_Inner .detail__main_cont
 =========================================== */
 .detail__main_cont {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   line-height: 1.85;
   color: #333;
 }
@@ -5696,7 +5725,7 @@ dl.task dd {
   border-bottom: 2px solid #222;
 }
 .detail__main_cont h3 {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: bold;
   margin: 1.8em 0 0.6em;
   line-height: 1.5;

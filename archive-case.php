@@ -2,9 +2,9 @@
 
 <div class="wrapper">
 
-    <article id="cate">
+    <article class="works-cate">
 
-      <div id="nav3rd">
+      <div class="sub-nav">
         <ul class="menu5 clearfix">
           <li><a href="/case/branding/">企業ブランディング</a></li>
           <li><a href="/case/package/">商品ブランデング</a></li>

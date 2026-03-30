@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div id="topMv">
+<div class="top-mv">
   <div class="videoArea">
     <video muted loop autoplay playsinline>
     <source src='<?php echo do_shortcode('[themePass]'); ?>/common/movie/tcd_pc.mp4' type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
@@ -143,7 +143,7 @@
 
         </div>
 
-        <div class="linkTyp01">
+        <div class="linkTyp01 pt_100">
           <a href="/branding">一覧を見る</a>
         </div>
       </div>

@@ -31,10 +31,10 @@
         </ul>
       </div>
 
-      <div class="layoutTyp08">
-
       <?php if (have_posts()) : ?>
       <?php while (have_posts()) : the_post(); $current_post_id = get_the_ID(); ?>
+
+      <div class="layoutTyp08">
 
         <div class="worksTyp03">
           <div class="column c-card-tile">
@@ -98,7 +98,7 @@
 
     </section>
 
-    <section class="w_full bc_G02 pb_100">
+    <section class="w_full bc_G02 pt_50 pb_100">
       <div class="layoutTyp06">
 
         <h2 class="h-sub">Recent Works</h2>

@@ -28,12 +28,12 @@
         <?php if (have_posts()) : ?>
           <?php while (have_posts()) : the_post(); ?>
 
-          <div class="layoutTyp08_Title">
+          <div class="layoutTyp08_Title pt_100">
             <h1 class="h-page"><?php the_title(); ?></h1>
           </div>
 
           <div class="layoutTyp08_Inner">
-            <div class="detail__main_cont">
+            <div class="detail__main_cont" style="font-size: var(--font-body); line-height: var(--lh-body); color: #333;">
               <?php
               remove_filter('the_content', 'wpautop');
               the_content();
