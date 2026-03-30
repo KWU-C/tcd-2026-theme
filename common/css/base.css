@@ -1583,6 +1583,7 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
   flex-wrap: wrap;
   justify-content: flex-start;
   padding: 30px 0 0;
+  row-gap: 50px;
 }
 @media only screen and (max-width: 1266px) {
   #mainContents .layoutTyp06 {
@@ -1601,6 +1602,7 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
   }
   #mainContents .layoutTyp06 .layoutTyp06_Inner {
     padding: 30px 0 30px;
+    row-gap: 20px;
   }
 }
 
