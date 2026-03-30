@@ -1518,12 +1518,10 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
   font-size: var(--font-body-small);
   line-height: var(--lh-body);
 }
-/* layoutTyp04 固有マージン */
-#mainContents .layoutTyp04 .layoutTyp04_Inner .column { margin: 0 54px 0 0; }
-#mainContents .layoutTyp04 .layoutTyp04_Inner .column:nth-child(3n) { margin: 0; }
-/* layoutTyp06 固有マージン */
-#mainContents .layoutTyp06 .layoutTyp06_Inner .column { margin: 0 54px 65px 0; }
-#mainContents .layoutTyp06 .layoutTyp06_Inner .column:nth-child(3n) { margin: 0 0 80px 0; }
+#mainContents .layoutTyp04 .layoutTyp04_Inner .column,
+#mainContents .layoutTyp06 .layoutTyp06_Inner .column { margin: 0 54px 0 0; }
+#mainContents .layoutTyp04 .layoutTyp04_Inner .column:nth-child(3n),
+#mainContents .layoutTyp06 .layoutTyp06_Inner .column:nth-child(3n) { margin: 0; }
 @media only screen and (max-width: 1266px) {
   #mainContents .layoutTyp04 {
     width: 100%;
@@ -1534,11 +1532,8 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
   #mainContents .layoutTyp06 .layoutTyp06_Inner .column {
     width: 30%;
   }
-  /* layoutTyp04 固有マージン */
-  #mainContents .layoutTyp04 .layoutTyp04_Inner .column { margin: 0 5% 0 0; }
-  /* layoutTyp06 固有マージン */
-  #mainContents .layoutTyp06 .layoutTyp06_Inner .column { margin: 0 5% 80px 0; }
-  #mainContents .layoutTyp06 .layoutTyp06_Inner .column:nth-child(3n) { margin: 0 0 80px 0; }
+  #mainContents .layoutTyp04 .layoutTyp04_Inner .column,
+  #mainContents .layoutTyp06 .layoutTyp06_Inner .column { margin: 0 5% 0 0; }
 }
 @media only screen and (max-width: 767px) {
   #mainContents .layoutTyp04 .layoutTyp04_Inner {
@@ -1551,10 +1546,8 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
     height: auto;
     margin: 0 0 20px;
   }
-  /* layoutTyp04 固有マージン */
-  #mainContents .layoutTyp04 .layoutTyp04_Inner .column:nth-child(3n) { margin: 0; }
-  /* layoutTyp06 固有マージン */
-  #mainContents .layoutTyp06 .layoutTyp06_Inner .column:nth-child(3n) { margin: 0 0 20px; }
+  #mainContents .layoutTyp04 .layoutTyp04_Inner .column:nth-child(3n),
+  #mainContents .layoutTyp06 .layoutTyp06_Inner .column:nth-child(3n) { margin: 0; }
   #mainContents .layoutTyp04 .layoutTyp04_Inner .column h4,
   #mainContents .layoutTyp04 .layoutTyp04_Inner .column p.h-label,
   #mainContents .layoutTyp06 .layoutTyp06_Inner .column h4,
