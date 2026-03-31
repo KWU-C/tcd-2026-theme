@@ -1232,55 +1232,13 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
 /*==========================================
  共通レイアウト
 ===========================================*/
-#mainContents .layoutTyp01 {
-  position: relative;
-  width: 600px;
-  margin: 0 auto;
-  padding: 200px 0 0;
-}
-#mainContents .layoutTyp01::before {
-  position: absolute;
-  left: -275px;
-  top: -11px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  font-size: 10.0rem; /* exception: 装飾背景テキスト（視覚効果） */
-  color: #F4F4F0;
-  content: "Who we are";
-}
-#mainContents .layoutTyp01 h1 {
-  padding: 0 0 20px;
-}
-#mainContents .layoutTyp01 p {
-  padding: 0 0 30px;
-  font-weight: 700;
-  font-size: var(--font-heading-emphasis); /* exception: layoutTyp01セクション大見出し */
-}
-@media only screen and (max-width: 767px) {
-  #mainContents .layoutTyp01 {
-    width: calc(100% - 40px);
-    margin: 0 auto;
-    padding: 100px 0 0;
-  }
-  #mainContents .layoutTyp01::before {
-    left: -20px;
-    top: -5px;
-    font-size: 5.8rem; /* exception: 装飾背景テキストSP */
-  }
-  #mainContents .layoutTyp01 h1 {
-    padding: 0 0 50px;
-		}
-  #mainContents .layoutTyp01 h2 {
-    padding: 0 0 30px;
-  }
-}
-#mainContents .layoutTyp02 {
+#mainContents .section-top-concept {
   position: relative;
   width: 700px;
   margin: 0 auto;
   padding: 200px 0 0;
 }
-#mainContents .layoutTyp02::before {
+#mainContents .section-top-concept::before {
   position: absolute;
   left: -275px;
   top: -11px;
@@ -1290,54 +1248,54 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
   color: #FFF;
   content: "What we do";
 }
-#mainContents .layoutTyp02 h2 {
+#mainContents .section-top-concept h2 {
   padding: 0 0 70px;
 }
-#mainContents .layoutTyp02 p {
+#mainContents .section-top-concept p {
   padding: 0 0 30px;
   font-weight: 700;
   font-size: var(--font-body);
 }
 @media only screen and (max-width: 767px) {
-  #mainContents .layoutTyp02 {
+  #mainContents .section-top-concept {
     width: calc(100% - 40px);
     margin: 0 auto;
     padding: 130px 0 0;
   }
-  #mainContents .layoutTyp02::before {
+  #mainContents .section-top-concept::before {
     left: -20px;
     top: -5px;
     font-size: 5.8rem; /* exception: 装飾背景テキストSP */
   }
-  #mainContents .layoutTyp02 h2 {
+  #mainContents .section-top-concept h2 {
     padding: 0 0 30px;
   }
-  #mainContents .layoutTyp02 p {
+  #mainContents .section-top-concept p {
     padding: 0 0 30px;
     font-size: var(--font-body);
   }
 }
 
-#mainContents .layoutTyp03 {
+#mainContents .service-card-grid {
   position: relative;
   width: 1146px;
   margin: 0 auto;
 }
-#mainContents .layoutTyp03 .h-display {
+#mainContents .service-card-grid .h-display {
   padding-top: 10px;
 }
-#mainContents .layoutTyp03 .columnBox .column .h-section {
+#mainContents .service-card-grid .columnBox .column .h-section {
   padding-top: var(--card-title-padding-top);
 }
 @media only screen and (max-width: 767px) {
-  #mainContents .layoutTyp03 .h-display {
+  #mainContents .service-card-grid .h-display {
     padding-top: 15px;
   }
-  #mainContents .layoutTyp03 .columnBox .column .h-section {
+  #mainContents .service-card-grid .columnBox .column .h-section {
     padding-top: var(--card-title-padding-top-sp);
   }
 }
-#mainContents .layoutTyp03 .columnBox {
+#mainContents .service-card-grid .columnBox {
   width: 100%;
   margin: 0 auto;
   padding: 50px 0 0;
@@ -1345,17 +1303,17 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
 }
-#mainContents .layoutTyp03 .columnBox .column {
+#mainContents .service-card-grid .columnBox .column {
   width: 100%;
   height: auto;
   min-height: 120px;
   margin: 0;
   text-align: center;
 }
-#mainContents .layoutTyp03 .columnBox .column:hover {
+#mainContents .service-card-grid .columnBox .column:hover {
   opacity: 0.8;
 }
-#mainContents .layoutTyp03 .columnBox .column a {
+#mainContents .service-card-grid .columnBox .column a {
   display: block;
   width: 100%;
   padding-bottom: var(--card-padding-bottom);
@@ -1366,20 +1324,20 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
   box-shadow: var(--card-shadow);
   transition: all 0.3s ease;
 }
-#mainContents .layoutTyp03 .columnBox .column a:hover {
+#mainContents .service-card-grid .columnBox .column a:hover {
   text-decoration: none;
   border: 1px solid #00ABD3;
 }
-#mainContents .layoutTyp03 .columnBox .column .h-section {
+#mainContents .service-card-grid .columnBox .column .h-section {
   padding-top: var(--card-title-padding-top);
   padding-right: var(--card-padding-x);
   padding-left: var(--card-padding-x);
   transition: all 0.3s ease;
 }
-#mainContents .layoutTyp03 .columnBox .column a:hover .h-section {
+#mainContents .service-card-grid .columnBox .column a:hover .h-section {
   color: #00ABD3;
 }
-#mainContents .layoutTyp03 .columnBox .column p {
+#mainContents .service-card-grid .columnBox .column p {
   padding-top: var(--card-text-padding-top);
   padding-right: var(--card-padding-x);
   padding-left: var(--card-padding-x);
@@ -1388,56 +1346,56 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
   line-height: var(--lh-body-tight);
 }
 /* Service archive: 高さ可変タイル */
-#mainContents .layoutTyp03 .service-tiles .column {
+#mainContents .service-card-grid .service-tiles .column {
   height: auto;
   min-height: 135px;
   padding-bottom: 28px;
 }
 @media only screen and (max-width: 767px) {
-  #mainContents .layoutTyp03 .service-tiles .column {
+  #mainContents .service-card-grid .service-tiles .column {
     height: auto;
     min-height: 100px;
   }
 }
 @media only screen and (max-width: 1266px) {
-#mainContents .layoutTyp03 {
+#mainContents .service-card-grid {
     width: calc(100% - 40px);
     margin: 0 auto;
   }
-  #mainContents .layoutTyp03 .columnBox {
+  #mainContents .service-card-grid .columnBox {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media only screen and (max-width: 767px) {
-#mainContents .layoutTyp03 {
+#mainContents .service-card-grid {
     width: calc(100% - 40px);
     margin: 0 auto;
   }
-  #mainContents .layoutTyp03 .h-display {
+  #mainContents .service-card-grid .h-display {
     padding-top: 10px;
   }
-  #mainContents .layoutTyp03 .columnBox {
+  #mainContents .service-card-grid .columnBox {
     width: 100%;
     padding: 30px 0 20px;
     grid-template-columns: 1fr;
     gap: 15px;
   }
-  #mainContents .layoutTyp03 .columnBox .column {
+  #mainContents .service-card-grid .columnBox .column {
     width: 100%;
     height: auto;
     min-height: 80px;
     margin: 0;
   }
-  #mainContents .layoutTyp03 .columnBox .column a {
+  #mainContents .service-card-grid .columnBox .column a {
     padding-bottom: var(--card-padding-bottom-sp);
   }
-  #mainContents .layoutTyp03 .columnBox .column .h-section {
+  #mainContents .service-card-grid .columnBox .column .h-section {
     padding-top: var(--card-title-padding-top-sp);
     padding-right: var(--card-padding-x-sp);
     padding-left: var(--card-padding-x-sp);
     font-size: var(--font-body);
   }
-  #mainContents .layoutTyp03 .columnBox .column p {
+  #mainContents .service-card-grid .columnBox .column p {
     padding-top: var(--card-text-padding-top-sp);
     padding-right: var(--card-padding-x-sp);
     padding-left: var(--card-padding-x-sp);
@@ -1876,19 +1834,19 @@ display: none;
   }
 }
 
-#mainContents .layoutTyp09 {
+#mainContents .filter-nav {
   width: 1200px;
   margin: 0 auto;
 }
-#mainContents .layoutTyp09 ul {
+#mainContents .filter-nav ul {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
 }
-#mainContents .layoutTyp09 ul li {
+#mainContents .filter-nav ul li {
   margin: 0 10px 10px 0;
 }
-#mainContents .layoutTyp09 ul li a {
+#mainContents .filter-nav ul li a {
   display: block;
   padding: 7px 14px 9px;
   border: 1px solid #949495;
@@ -1897,28 +1855,28 @@ display: none;
   font-size: 1.45rem; /* exception: タグ絞り込みUI視認サイズ固定 */
   text-align: center;
 }
-#mainContents .layoutTyp09 ul li a:hover {
+#mainContents .filter-nav ul li a:hover {
   text-decoration: none;
   opacity: 0.7;
 }
-#mainContents .layoutTyp09 ul li.active a {
+#mainContents .filter-nav ul li.active a {
   background-color: #949495;
   color: #FFF;
 }
 @media only screen and (max-width: 767px) {
-  #mainContents .layoutTyp09 {
+  #mainContents .filter-nav {
     width: calc(100% - 20px);
     margin: 0 0 0 20px;
     overflow: scroll;
   }
-  #mainContents .layoutTyp09 ul {
+  #mainContents .filter-nav ul {
     width: 3500px;
     flex-wrap: nowrap;
   }
-  #mainContents .layoutTyp09 ul li {
+  #mainContents .filter-nav ul li {
     margin: 0 10px 10px 0;
   }
-  #mainContents .layoutTyp09 ul li a {
+  #mainContents .filter-nav ul li a {
     display: block;
     padding: 3px 10px 3px;
     border: 1px solid #949495;
@@ -1926,94 +1884,94 @@ display: none;
     font-size: var(--font-caption);
     text-align: center;
   }
-  #mainContents .layoutTyp09 ul li a:hover {
+  #mainContents .filter-nav ul li a:hover {
     text-decoration: none;
     opacity: 0.7;
   }
-  #mainContents .layoutTyp09 ul li.active a {
+  #mainContents .filter-nav ul li.active a {
     background-color: #949495;
     color: #FFF;
   }
 }
 
-#mainContents .layoutTyp10 {
+#mainContents .access-two-col {
   width: 1100px;
   margin: 0 auto;
   padding: 100px 0 0;
 }
-#mainContents .layoutTyp10 h3 {
+#mainContents .access-two-col h3 {
   padding-top: 15px;
 }
 @media only screen and (max-width: 767px) {
-#mainContents .layoutTyp10 h3 {
+#mainContents .access-two-col h3 {
   padding-top: 10px;
 }}
-#mainContents .layoutTyp10 .layoutTyp10_Inner {
+#mainContents .access-two-col .access-two-col_Inner {
   display: flex;
   justify-content: space-between;
   padding: 60px 0 0;
 }
-#mainContents .layoutTyp10 .layoutTyp10_Inner .column {
+#mainContents .access-two-col .access-two-col_Inner .column {
   width: 520px;
 }
-#mainContents .layoutTyp10 .layoutTyp10_Inner h4 {
+#mainContents .access-two-col .access-two-col_Inner h4 {
   padding-top: 10px;
   padding-bottom: 20px;
 }
-#mainContents .layoutTyp10 .layoutTyp10_Inner iframe {
+#mainContents .access-two-col .access-two-col_Inner iframe {
   width: 520px;
   height: 520px;
   filter: grayscale(1);
 }
-#mainContents .layoutTyp10 .layoutTyp10_Inner h2 {
+#mainContents .access-two-col .access-two-col_Inner h2 {
   padding: 20px 0 0;
   font-size: var(--font-heading-card);
   font-weight: 700;
 }
-#mainContents .layoutTyp10 .layoutTyp10_Inner p {
+#mainContents .access-two-col .access-two-col_Inner p {
   padding-top: 15px;
   font-size: var(--font-body);
   line-height: var(--lh-body);
 }
 @media only screen and (max-width: 1266px) {
-  #mainContents .layoutTyp10 {
+  #mainContents .access-two-col {
     width: 100%;
     padding: 0 25px;
     box-sizing: border-box;
   }
-  #mainContents .layoutTyp10 .layoutTyp10_Inner .column {
+  #mainContents .access-two-col .access-two-col_Inner .column {
     width: 44%;
   }
-  #mainContents .layoutTyp10 .layoutTyp10_Inner iframe {
+  #mainContents .access-two-col .access-two-col_Inner iframe {
     width: 100%;
     height: 520px;
   }
 }
 @media only screen and (max-width: 767px) {
-  #mainContents .layoutTyp10 {
+  #mainContents .access-two-col {
     width: 90%;
     padding: 50px 0 0;
   }
-  #mainContents .layoutTyp10 .layoutTyp10_Inner {
+  #mainContents .access-two-col .access-two-col_Inner {
     flex-wrap: wrap;
     padding: 20px 0 0;
   }
-  #mainContents .layoutTyp10 .layoutTyp10_Inner .column {
+  #mainContents .access-two-col .access-two-col_Inner .column {
     width: 100%;
     padding: 0 0 60px;
   }
-  #mainContents .layoutTyp10 .layoutTyp10_Inner .column:last-child {
+  #mainContents .access-two-col .access-two-col_Inner .column:last-child {
     padding: 0;
   }
-  #mainContents .layoutTyp10 .layoutTyp10_Inner h4 {
+  #mainContents .access-two-col .access-two-col_Inner h4 {
     padding-top: 10px;
     padding-bottom: 20px;
   }
-  #mainContents .layoutTyp10 .layoutTyp10_Inner iframe {
+  #mainContents .access-two-col .access-two-col_Inner iframe {
     width: 100%;
     height: 400px;
   }
-  #mainContents .layoutTyp10 .layoutTyp10_Inner p {
+  #mainContents .access-two-col .access-two-col_Inner p {
     padding-top: 10px;
     font-size: var(--font-body);
   }

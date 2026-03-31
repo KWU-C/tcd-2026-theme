@@ -5,7 +5,7 @@
 
     <section class="w_full bc_G02 pt_50 pb_100">
 
-      <div class="layoutTyp09">
+      <div class="filter-nav">
         <ul>
           <?php
           $about_posts = get_posts(array(

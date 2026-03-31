@@ -14,7 +14,7 @@
       }
       ?>
 
-      <div class="layoutTyp09">
+      <div class="filter-nav">
         <ul>
           <li><a href="/works/">TOP</a></li>
           <?php

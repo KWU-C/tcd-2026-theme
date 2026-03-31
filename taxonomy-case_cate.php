@@ -10,7 +10,7 @@
       $current_slug = $current_term->slug;
       ?>
 
-      <div class="layoutTyp09">
+      <div class="filter-nav">
         <ul>
           <li<?php echo ($current_slug == 'top') ? ' class="active"' : ''; ?>><a href="/works/">TOP</a></li>
           <?php

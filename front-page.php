@@ -23,7 +23,7 @@
   <article class="pt_0">
     
     <section class="w_full pt_60 pb_60">
-      <div class="layoutTyp03">
+      <div class="service-card-grid">
         <h2 class="h-label">TCDのブランディングサービス</h2>
         <h3 class="h-display">Branding Services</h3>
         
@@ -56,7 +56,7 @@
 
         
         <section class="w_full bc_G03 pb_100">
-          <div class="layoutTyp02">
+          <div class="section-top-concept">
             <h2 class="h-hero">経営に、デザインの力を。</h2>
             <p>50年の実績を支える「デザイン力」<br />
               100業種を超える経験で培った「仮説構築力」<br />
@@ -147,11 +147,11 @@
 
 
     <section id="p07" class="w_full bc_G03 pb_150">
-      <div class="layoutTyp10">
+      <div class="access-two-col">
         <h2 class="h-label">東京・大阪を中心に全国対応可能です</h2>
         <h3 class="h-display">Access</h3>
 
-        <div class="layoutTyp10_Inner">
+        <div class="access-two-col_Inner">
 
           <div class="column">
             <h3 class="h-section pb_30">東京支社</h3>
@@ -184,9 +184,9 @@ $(function(){
   $(window).load(function(){
     var winW = $(window).width();
     //スライド
-    $(".layoutTyp03_Mv").animate({ opacity: 1 }, { duration: 500, easing: 'linear' });
+    $(".service-card-grid_Mv").animate({ opacity: 1 }, { duration: 500, easing: 'linear' });
     if(winW > 767){
-      $(".layoutTyp03_Mv").bxSlider({
+      $(".service-card-grid_Mv").bxSlider({
         auto: true,
         speed: 1000,
         pause: 4000,
@@ -195,7 +195,7 @@ $(function(){
         pager: true
       });
     } else {
-      $(".layoutTyp03_Mv").bxSlider({
+      $(".service-card-grid_Mv").bxSlider({
         auto: true,
         speed: 1000,
         pause: 4000,

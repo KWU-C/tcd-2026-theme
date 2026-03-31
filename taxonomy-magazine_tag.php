@@ -4,7 +4,7 @@
   <article class="pt_0">
 
     <section class="w_full bc_G02 pt_50 pb_100">
-      <div class="layoutTyp09">
+      <div class="filter-nav">
         <ul>
           <li><a href="/branding/">All</a></li>
           <?php
@@ -53,7 +53,7 @@
 
       </div>
 
-      <div class="layoutTyp09">
+      <div class="filter-nav">
         <ul>
           <li><a href="/branding/">All</a></li>
           <?php
@@ -80,8 +80,8 @@ $(function(){
   var tagName_A = decodeURIComponent(tagName);
   var tagName_B = tagName_A.replace("/","");
   if(tagName_B != "/branding/"){
-    $(".layoutTyp09 li").removeClass("active");
-    $(".layoutTyp09 li").each(function(index, el) {
+    $(".filter-nav li").removeClass("active");
+    $(".filter-nav li").each(function(index, el) {
       var listName = $(this).find("a").text();
       console.log(tagName_B +":"+ listName);
       if(tagName_B == listName){
@@ -89,7 +89,7 @@ $(function(){
       }
     });
   }else{
-    $(".layoutTyp09 li:first").addClass("active");
+    $(".filter-nav li:first").addClass("active");
   }
 });
 </script>

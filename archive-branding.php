@@ -4,7 +4,7 @@
   <article class="pt_0">
 
     <section class="w_full bc_G02 pt_50 pb_100">
-      <div class="layoutTyp09">
+      <div class="filter-nav">
         <ul>
           <li class="active"><a href="/branding/">All</a></li>
           <?php
@@ -42,7 +42,7 @@
 
       </div>
 
-      <div class="layoutTyp09">
+      <div class="filter-nav">
         <ul>
           <li><a href="/branding/">All</a></li>
           <?php
