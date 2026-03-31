@@ -23,8 +23,8 @@
         </ul>
       </div>
 
-      <div class="layoutTyp07">
-        <div class="layoutTyp07_Inner">
+      <div class="archive-card-grid">
+        <div class="archive-card-grid_Inner">
 
           <?php
           $top_posts = new WP_Query(array(

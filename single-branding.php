@@ -132,11 +132,11 @@
     </section>
 
     <section class="w_full bc_G02 pb_100">
-      <div class="layoutTyp07">
+      <div class="archive-card-grid">
 
         <h2 class="h-sub typ02">こちらの記事もよく読まれています</h2>
 
-        <div class="layoutTyp07_Inner">
+        <div class="archive-card-grid_Inner">
 
           <div id="brandingMv">
 
@@ -220,9 +220,9 @@
 
     <?php if(get_field('works01')): ?>
     <section class="w_full bc_G02 pb_100">
-      <div class="layoutTyp07">
+      <div class="archive-card-grid">
         <h2 class="h-sub typ02">関連するTCDの実績</h2>
-        <div id="worksData" class="layoutTyp07_Inner pt_30"></div>
+        <div id="worksData" class="archive-card-grid_Inner pt_30"></div>
       </div>
     </section>
     <?php endif; ?>
@@ -231,33 +231,6 @@
 </div>
 
 
-<link rel="stylesheet" href="<?php echo do_shortcode('[themePass]'); ?>/common/js/lib/slider/jquery.bxslider.css" />
-<script type="text/javascript" src="<?php echo do_shortcode('[themePass]'); ?>/common/js/lib/slider/jquery.bxslider.min.js"></script>
-<script>
-jQuery(function($){
-  $(function(){
-    $(window).load(function(){
-      var winW = $(window).width();
-      //スライド
-      $("#brandingMv").animate({ opacity: 1 }, { duration: 500, easing: 'linear' });
-      if(winW > 767){
-        $("#brandingMv").bxSlider({
-          auto: true,
-          speed: 1000,
-          pause: 5000,
-          slideWidth: 346,
-          slideMargin: 81,
-          minSlides: 1,
-          maxSlides: 3,
-          controls: false,
-          pager: false
-        });
-      } else {
-      }
-    });
-  });
-});
-</script>
 
 
 

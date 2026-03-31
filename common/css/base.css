@@ -1557,20 +1557,20 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
   }
 }
 
-#mainContents .layoutTyp07 {
+#mainContents .archive-card-grid {
   width: 1200px;
   margin: 0 auto;
 }
-#mainContents .layoutTyp07 h3 {
+#mainContents .archive-card-grid h3 {
   padding: 15px 0 0;
 }
-#mainContents .layoutTyp07 .layoutTyp07_Inner {
+#mainContents .archive-card-grid .archive-card-grid_Inner {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   padding: 30px 0 0;
 }
-#mainContents .layoutTyp07 .layoutTyp07_Inner .column {
+#mainContents .archive-card-grid .archive-card-grid_Inner .column {
   position: relative;
   width: 346px;
   height: 467px;
@@ -1580,88 +1580,71 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
   box-shadow: var(--card-shadow);
   overflow: hidden;
 }
-#mainContents .layoutTyp07 .layoutTyp07_Inner .column:nth-child(3n) {
+#mainContents .archive-card-grid .archive-card-grid_Inner .column:nth-child(3n) {
   margin: 0 0 80px 0;
 }
-#mainContents .layoutTyp07 .layoutTyp07_Inner .column a {
+#mainContents .archive-card-grid .archive-card-grid_Inner .column a {
   display: block;
 }
-#mainContents .layoutTyp07 .layoutTyp07_Inner .column a:hover {
+#mainContents .archive-card-grid .archive-card-grid_Inner .column a:hover {
   text-decoration: none;
 }
-#mainContents .layoutTyp07 .layoutTyp07_Inner .column img {
+#mainContents .archive-card-grid .archive-card-grid_Inner .column img {
   display: block;
   width: 100%;
   height: auto;
   border-radius: 8px 8px 0 0;
 }
-#mainContents .layoutTyp07 .layoutTyp07_Inner .column h3 {
+#mainContents .archive-card-grid .archive-card-grid_Inner .column h3 {
   padding: var(--card-title-padding-top) var(--card-padding-x) var(--card-title-padding-bottom);
   font-size: var(--font-body-large);
   line-height: var(--lh-body-tight);
 }
-#mainContents .layoutTyp07 .layoutTyp07_Inner .column p {
+#mainContents .archive-card-grid .archive-card-grid_Inner .column p {
   padding: 0 var(--card-padding-x) var(--card-padding-bottom);
   font-size: var(--font-body);
   line-height: var(--lh-body);
 }
 @media only screen and (max-width: 1266px) {
-  #mainContents .layoutTyp07 {
+  #mainContents .archive-card-grid {
     width: 100%;
     padding: 0 25px;
     box-sizing: border-box;
   }
-  #mainContents .layoutTyp07 .layoutTyp07_Inner .column {
+  #mainContents .archive-card-grid .archive-card-grid_Inner .column {
     width: 30%;
     margin: 0 5% 80px 0;
   }
-  #mainContents .layoutTyp07 .layoutTyp07_Inner .column:nth-child(3n) {
+  #mainContents .archive-card-grid .archive-card-grid_Inner .column:nth-child(3n) {
     margin: 0 0 80px 0;
   }
 }
 @media only screen and (max-width: 767px) {
-  #mainContents .layoutTyp07 {
+  #mainContents .archive-card-grid {
     width: calc(100% - 40px) !important;
     padding: 0;
   }
-  #mainContents .layoutTyp07 .layoutTyp07_Inner {
+  #mainContents .archive-card-grid .archive-card-grid_Inner {
     padding: 20px 0 0;
   }
-  #mainContents .layoutTyp07 .layoutTyp07_Inner .column {
+  #mainContents .archive-card-grid .archive-card-grid_Inner .column {
     float: none;
     width: 100%;
     height: auto;
     margin: 0 0 40px 0;
   }
-  #mainContents .layoutTyp07 .layoutTyp07_Inner .column:nth-child(3n) {
+  #mainContents .archive-card-grid .archive-card-grid_Inner .column:nth-child(3n) {
     margin: 0 0 40px;
   }
-  #mainContents .layoutTyp07 .layoutTyp07_Inner .column h3 {
+  #mainContents .archive-card-grid .archive-card-grid_Inner .column h3 {
     padding: var(--card-title-padding-top-sp) var(--card-padding-x-sp) var(--card-title-padding-bottom-sp);
     font-size: var(--font-heading-card);
     line-height: 1.5; /* exception: SP縦幅制約（lh-body-tightより少し広め）*/
   }
-  #mainContents .layoutTyp07 .layoutTyp07_Inner .column p {
+  #mainContents .archive-card-grid .archive-card-grid_Inner .column p {
     padding: 0 var(--card-padding-x-sp) var(--card-padding-bottom-sp);
     font-size: var(--font-body-small);
     line-height: var(--lh-body-loose);
-  }
-}
-#mainContents .layoutTyp07_Inner #brandingMv {
-  opacity: 0;
-}
-#mainContents .layoutTyp07_Inner .bx-wrapper {
-  box-shadow: none !important;
-  border: none !important;
-  background: none !important;
-}
-#mainContents .layoutTyp07_Inner .bx-wrapper .bx-viewport {
-  width: 101% !important;
-  height: 490px !important;
-}
-@media only screen and (max-width: 767px) {
-  #mainContents .layoutTyp07_Inner #brandingMv {
-    opacity: 1;
   }
 }
 
