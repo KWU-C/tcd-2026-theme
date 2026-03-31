@@ -132,17 +132,6 @@ body {
 /*==========================================
  clearfix
 ===========================================*/
-.clearfix {
-	zoom: 1;
-}
-.clearfix:before, .clearfix:after {
-	content: "";
-	display: table;
-}
-.clearfix:after {
-	clear: both;
-}
-
 /*==========================================
  画像切替
 ===========================================*/
@@ -1265,7 +1254,7 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
 #mainContents .layoutTyp01 p {
   padding: 0 0 30px;
   font-weight: 700;
-  font-size: 2.2rem; /* exception: layoutTyp01セクションh2固定 */
+  font-size: var(--font-heading-emphasis); /* exception: layoutTyp01セクション大見出し */
 }
 @media only screen and (max-width: 767px) {
   #mainContents .layoutTyp01 {
@@ -1282,17 +1271,9 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
     padding: 0 0 50px;
 		}
   #mainContents .layoutTyp01 h2 {
-    padding: 0 0 70px;
-		}
-#mainContents .layoutTyp01 h2 {
-  padding: 0 0 30px;
-			}
-}
-#mainContents .layoutTyp01 p {
     padding: 0 0 30px;
-    font-size: var(--font-heading-emphasis);
   }
-
+}
 #mainContents .layoutTyp02 {
   position: relative;
   width: 700px;
@@ -2149,6 +2130,15 @@ display: none;
   display: block;
   margin: 0 auto;
 }
+.detail__main_cont ul {
+  margin: 0 0 1.8em;
+  padding-left: 1.8em;
+}
+.detail__main_cont ul li {
+  list-style: disc;
+  margin-bottom: 0.5em;
+  line-height: 1.7;
+}
 .detail__main_cont .cv_btn {
   border: 1px solid #4dbc92;
   margin: 4em 0;
@@ -2233,10 +2223,28 @@ display: none;
   font-size: var(--font-body-small);
   padding: 0 2em 0;
 }
+.detail__main_cont img {
+  max-width: 100%;
+  display: block;
+  margin: 1.5em auto 2em;
+}
+/* pc/sp 切り替え（detail__main_cont 内限定） */
+.detail__main_cont img.pcView {
+  display: block;
+}
+.detail__main_cont img.spView {
+  display: none;
+}
 @media only screen and (max-width: 767px) {
   .detail__main_cont img {
     max-width: 100%;
     height: auto;
+  }
+  .detail__main_cont img.pcView {
+    display: none;
+  }
+  .detail__main_cont img.spView {
+    display: block;
   }
   .detail__main_cont h2 {
     font-size: 2.2rem; /* exception: detail h2レスポンシブ縮小 */
@@ -2419,16 +2427,6 @@ display: none;
   background-size: cover;
   background-position: center top;
 }
-
-#topMv_LP {
-  position: relative;
-  width: 100%;
-  height: 857px;
-  margin-top: -107px;
-  background-image: url("/branding_tokyo/topMv01.jpg");
-  background-size: cover;
-  background-position: center top;
-}
 #topMv_LP #topLogo {
   position: relative;
   width: 1250px;
@@ -2471,9 +2469,6 @@ display: none;
   position: relative;
   width: 100%;
   height: 550px;
-}
-#mainContents .serviceTyp12 .mvArea {
-  opacity: 0;
 }
 #mainContents .serviceTyp12 .mvArea {
   margin-left: calc((100vw - 880px) / 2);
@@ -2623,10 +2618,6 @@ display: none;
   text-decoration: none;
   opacity: 0.8;
 }
-.worksTyp02 .column .over {
-  position: relative;
-}
-
 .worksTyp02 .column img {
   display: block;
   width: 100%;
@@ -5705,63 +5696,6 @@ dl.task dd {
     width: 100%;
   }
 }
-/* ==========================================
-   Service 詳細 本文共通スタイル
-   対象: .layoutTyp08_Inner .detail__main_cont
-=========================================== */
-.detail__main_cont {
-  font-size: 1.6rem;
-  line-height: 1.85;
-  color: #333;
-}
-.detail__main_cont p {
-  margin-bottom: 1.8em;
-}
-.detail__main_cont h2 {
-  font-size: 1.9rem;
-  font-weight: bold;
-  margin: 2.5em 0 0.8em;
-  padding-bottom: 0.4em;
-  border-bottom: 2px solid #222;
-}
-.detail__main_cont h3 {
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin: 1.8em 0 0.6em;
-  line-height: 1.5;
-}
-.detail__main_cont ul {
-  margin: 0 0 1.8em;
-  padding-left: 1.8em;
-}
-.detail__main_cont ul li {
-  list-style: disc;
-  margin-bottom: 0.5em;
-  line-height: 1.7;
-}
-.detail__main_cont img {
-  max-width: 100%;
-  display: block;
-  margin: 1.5em auto 2em;
-}
-.detail__main_cont {
-  /* pc/sp 切り替え（detail__main_cont内限定） */
-}
-.detail__main_cont img.pcView {
-  display: block;
-}
-.detail__main_cont img.spView {
-  display: none;
-}
-@media only screen and (max-width: 767px) {
-  .detail__main_cont img.pcView {
-    display: none;
-  }
-  .detail__main_cont img.spView {
-    display: block;
-  }
-}
-
 /* サービス英語タイトル（h1直下の英語副題） */
 .service-en-title {
   font-size: 2.8rem;

@@ -33,7 +33,7 @@
           </div>
 
           <div class="layoutTyp08_Inner">
-            <div class="detail__main_cont" style="font-size: var(--font-body); line-height: var(--lh-body); color: #333;">
+            <div class="detail__main_cont">
               <?php
               remove_filter('the_content', 'wpautop');
               the_content();
