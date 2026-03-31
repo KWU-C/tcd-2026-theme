@@ -504,7 +504,6 @@ function tcd_enqueue_styles() {
     wp_enqueue_style('tcd-slick',          $uri . '/assets/css/vendor/slick.css',        array(),             $ver);
     wp_enqueue_style('tcd-slick-theme',    $uri . '/assets/css/vendor/slick-theme.css',  array('tcd-slick'),  $ver);
     wp_enqueue_style('tcd-base',           $uri . '/common/css/base.css',                array('tcd-basis'),  $ver);
-    wp_enqueue_style('tcd-responsive-recovery', $uri . '/css/tcd-responsive-recovery.css', array('tcd-base'), filemtime(get_template_directory() . '/css/tcd-responsive-recovery.css'));
 }
 add_action('wp_enqueue_scripts', 'tcd_enqueue_styles');
 
