@@ -99,11 +99,11 @@
     </section>
 
     <section class="w_full bc_G02 pt_50 pb_100">
-      <div class="layoutTyp06">
+      <div class="content-card-grid">
 
         <h2 class="h-sub">Recent Works</h2>
 
-        <div class="layoutTyp06_Inner">
+        <div class="content-card-grid_Inner">
           <?php
           $args = array(
             'post_type'      => 'works',

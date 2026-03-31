@@ -71,11 +71,11 @@
 
     
     <section class="w_full pt_100">
-      <div class="layoutTyp04">
+      <div class="works-card-grid">
         <h2 class="h-label">ブランディング実績</h2>
         <h3 class="h-display">Branding Works</h3>
         
-        <div class="layoutTyp04_Inner">
+        <div class="works-card-grid_Inner">
         
           <div class="column c-card-tile">
             <a href="/works/corporate/nitto.html">
@@ -108,11 +108,11 @@
 
 
     <section class="w_full pt_130 pb_150">
-      <div class="layoutTyp06">
+      <div class="content-card-grid">
         <h2 class="h-label">ブランディングコラム</h2>
         <h3 class="h-display">Branding Magazine</h3>
 
-        <div class="layoutTyp06_Inner">
+        <div class="content-card-grid_Inner">
 
           <?php
           $args = array(

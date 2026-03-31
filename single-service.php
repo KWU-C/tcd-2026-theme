@@ -53,11 +53,11 @@
     if ($related_cate) :
     ?>
     <section class="w_full bc_G02 pb_100">
-      <div class="layoutTyp06">
+      <div class="content-card-grid">
 
         <h2 class="h-sub">Related Works</h2>
 
-        <div class="layoutTyp06_Inner">
+        <div class="content-card-grid_Inner">
           <?php
           $args = array(
             'post_type'      => 'works',
