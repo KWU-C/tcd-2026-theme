@@ -499,9 +499,8 @@ function tcd_enqueue_styles() {
     $uri = get_template_directory_uri();
     $ver = '2.4';
 
-    wp_enqueue_style('tcd-basis',          $uri . '/assets/css/vendor/basis.min.css',   array(),             $ver);
-    wp_enqueue_style('tcd-drawer',         $uri . '/assets/css/vendor/drawer.css',       array(),             $ver);
-    wp_enqueue_style('tcd-base',           $uri . '/common/css/base.css',                array('tcd-basis'),  $ver);
+    wp_enqueue_style('tcd-drawer',         $uri . '/assets/css/vendor/drawer.css',       array(),        $ver);
+    wp_enqueue_style('tcd-base',           $uri . '/common/css/base.css',                array(),        $ver);
 }
 add_action('wp_enqueue_scripts', 'tcd_enqueue_styles');
 

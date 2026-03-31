@@ -6848,5 +6848,49 @@ body.works-post .works-single {
 }
 
 /* ========================================
+   archive-case grid
+   basis.min.css から移設（使用箇所: archive-case.php のみ）
+   _c-container / _c-row / _c-row__col の最小限セット
+======================================== */
+
+._c-container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 16px;
+  padding-left: 16px;
+  overflow: hidden;
+  max-width: 1200px;
+}
+
+._c-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+._c-row__col {
+  flex: 1;
+  max-width: 100%;
+}
+
+._c-row__col--1-1 {
+  flex: 0 1 100%;
+  max-width: 100%;
+}
+
+@media (min-width: 640px) {
+  ._c-row--md-fill > ._c-row__col {
+    display: flex;
+  }
+  ._c-row--md-fill > ._c-row__col > * {
+    flex: 0 1 100%;
+    max-width: 100%;
+  }
+  ._c-row__col--md-1-3 {
+    flex: 0 1 33.33333%;
+    max-width: 33.33333%;
+  }
+}
+
+/* ========================================
    contact / download
 ======================================== */
