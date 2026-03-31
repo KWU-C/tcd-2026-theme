@@ -1,0 +1,207 @@
+project_name: tcd-2026-theme
+policy_version: "1.0"
+last_updated: "2026-03-31"
+basis: >
+  2026年3月に実施したCSSオーディット（layoutTyp全廃・detail__main_cont正本化・
+  BxSlider依存局所化・未使用ファイル削除）後の状態を正とする。
+
+# ============================================================
+# 正本ソース（変更時は必ず責務を確認すること）
+# ============================================================
+canonical_sources:
+  - selector: ".detail__main_cont"
+    role: 記事本文タイポグラフィ（フォント・行間・リスト・画像）
+    defined_in: common/css/base.css
+    used_in: [single-works.php, single-service.php, single-about.php, single-branding.php, single-recruit.php]
+
+  - selector: ".article-shell"
+    role: 記事詳細ページの外枠白カードレイアウト
+    sub_elements: [_Title, _Inner, _Sns, _bottom, _link01, _List]
+    defined_in: common/css/base.css
+    used_in: [single-works.php, single-service.php, single-about.php, single-branding.php, single-recruit.php, page.php]
+
+  - selector: ".works-card-grid"
+    role: Branding Works 実績カードグリッド（3列）
+    sub_elements: [_Inner]
+    defined_in: common/css/base.css
+    used_in: [front-page.php]
+
+  - selector: ".content-card-grid"
+    role: 関連コンテンツカードグリッド（3列）
+    sub_elements: [_Inner]
+    defined_in: common/css/base.css
+    used_in: [front-page.php, single-works.php, single-service.php]
+
+  - selector: ".archive-card-grid"
+    role: アーカイブ・タクソノミー一覧カードグリッド（3列縦長）
+    sub_elements: [_Inner]
+    defined_in: common/css/base.css
+    used_in: [archive-branding.php, archive-about.php, archive-recruit.php, archive-service.php, taxonomy-magazine_cate.php, taxonomy-magazine_tag.php]
+
+  - selector: ".filter-nav"
+    role: カテゴリ・タクソノミー切替ナビゲーション
+    defined_in: common/css/base.css
+    used_in: [single-works.php, single-service.php, single-about.php, single-branding.php, single-recruit.php, archive-*.php, taxonomy-*.php]
+
+  - selector: ".access-two-col"
+    role: アクセス情報2カラムレイアウト（地図＋テキスト）
+    sub_elements: [_Inner]
+    defined_in: common/css/base.css
+    used_in: [front-page.php]
+
+  - selector: ".service-card-grid"
+    role: トップページのサービス一覧カードグリッド
+    defined_in: common/css/base.css
+    used_in: [front-page.php]
+
+  - selector: ".section-top-concept"
+    role: トップページのコンセプト文章セクション
+    defined_in: common/css/base.css
+    used_in: [front-page.php]
+
+# ============================================================
+# 禁止パターン
+# ============================================================
+forbidden_patterns:
+  class_naming:
+    - pattern: "layoutTyp[0-9]+"
+      reason: 廃止済み連番命名。再導入禁止
+    - pattern: "worksTyp[0-9]+ （新規追加）"
+      reason: 既存 worksTyp03 / serviceTyp12 は保留資産。新規作成は禁止
+    - pattern: "tmp|test|fix|new[0-9]|old"
+      reason: 一時的命名は技術的負債になる
+    - pattern: "[a-zA-Z]+[0-9]+（末尾連番）"
+      reason: box2 / card3 など意味のない連番クラスは追加しない
+
+  css_practices:
+    - "HTMLへのインラインstyle属性"
+    - "!importantの常用（理由なき使用）"
+    - "同一責務クラスの重複追加"
+    - "ページ専用スタイルを共通CSSへ混入"
+    - "既存正本クラスの責務変更（.detail__main_cont を外枠調整に使うなど）"
+    - "一時しのぎのmargin/padding調整の連鎖"
+
+# ============================================================
+# 命名ポリシー
+# ============================================================
+naming_policy:
+  base_format: "{役割}-{対象} のケバブケース"
+  examples:
+    - article-shell
+    - archive-card-grid
+    - filter-nav
+    - access-two-col
+  sub_element_format: "親クラス名_PascalCase"
+  examples_sub:
+    - article-shell_Inner
+    - article-shell_Title
+    - works-card-grid_Inner
+  separator_rule:
+    hyphen: 語の区切り（例: card-grid）
+    underscore: 親子関係のサブ要素（例: article-shell_Inner）
+  bem_note: >
+    厳密BEMは必須ではない。ただしクラス名だけで用途が読めることを最優先とする。
+
+# ============================================================
+# 微調整ポリシー
+# ============================================================
+adjustment_policy:
+  priority_order:
+    1: 既存クラスで解決できるか確認する
+    2: 既存責務の中で値だけ調整する
+    3: 新クラス追加（最後の手段）
+  new_class_criteria:
+    - 本当に複数箇所で再利用されるか
+    - 既存クラスの責務を壊さないか
+    - クラス名だけで用途が説明できるか
+    - ページ専用ならスコープが明確か
+    - 将来削除しやすい構造か
+  important_policy: >
+    原則禁止。使用する場合はコメントで理由を記録すること。
+
+# ============================================================
+# 例外ポリシー
+# ============================================================
+exception_policy:
+  page_scoped_styles: >
+    特定ページだけに必要なスタイルは .body-{slug} 親スコープで隔離する。
+    共通 CSS（base.css）に1ページ専用ルールを混入しない。
+  workstyp_legacy: >
+    worksTyp03 / serviceTyp12 は現役保留資産。
+    変更が必要な場合は単独調査を行い、別フェーズとして扱う。
+  bxslider: >
+    BxSliderは single-works / single-about / page.php で現役使用中。
+    ライブラリ自体（jquery.bxslider.min.js / jquery.bxslider.css）は削除しない。
+    新規の bxSlider 初期化追加は慎重に判断する。
+
+# ============================================================
+# レビューチェックリスト
+# ============================================================
+review_checklist:
+  before_edit:
+    - 修正対象の責務は何か（本文 / 外枠 / カード / 導線）
+    - 既存の正本クラスと重複・競合しないか
+    - 影響範囲（single / archive / page / front-page）を把握しているか
+    - PC / SP 両方の確認が必要か
+    - JS依存要素（BxSlider, opacity制御など）に触れていないか
+  after_edit:
+    - 旧セレクタと競合していないか
+    - 似た責務のクラスを増やしていないか
+    - hover / SP / padding / 行間が崩れていないか
+    - 変更理由を説明できるか
+    - 応急処置になっていないか
+
+# ============================================================
+# 保護コンポーネント（無断変更禁止）
+# ============================================================
+protected_components:
+  - selector: ".detail__main_cont"
+    reason: 本文タイポグラフィの正本。変更は全single系に影響する
+  - selector: ".article-shell"
+    reason: 記事外枠の正本。変更は全single系に影響する
+  - selector: ".worksTyp03"
+    reason: 現役保留資産。単独動作・他と干渉なし
+  - selector: ".serviceTyp12"
+    reason: page.php 専用資産。現状維持
+  - selector: ".clearfix"
+    reason: archive-case.php / inc-post.php で現役使用中
+
+# ============================================================
+# 保留アイテム（次フェーズ以降で扱う）
+# ============================================================
+hold_items:
+  - item: worksTyp03 のリネーム
+    reason: 単独動作中・緊急性なし
+    condition: 触る際は単独調査の上、別フェーズとして実施
+
+  - item: serviceTyp12 のリネーム
+    reason: page.php 専用・影響範囲が限定的
+    condition: page.php 全体を見直すタイミングで対応
+
+  - item: c-card-tile の BEM化・共通コンポーネント化
+    reason: 設計方針の意思決定が必要
+    condition: 全カードクラスの統一方針が決まってから実施
+
+  - item: clearfix の整理
+    reason: 現役テンプレートが依存している
+    condition: archive-case.php / inc-post.php の HTML 改修とセットで実施
+
+# ============================================================
+# 安全なリファクタリングルール
+# ============================================================
+safe_refactor_rules:
+  rename:
+    - 置換は「子要素 → 親クラス」の順で行う（逆順は部分一致ミスが起きる）
+    - CSS と テンプレートを同時に置換する（片方だけ変えると表示崩れが起きる）
+    - 置換後は旧クラス名の残留を grep で確認する
+    - deploy 後にブラウザで目視確認する
+
+  delete:
+    - 削除前にテンプレート横断検索で「本当に未使用か」を確認する
+    - 完全重複ルールのみ削除する（値が1つでも違えば保留）
+    - 削除は commit を分けて記録に残す
+
+  add:
+    - 新規追加は最小限にする
+    - 既存正本クラスの責務範囲を侵食しない
+    - ページ専用スタイルは親スコープで隔離する
