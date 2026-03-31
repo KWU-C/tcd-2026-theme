@@ -2099,7 +2099,7 @@ display: none;
   margin-bottom: 0.5em;
 }
 .detail__main_cont h3 {
-  font-size: var(--font-heading-card);
+  font-size: 1.8rem;
   line-height: var(--lh-body);
 }
 .detail__main_cont p {
