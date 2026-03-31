@@ -34,7 +34,7 @@
       <?php if (have_posts()) : ?>
       <?php while (have_posts()) : the_post(); $current_post_id = get_the_ID(); ?>
 
-      <div class="layoutTyp08">
+      <div class="article-shell">
 
         <div class="worksTyp03">
           <div class="column c-card-tile">
@@ -77,12 +77,12 @@
           <div class="preLink"></div>
         </div>
 
-        <div class="layoutTyp08_Title">
+        <div class="article-shell_Title">
           <p><?php the_field('works_text01'); ?></p>
           <h1 class="h-page"><?php the_title(); ?></h1>
         </div>
 
-        <div class="layoutTyp08_Inner">
+        <div class="article-shell_Inner">
           <div class="detail__main_cont">
             <?php the_content(); ?>
           </div>

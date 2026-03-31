@@ -3,7 +3,7 @@
 <div id="mainContents">
   <article class="pt_0">
     <section class="w_full bc_G02 pt_50 pb_100">
-      <div class="layoutTyp08">
+      <div class="article-shell">
 
 <?php
 remove_filter('the_content', 'wpautop');

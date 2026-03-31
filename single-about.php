@@ -23,16 +23,16 @@
         </ul>
       </div>
 
-      <div class="layoutTyp08">
+      <div class="article-shell">
 
         <?php if (have_posts()) : ?>
           <?php while (have_posts()) : the_post(); ?>
 
-          <div class="layoutTyp08_Title pt_100">
+          <div class="article-shell_Title pt_100">
             <h1 class="h-page"><?php the_title(); ?></h1>
           </div>
 
-          <div class="layoutTyp08_Inner">
+          <div class="article-shell_Inner">
             <div class="detail__main_cont">
               <?php
               remove_filter('the_content', 'wpautop');

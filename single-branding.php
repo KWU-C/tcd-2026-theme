@@ -19,7 +19,7 @@
         </ul>
       </div>
 
-      <div class="layoutTyp08">
+      <div class="article-shell">
 
       <?php if (have_posts()) : ?>
         <?php while (have_posts()) : the_post(); ?>
@@ -39,12 +39,12 @@
           }
           ?>
 
-          <div class="layoutTyp08_Title pt_100">
+          <div class="article-shell_Title pt_100">
             <p><?php the_time('Y.m.d'); ?></p>
             <h1 class="h-page"><?php echo $page_title; ?></h1>
           </div>
 
-          <div class="layoutTyp08_Inner">
+          <div class="article-shell_Inner">
             <div class="detail__main_cont">
 
               <?php
@@ -76,12 +76,12 @@
             if ( $cat_slug == "people" ) { }
             else {
           ?>
-          <div class="layoutTyp08_bottom">
+          <div class="article-shell_bottom">
             <h2 class="h-sub">筆者の最近の記事</h2>
-            <div class="layoutTyp08_link01">
+            <div class="article-shell_link01">
               <a href="/branding/magazine_cate/<?php echo $cat_slug ?>/">一覧へ</a>
             </div>
-            <div class="layoutTyp08_List">
+            <div class="article-shell_List">
               <ul>
 
 
@@ -115,7 +115,7 @@
             }
           ?>
 
-          <div class="layoutTyp08_Sns">
+          <div class="article-shell_Sns">
             <a target="_blank" href="https://twitter.com/share?url=<?php the_permalink(); ?>&text=<?php echo strip_tags($page_title); ?>" target="_blank">
               <img src="/wp-content/themes/tcd/common/img/branding/branding_sns01.svg" alt="twitter">
             </a>
