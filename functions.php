@@ -504,6 +504,25 @@ function tcd_enqueue_styles() {
 }
 add_action('wp_enqueue_scripts', 'tcd_enqueue_styles');
 
+// =============================================================================
+// bxslider の条件付き enqueue
+// =============================================================================
+function tcd_enqueue_bxslider() {
+    $uri = get_template_directory_uri();
+    $ver = filemtime( get_template_directory() . '/common/js/lib/slider/jquery.bxslider.min.js' );
+
+    $needs_bxslider =
+        is_singular( array( 'works', 'about' ) ) ||
+        is_front_page() ||
+        is_page( array( 'キャリア採用　東京（銀座）・芦屋（本社）', '2023年度新卒採用', '採用ポリシー', 'Company Profile', '会社概要', 'Our Working Style', 'Our Capability' ) ) ||
+        is_page( 'desart' );
+
+    if ( $needs_bxslider ) {
+        wp_enqueue_style(  'bxslider', $uri . '/common/js/lib/slider/jquery.bxslider.css',     array(),           $ver );
+        wp_enqueue_script( 'bxslider', $uri . '/common/js/lib/slider/jquery.bxslider.min.js',  array( 'jquery' ), $ver, true );
+    }
+}
+add_action( 'wp_enqueue_scripts', 'tcd_enqueue_bxslider' );
 
 // =============================================================================
 // タグを有効

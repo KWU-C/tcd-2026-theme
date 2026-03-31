@@ -177,8 +177,6 @@
   </article>
 </div>
 
-<link rel="stylesheet" href="<?php echo do_shortcode('[themePass]'); ?>/common/js/lib/slider/jquery.bxslider.css" />
-<script type="text/javascript" src="<?php echo do_shortcode('[themePass]'); ?>/common/js/lib/slider/jquery.bxslider.min.js"></script>
 <script>
 $(function(){
   $(window).load(function(){

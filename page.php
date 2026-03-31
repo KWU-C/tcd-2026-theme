@@ -16,8 +16,6 @@ the_content();
 </div>
 
 <?php if(is_page(array('キャリア採用　東京（銀座）・芦屋（本社）', '2023年度新卒採用', '採用ポリシー', 'Company Profile', '会社概要', 'Our Working Style', 'Our Capability'))): ?>
-<link rel="stylesheet" href="<?php echo do_shortcode('[themePass]'); ?>/common/js/lib/slider/jquery.bxslider.css" />
-<script type="text/javascript" src="<?php echo do_shortcode('[themePass]'); ?>/common/js/lib/slider/jquery.bxslider.min.js"></script>
 <script>
 $(function(){
   $(window).load(function(){
@@ -53,8 +51,6 @@ $(function(){
 </script>
 
 <?php elseif(is_page("desart")): ?>
-<link rel="stylesheet" href="<?php echo do_shortcode('[themePass]'); ?>/common/js/lib/slider/jquery.bxslider.css" />
-<script type="text/javascript" src="<?php echo do_shortcode('[themePass]'); ?>/common/js/lib/slider/jquery.bxslider.min.js"></script>
 <script>
 $(function(){
   var w = $(window).width();
