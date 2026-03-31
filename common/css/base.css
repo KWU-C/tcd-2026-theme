@@ -1315,7 +1315,7 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
 #mainContents .layoutTyp02 p {
   padding: 0 0 30px;
   font-weight: 700;
-  font-size: var(--font-heading-emphasis);
+  font-size: var(--font-body);
 }
 @media only screen and (max-width: 767px) {
   #mainContents .layoutTyp02 {

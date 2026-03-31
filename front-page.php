@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="top-mv">
+<div id="topMv">
   <div class="videoArea">
     <video muted loop autoplay playsinline>
     <source src='<?php echo do_shortcode('[themePass]'); ?>/common/movie/tcd_pc.mp4' type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
@@ -70,11 +70,6 @@
 
 
     
-    <div id="mainContents" class="pt_0">
-      <article class="pt_0">
-        
-        
-
     <section class="w_full pt_100">
       <div class="layoutTyp04">
         <h2 class="h-label">ブランディング実績</h2>
