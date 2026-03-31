@@ -130,9 +130,6 @@ body {
 }
 
 /*==========================================
- clearfix
-===========================================*/
-/*==========================================
  画像切替
 ===========================================*/
 /* PC、スマートフォン表示分岐 */
@@ -1685,11 +1682,6 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
   background-color: #f5f5f5;
 }
 #mainContents .article-shell .article-shell_Sns {
-  position: fixed;
-  right: 15px;
-  top: 120px;
-}
-#mainContents .article-shell .article-shell_Sns.up {
   position: fixed;
   right: 15px;
   top: 120px;
