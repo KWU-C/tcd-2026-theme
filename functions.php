@@ -501,8 +501,6 @@ function tcd_enqueue_styles() {
 
     wp_enqueue_style('tcd-basis',          $uri . '/assets/css/vendor/basis.min.css',   array(),             $ver);
     wp_enqueue_style('tcd-drawer',         $uri . '/assets/css/vendor/drawer.css',       array(),             $ver);
-    wp_enqueue_style('tcd-slick',          $uri . '/assets/css/vendor/slick.css',        array(),             $ver);
-    wp_enqueue_style('tcd-slick-theme',    $uri . '/assets/css/vendor/slick-theme.css',  array('tcd-slick'),  $ver);
     wp_enqueue_style('tcd-base',           $uri . '/common/css/base.css',                array('tcd-basis'),  $ver);
 }
 add_action('wp_enqueue_scripts', 'tcd_enqueue_styles');
