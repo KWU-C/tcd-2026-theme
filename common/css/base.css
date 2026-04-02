@@ -56,17 +56,16 @@ html {
 
    ========================================== */
 :root {
+  /* --- card spacing tokens --- */
   --card-padding-x: 25px;
-  --card-padding-bottom: 25px;
-  --card-title-padding-top: 10px;
-  --card-title-padding-bottom: 0px;
-  --card-text-padding-top: 0px;
+  --card-space-top: 20px;       /* img → ラベル/見出し */
+  --card-space-between: 10px;   /* ラベル → 本文 */
+  --card-space-bottom: 15px;    /* 本文 → カード下端 */
 
   --card-padding-x-sp: 20px;
-  --card-padding-bottom-sp: 5px;
-  --card-title-padding-top-sp: 10px;
-  --card-title-padding-bottom-sp: 5px;
-  --card-text-padding-top-sp: 0px;
+  --card-space-top-sp: 15px;
+  --card-space-between-sp: 10px;
+  --card-space-bottom-sp: 5px;
 
   --card-radius: 8px;
   --card-shadow: 3px 3px 6px 3px rgba(0, 0, 0, 0.1);
@@ -84,6 +83,8 @@ html {
   --font-caption: 1.3rem;
   --font-heading-emphasis: 3.0rem;
 
+  --font-button-cta: 2.3rem;
+
   --font-heading-page: 3.0rem;
   --font-heading-section: 1.7rem;
   --font-heading-card: 1.6rem;
@@ -96,6 +97,11 @@ html {
   --lh-body-loose: 1.7; /* SPカード本文 */
 
   --lh-note: 2.0; /* works補足テキスト（情報リスト） */
+}
+@media only screen and (max-width: 767px) {
+  :root {
+    --font-button-cta: 1.4rem;
+  }
 }
 
 ul, li {
@@ -635,13 +641,13 @@ header #headerContactArea li a:hover {
   content: "";
 }
 #footerContact .column h3 {
-  padding: 0;
-  font-size: var(--font-heading-emphasis);
+  padding-top: 6px;
+  font-size: var(--font-button-cta);
   font-weight: 700;
   color: #FFF;
 }
 #footerContact .column p {
-  padding: 12px 0 0;
+  padding-top: 0;
   font-size: var(--font-ui-small);
   font-weight: 700;
   color: #FFF;
@@ -678,7 +684,7 @@ header #headerContactArea li a:hover {
     margin: 0 0 0 -90px;
   }
   #footerContact .column h3 {
-    font-size: 2.2rem; /* exception: フッターコンタクトSP見出し */
+    font-size: var(--font-button-cta);
   }
   #footerContact .column p {
     padding: 15px 0 0;
@@ -1214,6 +1220,8 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
 
 /* F: .h-sub — サブ見出し h2/h3 (1.8rem は heading-section に近いが Poppinsなし本文大で共用) */
 .h-sub {
+  margin: 0; /* reset: ブラウザデフォルト margin による margin collapse を防ぐ */
+  padding: 0; /* reset: wp-block-library h2{padding:.44em} を打ち消す */
   font-size: var(--font-body-large);
   font-weight: 700;
   line-height: var(--lh-ui);
@@ -1282,14 +1290,14 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
   padding-top: 10px;
 }
 #mainContents .service-card-grid .columnBox .column .h-section {
-  padding-top: var(--card-title-padding-top);
+  padding-top: var(--card-space-top);
 }
 @media only screen and (max-width: 767px) {
   #mainContents .service-card-grid .h-display {
     padding-top: 15px;
   }
   #mainContents .service-card-grid .columnBox .column .h-section {
-    padding-top: var(--card-title-padding-top-sp);
+    padding-top: var(--card-space-top-sp);
   }
 }
 #mainContents .service-card-grid .columnBox {
@@ -1313,7 +1321,7 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
 #mainContents .service-card-grid .columnBox .column a {
   display: block;
   width: 100%;
-  padding-bottom: var(--card-padding-bottom);
+  padding-bottom: var(--card-space-bottom);
   border: 1px solid #C7C7BB;
   border-radius: var(--card-radius);
   background-color: var(--card-bg);
@@ -1326,7 +1334,7 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
   border: 1px solid #00ABD3;
 }
 #mainContents .service-card-grid .columnBox .column .h-section {
-  padding-top: var(--card-title-padding-top);
+  padding-top: var(--card-space-top);
   padding-right: var(--card-padding-x);
   padding-left: var(--card-padding-x);
   transition: all 0.3s ease;
@@ -1335,7 +1343,7 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
   color: #00ABD3;
 }
 #mainContents .service-card-grid .columnBox .column p {
-  padding-top: var(--card-text-padding-top);
+  padding-top: var(--card-space-between);
   padding-right: var(--card-padding-x);
   padding-left: var(--card-padding-x);
   font-size: var(--font-body-small);
@@ -1384,16 +1392,16 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
     margin: 0;
   }
   #mainContents .service-card-grid .columnBox .column a {
-    padding-bottom: var(--card-padding-bottom-sp);
+    padding-bottom: var(--card-space-bottom-sp);
   }
   #mainContents .service-card-grid .columnBox .column .h-section {
-    padding-top: var(--card-title-padding-top-sp);
+    padding-top: var(--card-space-top-sp);
     padding-right: var(--card-padding-x-sp);
     padding-left: var(--card-padding-x-sp);
     font-size: var(--font-body);
   }
   #mainContents .service-card-grid .columnBox .column p {
-    padding-top: var(--card-text-padding-top-sp);
+    padding-top: var(--card-space-between-sp);
     padding-right: var(--card-padding-x-sp);
     padding-left: var(--card-padding-x-sp);
     font-size: var(--font-caption-small);
@@ -1419,12 +1427,12 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
   justify-content: flex-start;
   padding: 30px 0 0;
 }
-/* -- カードカラム共通スタイル（works-card-grid / content-card-grid） -- */
+/* -- カードレイアウト（works-card-grid / content-card-grid） -- */
 #mainContents .works-card-grid .works-card-grid_Inner .column,
 #mainContents .content-card-grid .content-card-grid_Inner .column {
   position: relative;
   width: 346px;
-  height: 310px;
+  height: auto;
   border-radius: var(--card-radius);
   background-color: var(--card-bg);
   box-shadow: var(--card-shadow);
@@ -1446,25 +1454,39 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
   border-radius: 8px 8px 0 0;
   object-fit: cover;
 }
+/* -- カードタイポグラフィ（works-card-grid / content-card-grid） -- */
 #mainContents .works-card-grid .works-card-grid_Inner .column h4,
 #mainContents .works-card-grid .works-card-grid_Inner .column p.h-label,
 #mainContents .content-card-grid .content-card-grid_Inner .column h4,
 #mainContents .content-card-grid .content-card-grid_Inner .column p.h-label {
-  padding-top: var(--card-title-padding-top);
-  padding-right: var(--card-padding-x);
-  padding-bottom: var(--card-title-padding-bottom);
-  padding-left: var(--card-padding-x);
   font-size: var(--font-ui-small);
   line-height: var(--lh-body-tight);
 }
 #mainContents .works-card-grid .works-card-grid_Inner .column p:not(.h-label),
 #mainContents .content-card-grid .content-card-grid_Inner .column p:not(.h-label) {
-  padding-top: var(--card-text-padding-top);
-  padding-right: var(--card-padding-x);
-  padding-bottom: var(--card-padding-bottom);
-  padding-left: var(--card-padding-x);
   font-size: var(--font-body-small);
   line-height: var(--lh-body);
+}
+/* -- カード余白（works-card-grid / content-card-grid） -- */
+#mainContents .works-card-grid .works-card-grid_Inner .column > a > h4,
+#mainContents .works-card-grid .works-card-grid_Inner .column > a > p.h-label,
+#mainContents .content-card-grid .content-card-grid_Inner .column > a > h4,
+#mainContents .content-card-grid .content-card-grid_Inner .column > a > p.h-label {
+  padding-top: var(--card-space-top);
+  padding-right: var(--card-padding-x);
+  padding-left: var(--card-padding-x);
+}
+#mainContents .works-card-grid .works-card-grid_Inner .column > a > p:not(.h-label),
+#mainContents .content-card-grid .content-card-grid_Inner .column > a > p:not(.h-label) {
+  padding-top: var(--card-space-between);
+  padding-right: var(--card-padding-x);
+  padding-bottom: var(--card-space-bottom);
+  padding-left: var(--card-padding-x);
+}
+/* ラベルなしカード: p が img 直後の最初の要素 */
+#mainContents .works-card-grid .works-card-grid_Inner .column > a > p:not(.h-label):first-of-type,
+#mainContents .content-card-grid .content-card-grid_Inner .column > a > p:not(.h-label):first-of-type {
+  padding-top: var(--card-space-top);
 }
 #mainContents .works-card-grid .works-card-grid_Inner .column,
 #mainContents .content-card-grid .content-card-grid_Inner .column { margin: 0 54px 0 0; }
@@ -1496,25 +1518,38 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
   }
   #mainContents .works-card-grid .works-card-grid_Inner .column:nth-child(3n),
   #mainContents .content-card-grid .content-card-grid_Inner .column:nth-child(3n) { margin: 0; }
+  /* タイポグラフィ SP */
   #mainContents .works-card-grid .works-card-grid_Inner .column h4,
   #mainContents .works-card-grid .works-card-grid_Inner .column p.h-label,
   #mainContents .content-card-grid .content-card-grid_Inner .column h4,
   #mainContents .content-card-grid .content-card-grid_Inner .column p.h-label {
-    padding-top: var(--card-title-padding-top-sp);
-    padding-right: var(--card-padding-x-sp);
-    padding-bottom: var(--card-title-padding-bottom-sp);
-    padding-left: var(--card-padding-x-sp);
     font-size: var(--font-ui-small);
     line-height: 1.5; /* exception: SP縦幅制約（lh-body-tightより少し広め）*/
   }
   #mainContents .works-card-grid .works-card-grid_Inner .column p:not(.h-label),
   #mainContents .content-card-grid .content-card-grid_Inner .column p:not(.h-label) {
-    padding-top: var(--card-text-padding-top-sp);
-    padding-right: var(--card-padding-x-sp);
-    padding-bottom: var(--card-padding-bottom-sp);
-    padding-left: var(--card-padding-x-sp);
     font-size: var(--font-body-small);
     line-height: var(--lh-body-loose);
+  }
+  /* 余白 SP */
+  #mainContents .works-card-grid .works-card-grid_Inner .column > a > h4,
+  #mainContents .works-card-grid .works-card-grid_Inner .column > a > p.h-label,
+  #mainContents .content-card-grid .content-card-grid_Inner .column > a > h4,
+  #mainContents .content-card-grid .content-card-grid_Inner .column > a > p.h-label {
+    padding-top: var(--card-space-top-sp);
+    padding-right: var(--card-padding-x-sp);
+    padding-left: var(--card-padding-x-sp);
+  }
+  #mainContents .works-card-grid .works-card-grid_Inner .column > a > p:not(.h-label),
+  #mainContents .content-card-grid .content-card-grid_Inner .column > a > p:not(.h-label) {
+    padding-top: var(--card-space-between-sp);
+    padding-right: var(--card-padding-x-sp);
+    padding-bottom: var(--card-space-bottom-sp);
+    padding-left: var(--card-padding-x-sp);
+  }
+  #mainContents .works-card-grid .works-card-grid_Inner .column > a > p:not(.h-label):first-of-type,
+  #mainContents .content-card-grid .content-card-grid_Inner .column > a > p:not(.h-label):first-of-type {
+    padding-top: var(--card-space-top-sp);
   }
 }
 
@@ -1570,7 +1605,7 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
 #mainContents .archive-card-grid .archive-card-grid_Inner .column {
   position: relative;
   width: 346px;
-  height: 467px;
+  height: auto;
   margin: 0 54px 65px 0;
   border-radius: var(--card-radius);
   background-color: var(--card-bg);
@@ -1592,15 +1627,25 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
   height: auto;
   border-radius: 8px 8px 0 0;
 }
+/* -- カードタイポグラフィ（archive-card-grid） -- */
 #mainContents .archive-card-grid .archive-card-grid_Inner .column h3 {
-  padding: var(--card-title-padding-top) var(--card-padding-x) var(--card-title-padding-bottom);
   font-size: var(--font-body-large);
   line-height: var(--lh-body-tight);
 }
 #mainContents .archive-card-grid .archive-card-grid_Inner .column p {
-  padding: 0 var(--card-padding-x) var(--card-padding-bottom);
   font-size: var(--font-body);
   line-height: var(--lh-body);
+}
+/* -- カード余白（archive-card-grid） -- */
+#mainContents .archive-card-grid .archive-card-grid_Inner .column > a > h3 {
+  padding-top: var(--card-space-top);
+  padding-right: var(--card-padding-x);
+  padding-left: var(--card-padding-x);
+}
+#mainContents .archive-card-grid .archive-card-grid_Inner .column > a > p {
+  padding-right: var(--card-padding-x);
+  padding-bottom: var(--card-space-bottom);
+  padding-left: var(--card-padding-x);
 }
 @media only screen and (max-width: 1266px) {
   #mainContents .archive-card-grid {
@@ -1633,15 +1678,25 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
   #mainContents .archive-card-grid .archive-card-grid_Inner .column:nth-child(3n) {
     margin: 0 0 40px;
   }
+  /* タイポグラフィ SP */
   #mainContents .archive-card-grid .archive-card-grid_Inner .column h3 {
-    padding: var(--card-title-padding-top-sp) var(--card-padding-x-sp) var(--card-title-padding-bottom-sp);
     font-size: var(--font-heading-card);
     line-height: 1.5; /* exception: SP縦幅制約（lh-body-tightより少し広め）*/
   }
   #mainContents .archive-card-grid .archive-card-grid_Inner .column p {
-    padding: 0 var(--card-padding-x-sp) var(--card-padding-bottom-sp);
     font-size: var(--font-body-small);
     line-height: var(--lh-body-loose);
+  }
+  /* 余白 SP */
+  #mainContents .archive-card-grid .archive-card-grid_Inner .column > a > h3 {
+    padding-top: var(--card-space-top-sp);
+    padding-right: var(--card-padding-x-sp);
+    padding-left: var(--card-padding-x-sp);
+  }
+  #mainContents .archive-card-grid .archive-card-grid_Inner .column > a > p {
+    padding-right: var(--card-padding-x-sp);
+    padding-bottom: var(--card-space-bottom-sp);
+    padding-left: var(--card-padding-x-sp);
   }
 }
 
@@ -3588,7 +3643,7 @@ nav#pagination .flLink a:hover {
   height: 40px;
   background-color: #F0F0F0;
   margin-bottom: 20px;
-  padding: 7px 0 0 15px;
+  padding: 4px 0 0 15px;
   text-align: left;
   font-size: var(--font-ui-large);
   font-weight: 700;
@@ -6892,5 +6947,13 @@ body.works-post .works-single {
 }
 
 /* ========================================
+   c-card-tile
+======================================== */
+.column .h-label {
+  margin: 0;
+}
+
+/* ========================================
    contact / download
 ======================================== */
+
