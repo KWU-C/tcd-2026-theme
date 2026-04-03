@@ -186,7 +186,7 @@ body {
   --font-heading-emphasis: 3.0rem;
 
   --font-button-cta: 2.3rem;
-  --font-button-cta-sp: 1.4rem;
+  --font-button-cta-sp: 2.0rem;
 
   --font-heading-page: 3.0rem;
   --font-heading-section: 1.7rem;
@@ -428,52 +428,48 @@ header #header_SpMenu {
     background-size: cover;
     content: "";
   }
-  header #header_SpMenu #header_SpContact01 {
+  header #header_SpMenu #header_SpContact01,
+  header #header_SpMenu #header_SpContact02 {
     position: relative;
     width: 90%;
-    height: auto;
-    margin: 0 5% 20px;
-    padding: 20px 0 20px;
     border-radius: var(--card-radius);
     background-color: var(--color-brand);
+    box-shadow: var(--card-shadow);
     text-align: center;
+  }
+  header #header_SpMenu #header_SpContact01 {
+    margin: 0 5% 20px;
+  }
+  header #header_SpMenu #header_SpContact02 {
+    margin: 0 5%;
+  }
+  header #header_SpMenu #header_SpContact01 a,
+  header #header_SpMenu #header_SpContact02 a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    transition: all 0.3s;
+  }
+  header #header_SpMenu #header_SpContact01 a:hover,
+  header #header_SpMenu #header_SpContact02 a:hover {
+    opacity: 0.7;
+    text-decoration: none;
   }
   header #header_SpMenu #header_SpContact01::before {
     position: absolute;
     left: 50%;
-    top: 23px;
+    top: 22px;
     width: 15px;
     height: 20px;
     margin: 0 0 0 -70px;
     background-image: url("../img/icon05.svg");
     background-size: cover;
     content: "";
-  }
-  header #header_SpMenu #header_SpContact01 a:hover {
-    text-decoration: none;
-  }
-  header #header_SpMenu #header_SpContact01 h3 {
-    font-size: 2.2rem; /* exception: SPコンタクトブロック見出し */
-    font-weight: 100;
-    color: var(--color-white);
-  }
-  header #header_SpMenu #header_SpContact01 p {
-    padding: 15px 0 0;
-    font-size: var(--font-ui-small);
-    font-weight: 700;
-    color: var(--color-white);
-    line-height: var(--lh-ui);
-  }
-
-  header #header_SpMenu #header_SpContact02 {
-    position: relative;
-    width: 90%;
-    height: auto;
-    margin: 0 5%;
-    padding: 20px 0 20px;
-    border-radius: var(--card-radius);
-    background-color: var(--color-brand);
-    text-align: center;
   }
   header #header_SpMenu #header_SpContact02::before {
     position: absolute;
@@ -486,17 +482,16 @@ header #header_SpMenu {
     background-size: cover;
     content: "";
   }
-  header #header_SpMenu #header_SpContact02 a:hover {
-    text-decoration: none;
-  }
+  header #header_SpMenu #header_SpContact01 h3,
   header #header_SpMenu #header_SpContact02 h3 {
-    font-size: 2.2rem; /* exception: SPコンタクトブロック見出し */
-    font-weight: 100;
+    font-size: var(--font-button-cta-sp);
+    font-weight: 700;
     color: var(--color-white);
   }
+  header #header_SpMenu #header_SpContact01 p,
   header #header_SpMenu #header_SpContact02 p {
-    padding: 15px 0 0;
-    font-size: var(--font-ui-small);
+    padding: 0;
+    font-size: var(--font-body-small);
     font-weight: 700;
     color: var(--color-white);
     line-height: var(--lh-ui);
@@ -747,7 +742,7 @@ header #headerContactArea li a:hover {
   content: "";
 }
 #footerContact .column h3 {
-  padding-top: 6px;
+  padding: 0;
   font-size: var(--font-button-cta);
   font-weight: 700;
   color: var(--color-white);
@@ -793,7 +788,7 @@ header #headerContactArea li a:hover {
     font-size: var(--font-button-cta-sp);
   }
   #footerContact .column p {
-    padding: 15px 0 0;
+    padding: 0;
     font-size: var(--font-body-small);
   }
 }
