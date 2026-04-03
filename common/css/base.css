@@ -3392,7 +3392,7 @@ nav#pagination .flLink a:hover {
   margin: 0 0 0 10px;
   padding: 2px 15px 3px;
   border-radius: 30px;
-  background-color: #E17E5E;
+  background-color: #E17E5E; /* exception: お問い合わせフォーム「必須」バッジ・オレンジアクセント */
   font-size: var(--font-body-small);
   font-weight: 700;
   color: var(--color-white);
@@ -4149,7 +4149,7 @@ nav#pagination .flLink a:hover {
 =========================================== */
 .btnlike {
   margin-top: 80px;
-  background-color: #b04b4b;
+  background-color: #b04b4b; /* exception: 告知ボタン・赤アクセント（エラー色とは別用途） */
   line-height: 40px;
   font-size: var(--font-ui-small);
   text-align: center;
