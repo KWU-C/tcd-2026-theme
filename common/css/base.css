@@ -138,6 +138,7 @@ body {
   --color-gray-950:   #1a1a1a;
   --color-gray-700:   #484848;
   --color-gray-500:   #999999;   /* #949495 を吸収（差: 4/255） */
+  --color-gray-300:   #bbbbbb;
   --color-cyan:   #00B4D8;   /* ブランドシアン（#00ABD3 / #37ab86 / #4dbc92 を統合） */
   --color-red:    #cc0000;
   /* --- color semantic layer（base 参照） --- */
@@ -3797,7 +3798,7 @@ nav#pagination .flLink a:hover {
 .c-heading-bar {
   width: 100%;
   height: 40px;
-  background-color: var(--color-gray-500);
+  background-color: var(--color-gray-300);
   margin-bottom: 20px;
   padding: 4px 0 0 15px;
   text-align: left;
