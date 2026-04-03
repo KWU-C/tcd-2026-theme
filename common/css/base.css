@@ -138,7 +138,7 @@ body {
   --color-gray-950:   #1a1a1a;
   --color-gray-700:   #484848;
   --color-gray-500:   #999999;   /* #949495 を吸収（差: 4/255） */
-  --color-gray-300:   #bbbbbb;
+  --color-gray-300:   #cccccc;
   --color-cyan:   #00B4D8;   /* ブランドシアン（#00ABD3 / #37ab86 / #4dbc92 を統合） */
   --color-red:    #cc0000;
   /* --- color semantic layer（base 参照） --- */
@@ -2248,6 +2248,13 @@ display: none;
   font-size: var(--font-ui);
   line-height: var(--lh-body);
 }
+/* h3.c-heading-bar — バー見出しコンポーネント専用（通常 h3 とは独立） */
+.detail__main_cont h3.c-heading-bar {
+  font-size: var(--font-ui-large);
+  line-height: var(--lh-ui);
+  padding: 6px 0 0 15px;
+  height: 40px;
+}
 .detail__main_cont p {
   font-size: var(--font-body);
   line-height: var(--lh-body);
@@ -2398,6 +2405,11 @@ display: none;
   .detail__main_cont h3 {
     font-size: var(--font-body-large);
     padding: 0;
+  }
+  .detail__main_cont h3.c-heading-bar {
+    font-size: var(--font-body);
+    padding: 5px 10px;
+    height: auto;
   }
   .detail__main_cont .colum_wrap {
     border-top: 1px solid var(--color-text-muted);
@@ -3800,7 +3812,7 @@ nav#pagination .flLink a:hover {
   height: 40px;
   background-color: var(--color-gray-300);
   margin-bottom: 20px;
-  padding: 4px 0 0 15px;
+  padding: 6px 0 0 15px;
   text-align: left;
   font-size: var(--font-ui-large);
   font-weight: 700;
