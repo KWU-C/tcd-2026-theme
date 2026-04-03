@@ -38,7 +38,7 @@
   display: block;
   width: 100%;
   padding: 1em;
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
   color: var(--color-text);
 }
 
@@ -74,12 +74,12 @@
 }
 
 #tcd em.note {
-  font-size: 1.2rem;
+  font-size: var(--font-caption-small);
   font-style: normal;
 }
 
 #tcd .layerTxt {
-  font-size: 1.6rem;
+  font-size: var(--font-ui);
   font-weight: bold;
 }
 
@@ -157,7 +157,7 @@
   margin-top: 80px;
   background-color: var(--color-error);
   line-height: 40px;
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
   text-align: center;
   color: var(--color-white);
   padding: 1em 0.5em;
@@ -308,7 +308,7 @@ ul.social-button-syncer li:nth-last-of-type(1) {
 }
 
 .article__list_cat {
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
 }
 
 .article__list_item {
@@ -323,17 +323,17 @@ ul.social-button-syncer li:nth-last-of-type(1) {
 
 .article__list_ttl {
   margin-bottom: 1.8rem;
-  font-size: 1.6rem;
+  font-size: var(--font-ui);
   word-break: break-all;
 }
 
 .article__list_excerpt {
-  font-size: 1.2rem;
+  font-size: var(--font-caption-small);
   word-break: break-all;
 }
 
 .article__list_client {
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
 }
 
 /* ==========================================
@@ -363,7 +363,7 @@ ul.social-button-syncer li:nth-last-of-type(1) {
 .recent__sidebar_item {
   padding: 1rem 0;
   border-bottom: 1px solid var(--color-border);
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
 }
 
 .recent__sidebar_item:last-child {
@@ -446,7 +446,7 @@ ul.social-button-syncer li:nth-last-of-type(1) {
 }
 
 .page__nav_link {
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
 }
 
 .page__nav_link:hover {
@@ -462,7 +462,7 @@ ul.social-button-syncer li:nth-last-of-type(1) {
 
 .page__nav_parent::after {
   content: "▼";
-  font-size: 1rem;
+  font-size: var(--font-caption-xs);
   position: absolute;
   top: 50%;
   right: 0;
@@ -491,14 +491,14 @@ ul.social-button-syncer li:nth-last-of-type(1) {
 }
 
 .page__nav_child-link {
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
 }
 
 .page__nav_child-cap {
   position: absolute;
   right: 1rem;
   bottom: 1rem;
-  font-size: 1.2rem;
+  font-size: var(--font-caption-small);
   color: var(--color-text-muted);
 }
 
@@ -520,7 +520,7 @@ ul.social-button-syncer li:nth-last-of-type(1) {
 #nav3rd ul li {
   float: left;
   text-align: center;
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
   line-height: 1.75em;
   padding: 0.5em;
   background-color: var(--color-bg-light);
@@ -538,7 +538,7 @@ ul.social-button-syncer li:nth-last-of-type(1) {
   margin: 20px 0 0;
   border-bottom: none;
   background-color: #fbf2f2;
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
 }
 
 #nav3rd ul li.toCon a {
@@ -597,7 +597,7 @@ ul.social-button-syncer li:nth-last-of-type(1) {
 #nav3rd_wide ul li {
   float: left;
   text-align: center;
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
   line-height: 2em;
   padding: 0.5em;
   background-color: var(--color-bg-light);
@@ -615,7 +615,7 @@ ul.social-button-syncer li:nth-last-of-type(1) {
   margin: 20px 0 0;
   border-bottom: none;
   background-color: #fbf2f2;
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
 }
 
 #nav3rd_wide ul li.toCon a {
@@ -664,7 +664,7 @@ ul.social-button-syncer li:nth-last-of-type(1) {
   border: 1px solid var(--color-bg-light);
   display: block;
   float: left;
-  font-size: 1.2rem;
+  font-size: var(--font-caption-small);
   line-height: 1.5em;
   padding: 0.5em;
   margin: 0.5em;
@@ -849,7 +849,7 @@ ul.social-button-syncer li:nth-last-of-type(1) {
     border-bottom: 1px dotted var(--color-bg-light);
     display: block;
     float: none;
-    font-size: 1.4rem;
+    font-size: var(--font-body-small);
     line-height: 1.5em;
     padding: 0.75em;
     margin: 0;
@@ -890,7 +890,7 @@ h1.bnone {
 
 #crew h1 {
   font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
-  font-size: 3.2rem;
+  font-size: 3.2rem; /* exception: クルー紹介 h1・明朝体ブランドタイポグラフィ */
   border: none;
   line-height: 1.75em;
   margin-bottom: 1em;
@@ -908,11 +908,11 @@ h1.bnone {
 #crew dl dd {
   vertical-align: bottom;
   display: table-cell;
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
 }
 
 #crew dl dd small {
-  font-size: 1.1rem;
+  font-size: var(--font-caption-xs);
 }
 
 #crew p {
@@ -1032,7 +1032,7 @@ h1.bnone {
 }
 
 #tcd .profile dl dt {
-  font-size: 1.6rem;
+  font-size: var(--font-ui);
   line-height: 1.8em;
   width: 160px;
   float: left;
@@ -1044,7 +1044,7 @@ h1.bnone {
 }
 
 #tcd .profile dl dd {
-  font-size: 1.6rem;
+  font-size: var(--font-ui);
   line-height: 1.8em;
   width: 530px;
   float: left;
@@ -1109,7 +1109,7 @@ h1.bnone {
 }
 
 #tcd .profile-en dl dt {
-  font-size: 1.6rem;
+  font-size: var(--font-ui);
   line-height: 1.75em;
   width: 180px;
   float: left;
@@ -1121,7 +1121,7 @@ h1.bnone {
 }
 
 #tcd .profile-en dl dd {
-  font-size: 1.6rem;
+  font-size: var(--font-ui);
   font-weight: 400;
   line-height: 2em;
   width: 510px;
@@ -1190,7 +1190,7 @@ h1.bnone {
 
 #tcd .client .clientList ul li {
   width: 100%;
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
   line-height: 1.4em;
   padding: 0 0 0.75em;
 }
@@ -1340,7 +1340,7 @@ h1.bnone {
 }
 
 #staff .mes dl {
-  font-size: 1.6rem;
+  font-size: var(--font-ui);
   line-height: 2em;
   padding: 0 0 15px;
   margin: 0 0 15px;
@@ -1369,7 +1369,7 @@ h1.bnone {
 }
 
 #contentsfull h1 {
-  font-size: 1.6rem;
+  font-size: var(--font-ui);
   font-weight: bold;
   margin: 0 0 2em;
   border-bottom: 1px solid var(--color-border);
@@ -1377,7 +1377,7 @@ h1.bnone {
 }
 
 #contentsfull h1 em {
-  font-size: 1rem;
+  font-size: var(--font-caption-xs);
   margin: 0 0 0.75em;
   display: block;
   font-style: normal;
@@ -1385,7 +1385,7 @@ h1.bnone {
 }
 
 #contentsfull h2 {
-  font-size: 1.8rem;
+  font-size: var(--font-body);
   font-weight: bold;
   background-color: var(--color-ui-dark);
   padding: 0.5em;
@@ -1401,7 +1401,7 @@ h1.bnone {
 
 #servicePage h1 {
   text-align: center;
-  font-size: 2.2rem;
+  font-size: var(--font-heading-sub);
   line-height: 2em;
   border: none;
 }
@@ -1414,7 +1414,7 @@ h1.bnone {
 }
 
 #servicePage h2.ttl2 {
-  font-size: 3rem;
+  font-size: var(--font-heading-page);
   color: var(--color-text-muted);
   font-weight: bold;
   border-bottom: solid 1px var(--color-border);
@@ -1422,7 +1422,7 @@ h1.bnone {
 }
 
 #servicePage h3 {
-  font-size: 2rem;
+  font-size: var(--font-body-large);
   font-weight: bold;
   margin-top: 0.5em;
 }
@@ -1435,13 +1435,13 @@ h1.bnone {
 #servicePage .gray-box .task_icon {
   background-color: var(--color-text-muted);
   color: var(--color-white);
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
   padding: 3px 8px;
   display: inline;
 }
 
 #servicePage p {
-  font-size: 1.8rem;
+  font-size: var(--font-body);
   line-height: 2.5em;
 }
 
@@ -1455,7 +1455,7 @@ h1.bnone {
 .serviceLink h3 {
   background-color: var(--color-text-muted) !important;
   color: var(--color-white);
-  font-size: 1.6rem;
+  font-size: var(--font-ui);
   font-weight: normal;
   line-height: 2em;
   margin: 0 !important;
@@ -1464,7 +1464,7 @@ h1.bnone {
 
 .serviceEx {
   margin: 0;
-  font-size: 1.6rem;
+  font-size: var(--font-ui);
 }
 
 .serviceEx li {
@@ -1475,7 +1475,7 @@ h1.bnone {
 
 ol.serviceEx2 {
   margin: 0 0 40px;
-  font-size: 1.6rem;
+  font-size: var(--font-ui);
   list-style: decimal;
 }
 
@@ -1492,7 +1492,7 @@ ol.serviceEx2 li {
 .serviceCase dl {
   width: 330px;
   float: left;
-  font-size: 1.6rem;
+  font-size: var(--font-ui);
 }
 
 .serviceCase dl dt img {
@@ -1538,7 +1538,7 @@ ol.serviceEx2 li {
 }
 
 .lead p {
-  font-size: 1.85rem;
+  font-size: var(--font-body);
 }
 
 dl.task {
@@ -1549,7 +1549,7 @@ dl.task {
 }
 
 dl.task dt {
-  font-size: 1.6rem;
+  font-size: var(--font-ui);
   line-height: 1.75em;
   width: 35%;
   float: left;
@@ -1583,7 +1583,7 @@ dl.task dd {
 }
 
 .about-policy dl dd p {
-  font-size: 1.5rem !important;
+  font-size: var(--font-body-detail) !important;
 }
 
 /* ==========================================
@@ -1641,7 +1641,7 @@ dl.task dd {
     padding-bottom: 4em;
   }
   #crew h1 {
-    font-size: 2.4rem;
+    font-size: 2.4rem; /* exception: クルー紹介 h1 SP縮小（3.2rem→2.4rem） */
     margin-bottom: 1em;
   }
   #crew dl {
@@ -1967,7 +1967,7 @@ dl.task dd {
 }
 .service-cases p {
   color: var(--color-text-muted);
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
   line-height: 1.85;
   margin-bottom: 0;
 }
@@ -1995,13 +1995,13 @@ dl.task dd {
 }
 .service-step h3 {
   margin: 0;
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
   font-weight: bold;
   line-height: 1.5;
 }
 .service-step p {
   margin: 0;
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
   line-height: 1.75;
 }
 .service-step:last-child {
@@ -2018,7 +2018,7 @@ dl.task dd {
   min-width: 50%;
 }
 .service-toc p {
-  font-size: 1.3rem;
+  font-size: var(--font-caption);
   font-weight: bold;
   margin: 0 0 0.5em;
 }
@@ -2028,7 +2028,7 @@ dl.task dd {
 }
 .service-toc ul li {
   list-style: decimal;
-  font-size: 1.35rem;
+  font-size: var(--font-ui-small);
   margin-bottom: 0.3em;
   line-height: 1.6;
 }

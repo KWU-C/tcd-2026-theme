@@ -3798,7 +3798,7 @@ nav#pagination .flLink a:hover {
    works詳細：冒頭補足テキスト（インラインスタイル移行用）
    ============================================================ */
 .detail__main_cont p.c-works-note {
-  font-size: 1.2rem;
+  font-size: var(--font-caption-small);
   color: var(--color-text-muted);
   line-height: var(--lh-note);
   padding-bottom: 20px;
@@ -4032,7 +4032,7 @@ nav#pagination .flLink a:hover {
   display: block;
   width: 100%;
   padding: 1em;
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
   color: var(--color-text);
 }
 
@@ -4068,12 +4068,12 @@ nav#pagination .flLink a:hover {
 }
 
 #tcd em.note {
-  font-size: 1.2rem;
+  font-size: var(--font-caption-small);
   font-style: normal;
 }
 
 #tcd .layerTxt {
-  font-size: 1.6rem;
+  font-size: var(--font-ui);
   font-weight: bold;
 }
 
@@ -4280,14 +4280,14 @@ ul.social-button-syncer li:nth-last-of-type(1) {
 }
 
 .heading__ttl {
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
   line-height: 1.15385;
   font-weight: normal;
   margin-bottom: 1em;
 }
 
 .heading__ttl_sub {
-  font-size: 1.2rem;
+  font-size: var(--font-caption-small);
   font-weight: 300;
 }
 
@@ -4305,7 +4305,7 @@ ul.social-button-syncer li:nth-last-of-type(1) {
 .sub-nav ul li {
   float: left;
   text-align: center;
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
   line-height: 1.75em;
   padding: 0.5em;
   background-color: var(--color-bg-light);
@@ -4323,7 +4323,7 @@ ul.social-button-syncer li:nth-last-of-type(1) {
   margin: 20px 0 0;
   border-bottom: none;
   background-color: #fbf2f2 /* exception: エラー薄背景 */;
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
 }
 
 .sub-nav ul li.toCon a {
@@ -4382,7 +4382,7 @@ ul.social-button-syncer li:nth-last-of-type(1) {
 .sub-nav-wide ul li {
   float: left;
   text-align: center;
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
   line-height: 2em;
   padding: 0.5em;
   background-color: var(--color-bg-light);
@@ -4400,7 +4400,7 @@ ul.social-button-syncer li:nth-last-of-type(1) {
   margin: 20px 0 0;
   border-bottom: none;
   background-color: #fbf2f2 /* exception: エラー薄背景 */;
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
 }
 
 .sub-nav-wide ul li.toCon a {
@@ -4449,7 +4449,7 @@ ul.social-button-syncer li:nth-last-of-type(1) {
   border: 1px solid var(--color-bg-light);
   display: block;
   float: left;
-  font-size: 1.2rem;
+  font-size: var(--font-caption-small);
   line-height: 1.5em;
   padding: 0.5em;
   margin: 0.5em;
@@ -4565,7 +4565,7 @@ ul.social-button-syncer li:nth-last-of-type(1) {
     border-bottom: 1px dotted var(--color-bg-light);
     display: block;
     float: none;
-    font-size: 1.4rem;
+    font-size: var(--font-body-small);
     line-height: 1.5em;
     padding: 0.75em;
     margin: 0;
@@ -4606,7 +4606,7 @@ h1.bnone {
 
 .about-crew h1 {
   font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
-  font-size: 3.2rem;
+  font-size: 3.2rem; /* exception: クルー紹介 h1・明朝体ブランドタイポグラフィ */
   border: none;
   line-height: 1.75em;
   margin-bottom: 1em;
@@ -4624,11 +4624,11 @@ h1.bnone {
 .about-crew dl dd {
   vertical-align: bottom;
   display: table-cell;
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
 }
 
 .about-crew dl dd small {
-  font-size: 1.1rem;
+  font-size: var(--font-caption-xs);
 }
 
 .about-crew p {
@@ -4748,7 +4748,7 @@ h1.bnone {
 }
 
 #tcd .profile dl dt {
-  font-size: 1.6rem;
+  font-size: var(--font-ui);
   line-height: 1.8em;
   width: 160px;
   float: left;
@@ -4760,7 +4760,7 @@ h1.bnone {
 }
 
 #tcd .profile dl dd {
-  font-size: 1.6rem;
+  font-size: var(--font-ui);
   line-height: 1.8em;
   width: 530px;
   float: left;
@@ -4825,7 +4825,7 @@ h1.bnone {
 }
 
 #tcd .profile-en dl dt {
-  font-size: 1.6rem;
+  font-size: var(--font-ui);
   line-height: 1.75em;
   width: 180px;
   float: left;
@@ -4837,7 +4837,7 @@ h1.bnone {
 }
 
 #tcd .profile-en dl dd {
-  font-size: 1.6rem;
+  font-size: var(--font-ui);
   font-weight: 400;
   line-height: 2em;
   width: 510px;
@@ -4906,7 +4906,7 @@ h1.bnone {
 
 #tcd .client .clientList ul li {
   width: 100%;
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
   line-height: 1.4em;
   padding: 0 0 0.75em;
 }
@@ -5056,7 +5056,7 @@ h1.bnone {
 }
 
 .about-staff .mes dl {
-  font-size: 1.6rem;
+  font-size: var(--font-ui);
   line-height: 2em;
   padding: 0 0 15px;
   margin: 0 0 15px;
@@ -5085,7 +5085,7 @@ h1.bnone {
 }
 
 .page-content-full h1 {
-  font-size: 1.6rem;
+  font-size: var(--font-ui);
   font-weight: bold;
   margin: 0 0 2em;
   border-bottom: 1px solid var(--color-border);
@@ -5101,7 +5101,7 @@ h1.bnone {
 }
 
 .page-content-full h2 {
-  font-size: 1.8rem;
+  font-size: var(--font-body);
   font-weight: bold;
   background-color: var(--color-ui-dark);
   padding: 0.5em;
@@ -5117,7 +5117,7 @@ h1.bnone {
 
 .service-page h1 {
   text-align: center;
-  font-size: 2.2rem;
+  font-size: var(--font-heading-sub);
   line-height: 2em;
   border: none;
 }
@@ -5151,13 +5151,13 @@ h1.bnone {
 .service-page .gray-box .task_icon {
   background-color: var(--color-ui-dark);
   color: var(--color-white);
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
   padding: 3px 8px;
   display: inline;
 }
 
 .service-page p {
-  font-size: 1.8rem;
+  font-size: var(--font-body);
   line-height: 2.5em;
 }
 
@@ -5171,7 +5171,7 @@ h1.bnone {
 .serviceLink h3 {
   background-color: var(--color-text-muted) !important;
   color: var(--color-white);
-  font-size: 1.6rem;
+  font-size: var(--font-ui);
   font-weight: normal;
   line-height: 2em;
   margin: 0 !important;
@@ -5180,7 +5180,7 @@ h1.bnone {
 
 .serviceEx {
   margin: 0;
-  font-size: 1.6rem;
+  font-size: var(--font-ui);
 }
 
 .serviceEx li {
@@ -5191,7 +5191,7 @@ h1.bnone {
 
 ol.serviceEx2 {
   margin: 0 0 40px;
-  font-size: 1.6rem;
+  font-size: var(--font-ui);
   list-style: decimal;
 }
 
@@ -5208,7 +5208,7 @@ ol.serviceEx2 li {
 .serviceCase dl {
   width: 330px;
   float: left;
-  font-size: 1.6rem;
+  font-size: var(--font-ui);
 }
 
 .serviceCase dl dt img {
@@ -5254,7 +5254,7 @@ ol.serviceEx2 li {
 }
 
 .lead p {
-  font-size: 1.85rem;
+  font-size: var(--font-body);
 }
 
 dl.task {
@@ -5265,7 +5265,7 @@ dl.task {
 }
 
 dl.task dt {
-  font-size: 1.6rem;
+  font-size: var(--font-ui);
   line-height: 1.75em;
   width: 35%;
   float: left;
@@ -5299,7 +5299,7 @@ dl.task dd {
 }
 
 .about-policy dl dd p {
-  font-size: 1.5rem !important;
+  font-size: var(--font-body-detail) !important;
 }
 
 /* ==========================================
@@ -5357,7 +5357,7 @@ dl.task dd {
     padding-bottom: 4em;
   }
   .about-crew h1 {
-    font-size: 2.4rem;
+    font-size: 2.4rem; /* exception: クルー紹介 h1 SP縮小（3.2rem→2.4rem） */
     margin-bottom: 1em;
   }
   .about-crew dl {
@@ -5578,7 +5578,7 @@ dl.task dd {
 }
 /* サービス英語タイトル（h1直下の英語副題） */
 .service-en-title {
-  font-size: 2.8rem;
+  font-size: var(--font-display-service);
   font-weight: bold;
   letter-spacing: 0.04em;
   margin: 0 0 0.4em;
@@ -5587,7 +5587,7 @@ dl.task dd {
 
 /* リード文 */
 .service-lead {
-  font-size: 1.55rem;
+  font-size: var(--font-body-lead);
   line-height: 2;
   margin-bottom: 3em;
   color: var(--color-text);
@@ -5626,7 +5626,7 @@ dl.task dd {
 }
 .service-cases p {
   color: var(--color-text-muted);
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
   line-height: 1.85;
   margin-bottom: 0;
 }
@@ -5654,13 +5654,13 @@ dl.task dd {
 }
 .service-step h3 {
   margin: 0;
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
   font-weight: bold;
   line-height: 1.5;
 }
 .service-step p {
   margin: 0;
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
   line-height: 1.75;
 }
 .service-step:last-child {
@@ -5677,7 +5677,7 @@ dl.task dd {
   min-width: 50%;
 }
 .service-toc p {
-  font-size: 1.3rem;
+  font-size: var(--font-caption);
   font-weight: bold;
   margin: 0 0 0.5em;
 }
@@ -5687,7 +5687,7 @@ dl.task dd {
 }
 .service-toc ul li {
   list-style: decimal;
-  font-size: 1.35rem;
+  font-size: var(--font-ui-small);
   margin-bottom: 0.3em;
   line-height: 1.6;
 }
@@ -5739,7 +5739,7 @@ dl.task dd {
 
 #tcd .top-article div h1 {
   color: var(--color-text-muted);
-  font-size: 2.1rem;
+  font-size: var(--font-heading-sub);
   margin-bottom: 70px;
 }
 
@@ -5752,7 +5752,7 @@ dl.task dd {
   width: 50%;
   float: left;
   font-weight: bold;
-  font-size: 1.8rem;
+  font-size: var(--font-body);
   padding: 30px 0;
   margin-bottom: 60px;
 }
@@ -5779,7 +5779,7 @@ dl.task dd {
 
 #tcd .top-new-case h2 {
   text-align: left;
-  font-size: 1.4rem !important;
+  font-size: var(--font-body-small) !important;
 }
 
 #tcd .top-new-case ._c-row__col {
@@ -5797,7 +5797,7 @@ dl.task dd {
 }
 
 #tcd .top-new-case ._c-row__col .thum a .ttl {
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
   line-height: 1.75em;
 }
 
@@ -5844,7 +5844,7 @@ dl.task dd {
 }
 
 #tcd .works-officeart h2 {
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
   font-weight: normal;
   margin-top: 0;
   margin-bottom: 2em;
@@ -5856,7 +5856,7 @@ dl.task dd {
 }
 
 #tcd .works-officeart p {
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
   line-height: 1.75em;
   margin-bottom: 2em;
 }
@@ -5918,7 +5918,7 @@ dl.task dd {
 }
 
 #tcd .works-cate ._c-row__col .thum a .ttl {
-  font-size: 1.3rem;
+  font-size: var(--font-caption);
   line-height: 1.75em;
   padding-top: 0.5em;
 }
@@ -5938,7 +5938,7 @@ dl.task dd {
 }
 
 .works-naming h1.entry-title {
-  font-size: 1.8rem;
+  font-size: var(--font-body);
   line-height: 1.5em;
   margin: 0 0 0.5em;
 }
@@ -5954,7 +5954,7 @@ dl.task dd {
 }
 
 .works-naming dl dt h1.entry-title {
-  font-size: 1.8rem;
+  font-size: var(--font-body);
   line-height: 1.5em;
   margin: 0 0 1em;
   padding-top: 1em;
@@ -5973,7 +5973,7 @@ dl.task dd {
 .works-naming dl dd .entry-content {
   float: right;
   width: 400px;
-  font-size: 1.5rem;
+  font-size: var(--font-body-detail);
   line-height: 1.85em;
 }
 
@@ -6075,12 +6075,12 @@ dl.task dd {
 
 .maga-archive-client {
   display: block;
-  font-size: 1.2rem;
+  font-size: var(--font-caption-small);
 }
 
 .maga-archive-ttl {
   display: block;
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
   font-weight: 600;
 }
 
@@ -6092,7 +6092,7 @@ dl.task dd {
 }
 
 .maga-detail-client {
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
   margin-bottom: 1rem;
 }
 
@@ -6112,7 +6112,7 @@ dl.task dd {
 
 .maga-detail-block-ttl {
   width: 25%;
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
   font-weight: 600;
 }
 
@@ -6121,7 +6121,7 @@ dl.task dd {
 }
 
 .maga-detail-block-txt {
-  font-size: 1.8rem;
+  font-size: var(--font-body);
   line-height: 1.8;
 }
 
@@ -6133,7 +6133,7 @@ dl.task dd {
   padding: 2rem 0;
   box-sizing: border-box;
   background: var(--color-text-muted);
-  font-size: 2.2rem;
+  font-size: var(--font-heading-sub);
   color: var(--color-white) !important;
   position: relative;
   text-align: center;
@@ -6183,7 +6183,7 @@ dl.task dd {
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 1.2rem;
+  font-size: var(--font-caption-small);
   color: var(--color-white);
 }
 
@@ -6216,7 +6216,7 @@ dl.task dd {
 }
 
 .maga-nav-ttl-link {
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
 }
 
 .maga-nav-img {
@@ -6234,14 +6234,14 @@ dl.task dd {
 
 .maga-column-ttl {
   display: block;
-  font-size: 1.8rem;
+  font-size: var(--font-body);
   color: var(--color-text-muted);
   margin-bottom: 1rem;
 }
 
 .maga-column-txt {
   display: block;
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
 }
 
 .maga-btn {
@@ -6252,7 +6252,7 @@ dl.task dd {
   padding: 2rem 0;
   box-sizing: border-box;
   background: var(--color-text-muted);
-  font-size: 2.2rem;
+  font-size: var(--font-heading-sub);
   color: var(--color-white) !important;
   position: relative;
   text-align: center;
@@ -6305,7 +6305,7 @@ dl.task dd {
 }
 
 .detail__main_cat {
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
   font-weight: 600;
   color: var(--color-text-muted);
   padding-right: 2rem;
@@ -6313,13 +6313,13 @@ dl.task dd {
 }
 
 .detail__main_date {
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
   color: var(--color-text-muted);
   padding-left: 2rem;
 }
 
 .detail__main_ttl {
-  font-size: 3.1rem;
+  font-size: var(--font-heading-page);
   font-weight: 600;
   line-height: 1.75em;
   margin-bottom: 3.25rem;
@@ -6328,13 +6328,13 @@ dl.task dd {
 
 .detail__main_ttl-h2 {
   margin: 7rem 0 3rem;
-  font-size: 2.4rem;
+  font-size: 2.4rem; /* exception: 記事詳細 h2・heading-sub(2.1rem)と0.3rem差は有意 */
   font-weight: 600;
   line-height: 1.6;
 }
 
 .detail__main_txt {
-  font-size: 1.8rem;
+  font-size: var(--font-body);
   line-height: 2;
   margin: 0;
 }
@@ -6350,7 +6350,7 @@ dl.task dd {
 
 .detail__main_block-ttl {
   padding: 1.7rem 0;
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
   font-weight: 600;
   color: var(--color-text-muted);
 }
@@ -6376,13 +6376,13 @@ dl.task dd {
 }
 
 .detail__case_ttl {
-  font-size: 1.6rem;
+  font-size: var(--font-ui);
   margin-bottom: .5rem;
 }
 
 .detail__case_txt {
   padding-left: 1.5rem;
-  font-size: 1.6rem;
+  font-size: var(--font-ui);
   color: var(--color-brand);
 }
 
@@ -6401,17 +6401,17 @@ dl.task dd {
 }
 
 .detail__author_name {
-  font-size: 1.8rem;
+  font-size: var(--font-body);
   margin-bottom: .5rem;
 }
 
 .detail__author_sub {
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
   margin-bottom: 0;
 }
 
 .detail__author_cont {
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
 }
 
 .detail__sns {
@@ -6483,12 +6483,12 @@ body.works-post .works-single {
 }
 
 #tcd .works-single .works-side-wrap p.client {
-  font-size: 1.2rem;
+  font-size: var(--font-caption-small);
   line-height: 1.2em;
 }
 
 #tcd .works-single .works-side-wrap p {
-  font-size: 1.6rem;
+  font-size: var(--font-ui);
   line-height: 2em;
 }
 
@@ -6596,7 +6596,7 @@ body.works-post .works-single {
   }
 
   .maga-detail-ttl {
-    font-size: 2.2rem;
+    font-size: var(--font-heading-sub);
     margin-bottom: 3rem;
   }
 
@@ -6618,13 +6618,13 @@ body.works-post .works-single {
   }
 
   .maga-detail-block-txt {
-    font-size: 1.6rem;
+    font-size: var(--font-ui);
     line-height: 1.6;
   }
 
   .maga-detail-btn {
     padding: 1.5rem 0;
-    font-size: 1.8rem;
+    font-size: var(--font-body);
   }
 
   .maga-detail-btn::before {
@@ -6648,7 +6648,7 @@ body.works-post .works-single {
 
   .maga-btn {
     padding: 1.5rem 0;
-    font-size: 1.8rem;
+    font-size: var(--font-body);
   }
 
   .maga-btn::before {
@@ -6689,7 +6689,7 @@ body.works-post .works-single {
 
   .detail__main_ttl-h2 {
     margin: 4rem 0 2rem;
-    font-size: 1.8rem;
+    font-size: var(--font-body);
   }
 
   .detail__main_block-ttl {
@@ -6710,12 +6710,12 @@ body.works-post .works-single {
   }
 
   .detail__case_ttl {
-    font-size: 1.4rem;
+    font-size: var(--font-body-small);
   }
 
   .detail__case_txt {
     padding-left: 1.3rem;
-    font-size: 1.4rem;
+    font-size: var(--font-body-small);
   }
 
   .detail__case_img {
@@ -6849,7 +6849,7 @@ body.works-post .works-single {
 =========================================== */
 
 .blog h1.entry-title {
-  font-size: 2.4rem;
+  font-size: 2.4rem; /* exception: ブログ記事タイトル h1・heading-sub(2.1rem)と0.3rem差は有意 */
   line-height: 1.5em;
   margin: 0 0 1.5em;
 }
@@ -6865,7 +6865,7 @@ body.works-post .works-single {
 }
 
 .blog dl dt h1.entry-title {
-  font-size: 1.8rem;
+  font-size: var(--font-body);
   line-height: 1.5em;
   margin: 0 0 1em;
   padding-top: 1em;
@@ -6884,7 +6884,7 @@ body.works-post .works-single {
 .blog dl dd .entry-content {
   float: left;
   width: 330px;
-  font-size: 1.5rem;
+  font-size: var(--font-body-detail);
   line-height: 1.85em;
 }
 
@@ -6920,7 +6920,7 @@ body.works-post .works-single {
 }
 
 .blog #recent-posts ul li {
-  font-size: 1.4rem;
+  font-size: var(--font-body-small);
   list-style: disc;
   list-style-position: outside;
   margin-left: 1.5em;
@@ -6977,7 +6977,7 @@ body.works-post .works-single {
 }
 
 .maga-contents h1 em {
-  font-size: 1.5rem;
+  font-size: var(--font-body-detail);
   margin: 0 0 0.75em;
   display: block;
   font-style: normal;
@@ -6985,7 +6985,7 @@ body.works-post .works-single {
 }
 
 .maga-contents h2 {
-  font-size: 1.8rem;
+  font-size: var(--font-body);
   font-weight: bold;
   background-color: var(--color-ui-dark);
   color: var(--color-white);
@@ -6995,7 +6995,7 @@ body.works-post .works-single {
 }
 
 .maga-contents h2.bor {
-  font-size: 1.6rem;
+  font-size: var(--font-ui);
   font-weight: bold;
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
@@ -7016,18 +7016,18 @@ body.works-post .works-single {
 
 .maga-contents h3 {
   font-weight: bold;
-  font-size: 1.6rem;
+  font-size: var(--font-ui);
   margin: 0 0 0.75em;
   line-height: 1.75em;
 }
 
 .maga-contents h3.tit {
-  font-size: 2.2rem;
+  font-size: var(--font-heading-sub);
   padding-top: 10px;
 }
 
 .maga-contents .imp {
-  font-size: 1.6rem;
+  font-size: var(--font-ui);
   font-weight: bold;
   background-color: var(--color-error);
   color: var(--color-white);
