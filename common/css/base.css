@@ -138,18 +138,18 @@ body {
   --color-gray-950:   #1a1a1a;
   --color-gray-700:   #484848;
   --color-gray-500:   #999999;   /* #949495 を吸収（差: 4/255） */
-  --color-cyan-400:   #00B4D8;   /* ブランドシアン（#00ABD3 / #37ab86 / #4dbc92 を統合） */
-  --color-red-600:    #cc0000;
+  --color-cyan:   #00B4D8;   /* ブランドシアン（#00ABD3 / #37ab86 / #4dbc92 を統合） */
+  --color-red:    #cc0000;
   /* --- color semantic layer（base 参照） --- */
   --color-text:          var(--color-gray-950);   /* 本文・リンク・黒系（#333/#222/#000 を統合） */
   --color-text-muted:    var(--color-gray-500);   /* 補助テキスト（#999/#aaa/#bbb/#555 を統合） */
-  --color-brand:         var(--color-cyan-400);   /* ブランドブルー */
-  --color-brand-hover:   var(--color-cyan-400);
+  --color-brand:         var(--color-cyan);   /* ブランドブルー */
+  --color-brand-hover:   var(--color-cyan);
   --color-ui-dark:       var(--color-gray-700);   /* ボタン・濃いUI（#505050/#555 を統合） */
   --color-ui-mid:        var(--color-gray-500);   /* フッター・ナビ背景（#787878 を統合） */
-  --color-error:         var(--color-red-600);    /* エラー文字色（#B70000/#C80C1A を統合） */
-  --color-accent-cv:        var(--color-cyan-400);
-  --color-accent-cv-border: var(--color-cyan-400);
+  --color-error:         var(--color-red);    /* エラー文字色（#B70000/#C80C1A を統合） */
+  --color-accent-cv:        var(--color-cyan);
+  --color-accent-cv-border: var(--color-cyan);
 
   /* --- radius tokens --- */
   --radius-sm: 3px;   /* フォーム・小要素（4px を吸収） */
