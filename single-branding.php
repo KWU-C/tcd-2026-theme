@@ -131,86 +131,35 @@
 
     </section>
 
-    <section class="w_full bc_G02 pb_100">
-      <div class="archive-card-grid">
+    <section class="w_full bc_G02 pt_50 pb_100">
+      <div class="content-card-grid">
 
         <h2 class="h-sub typ02">こちらの記事もよく読まれています</h2>
 
-        <div class="archive-card-grid_Inner">
-
-          <div id="brandingMv">
-
-            <div class="column c-card-tile">
-              <a href="/branding/ikuyama/marketing_basic_knowledge03.html">
-              <img width="333" height="167" src="/wp-content/uploads/sites/3/2021/08/marketing_basic_knowledge03_thumb.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="/wp-content/uploads/sites/3/2021/08/marketing_basic_knowledge03_thumb.jpg 333w, /branding/wp-content/uploads/sites/3/2021/08/marketing_basic_knowledge03_thumb-300x150.jpg 300w" sizes="(max-width: 333px) 85vw, 333px">
-              <h3>今さら聞けない！マーケティングの基礎知識<br>消費者行動研究としての「ライフステージ論」の 有効性を検証する</h3>
-              <p>シリーズ企画「今さら聞けない！マーケティングの基礎知識」も第3回目。……続きを読む</p>
-              </a>
-            </div>
-
-            <div class="column c-card-tile">
-              <a href="/branding/03-news/nomen_interview01.html">
-              <img width="333" height="167" src="/wp-content/uploads/sites/3/2021/08/nomen_thumbnail_0128.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="/wp-content/uploads/sites/3/2021/08/nomen_thumbnail_0128.jpg 333w, /branding/wp-content/uploads/sites/3/2021/08/nomen_thumbnail_0128-300x150.jpg 300w" sizes="(max-width: 333px) 85vw, 333px">
-              <h3>TCDの海外パートナー、フランスのネーミング会社 Nomen CEO マルセロ バトン氏 インタビュー</h3>
-              <p>TCDは2020年、ネーミング作成のグローバル対応力を強化するため、……続きを読む</p>
-              </a>
-            </div>
-
-            <div class="column c-card-tile">
-              <a href="/branding/yamazaki/pkg_design2.html">
-              <img width="330" height="165" src="/wp-content/uploads/sites/3/2015/10/sum_pkg_design2.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="/wp-content/uploads/sites/3/2015/10/sum_pkg_design2.jpg 330w, /branding/wp-content/uploads/sites/3/2015/10/sum_pkg_design2-300x150.jpg 300w" sizes="(max-width: 330px) 85vw, 330px">
-              <h3>競合に勝つパッケージデザイン開発のために<br>商品ブランディング考＜Part2＞</h3>
-              <p>こちらの連載では、商品パッケージデザインの役割と商品ブランディング事……続きを読む</p>
-              </a>
-            </div>
-
-            <div class="column c-card-tile">
-              <a href="/branding/yamazaki/brandprocess_1.html">
-              <img width="690" height="365" src="/wp-content/uploads/sites/3/2017/05/brandprocess_1_img1-2.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="/wp-content/uploads/sites/3/2017/05/brandprocess_1_img1-2.jpg 690w, /branding/wp-content/uploads/sites/3/2017/05/brandprocess_1_img1-2-300x159.jpg 300w" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 984px) 61vw, (max-width: 1362px) 45vw, 600px">
-              <h3>「商品」を「ブランド」へと成長させるためのプロセス <br>〜商品ブランドデザイン開発について〜＜Part1＞</h3>
-              <p>こちらの連載では、3回に分けて商品ブランドデザイン開発（商品ブランデ……続きを読む</p>
-              </a>
-            </div>
-
-            <div class="column c-card-tile">
-              <a href="/branding/kawauchi/brandmanager_06.html">
-              <img width="333" height="167" src="/wp-content/uploads/sites/3/2020/05/brandmanager6_thum.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="/wp-content/uploads/sites/3/2020/05/brandmanager6_thum.png 333w, /branding/wp-content/uploads/sites/3/2020/05/brandmanager6_thum-300x150.png 300w" sizes="(max-width: 333px) 85vw, 333px">
-              <h3>ブランド・マネージャーの仕事⑥<br>経営の武器としての「デザイン」</h3>
-              <p>◼️イチから始める「ブランディング」当コラムでは、大手企業に限らず「……続きを読む</p>
-              </a>
-            </div>
-
-            <div class="column c-card-tile">
-              <a href="/branding/yamazaki/new_normal.html">
-              <img width="690" height="345" src="/wp-content/uploads/sites/3/2020/04/column_yamasaki_thumb.gif" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="">
-              <h3>Think about ”DESIGN”<br>現代のデザイナーに求められる、<br>「デザインすること以外の価値」とは</h3>
-              <p>ブランドは「モノ」ではなく「魅力のあるコトを生み出す」存在へ ブラン……続きを読む</p>
-              </a>
-            </div>
-
-          <?php /*
-          global $post;
-          switch_to_blog(3);
-          $args = array(
-            'numberposts' => 6,
-            'post_type' => 'post'
+        <div class="content-card-grid_Inner">
+          <?php
+          $related_args = array(
+            'post_type'      => 'branding',
+            'posts_per_page' => 3,
+            'post__not_in'   => array(get_the_ID()),
+            'orderby'        => 'date',
+            'order'          => 'DESC',
           );
-          $postlist = get_posts($args);
-          if($postlist): foreach($postlist as $post): setup_postdata($post);
+          $related_query = new WP_Query($related_args);
+          if ($related_query->have_posts()) :
+            while ($related_query->have_posts()) : $related_query->the_post();
           ?>
-            <div class="column c-card-tile">
-              <a href="<?php the_permalink(); ?>">
+          <div class="column c-card-tile">
+            <a href="<?php the_permalink(); ?>">
               <?php the_post_thumbnail(); ?>
-                <h3><?php the_title(); ?></h3>
-                <p><?php echo wp_trim_words(get_the_content(), 34, '……続きを読む' ); ?></p>
-              </a>
-            </div>
-          <?php endforeach; endif;
-          wp_reset_postdata();
-          restore_current_blog();
-          */ ?>
+              <p><?php the_title(); ?></p>
+            </a>
           </div>
-
+          <?php
+            endwhile;
+            endif;
+            wp_reset_postdata();
+          ?>
         </div>
 
       </div>

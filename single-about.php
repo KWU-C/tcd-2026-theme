@@ -3,7 +3,7 @@
 <div id="mainContents">
   <article class="pt_0">
 
-    <section class="w_full bc_G02 pt_50 pb_100">
+    <section class="w_full bc_G02 pt_50">
 
       <div class="filter-nav">
         <ul>
@@ -28,7 +28,7 @@
         <?php if (have_posts()) : ?>
           <?php while (have_posts()) : the_post(); ?>
 
-          <div class="article-shell_Title pt_100">
+          <div class="article-shell_Title">
             <h1 class="h-page"><?php the_title(); ?></h1>
           </div>
 
