@@ -133,17 +133,33 @@ body {
   --space-footer-utility-top: 65px;     /* フッターユーティリティ上余白 */
   --space-footer-utility-top-sp: 50px;
 
-  /* --- color tokens --- */
-  --color-white: #FFF;
-  --color-text: #1a1a1a;          /* 本文・リンク・黒系（#333/#222/#000 を統合） */
-  --color-text-muted: #999999;    /* 補助テキスト（#999/#aaa/#bbb/#555 を統合） */
-  --color-brand: #00ABD3;         /* ブランドブルー */
-  --color-brand-hover: #00B4D8;
-  --color-bg-light: #efefef;      /* セクション背景・帯（f0〜f8系・F3F4F5 等を統合） */
-  --color-border: #ddd;           /* ボーダー（#ccc/#eee/#e6e6e6/#B4B4B4 等を統合） */
-  --color-ui-dark: #484848;       /* ボタン・濃いUI（#505050/#555 を統合） */
-  --color-ui-mid: #949495;        /* フッター・ナビ背景（#787878 を統合） */
-  --color-error: #cc0000;         /* エラー文字色（#B70000/#C80C1A を統合） */
+  /* --- color base layer（raw values） --- */
+  --color-white:      #ffffff;
+  --color-gray-950:   #1a1a1a;
+  --color-gray-700:   #484848;
+  --color-gray-500:   #999999;   /* #949495 を吸収（差: 4/255） */
+  --color-gray-200:   #dddddd;
+  --color-gray-100:   #efefef;
+  --color-cyan-500:   #00ABD3;
+  --color-cyan-400:   #00B4D8;
+  --color-red-600:    #cc0000;
+  --color-green-500:  #37ab86;   /* CVグリーン・recruitアクセント */
+  --color-green-400:  #4dbc92;   /* CVグリーン border */
+  --color-green-50:   #edf7f3;   /* CVグリーン 背景 */
+
+  /* --- color semantic layer（base 参照） --- */
+  --color-text:          var(--color-gray-950);   /* 本文・リンク・黒系（#333/#222/#000 を統合） */
+  --color-text-muted:    var(--color-gray-500);   /* 補助テキスト（#999/#aaa/#bbb/#555 を統合） */
+  --color-brand:         var(--color-cyan-500);   /* ブランドブルー */
+  --color-brand-hover:   var(--color-cyan-400);
+  --color-bg-light:      var(--color-gray-100);   /* セクション背景・帯（f0〜f8系・F3F4F5 等を統合） */
+  --color-border:        var(--color-gray-200);   /* ボーダー（#ccc/#eee/#e6e6e6/#B4B4B4 等を統合） */
+  --color-ui-dark:       var(--color-gray-700);   /* ボタン・濃いUI（#505050/#555 を統合） */
+  --color-ui-mid:        var(--color-gray-500);   /* フッター・ナビ背景（#787878 を統合） */
+  --color-error:         var(--color-red-600);    /* エラー文字色（#B70000/#C80C1A を統合） */
+  --color-accent-cv:        var(--color-green-500);
+  --color-accent-cv-border: var(--color-green-400);
+  --color-accent-cv-bg:     var(--color-green-50);
 
   /* --- radius tokens --- */
   --radius-sm: 3px;   /* フォーム・小要素（4px を吸収） */
@@ -2282,16 +2298,15 @@ display: none;
   line-height: 1.7;
 }
 .detail__main_cont .cv_btn {
-  border: 1px solid #4dbc92 /* exception: CVボタン系グリーン border */
-;
+  border: 1px solid var(--color-accent-cv-border);
   margin: 4em 0;
   padding: 1.5em 0.5em;
   width: 100%;
   line-height: 2em; /* exception: CVボタン縦余白確保（em指定でfont-size倍率固定）*/
-  color: #37ab86 /* exception: CVボタン・recruitアクセントグリーン */;
+  color: var(--color-accent-cv);
   text-align: center;
   font-size: var(--font-body-large);
-  background-color: #edf7f3;
+  background-color: var(--color-accent-cv-bg);
 }
 .detail__main_cont .cv_btn img {
   padding-bottom: 1em;
@@ -2299,7 +2314,7 @@ display: none;
 .detail__main_cont .cv_btn a:link,
 .detail__main_cont .cv_btn a:visited {
   font-weight: bold;
-  color: #37ab86 /* exception: CVボタン・recruitアクセントグリーン */;
+  color: var(--color-accent-cv);
   text-decoration: underline;
 }
 .detail__main_cont .cv_btn a:hover {
@@ -4162,7 +4177,7 @@ nav#pagination .flLink a:hover {
   bottom: 25px;
   width: 160px;
   padding: 0 0.5em;
-  background-color: #37ab86 /* exception: CVボタン・recruitアクセントグリーン */;
+  background-color: var(--color-accent-cv);
   height: 40px;
   line-height: 40px;
   display: none;
@@ -4688,7 +4703,7 @@ h1.bnone {
   color: var(--color-white);
   margin-top: 0.5em;
   padding: 0.75em 0;
-  background-color: #37ab86 /* exception: CVボタン・recruitアクセントグリーン */;
+  background-color: var(--color-accent-cv);
   border-radius: var(--radius-sm);
 }
 
@@ -4708,7 +4723,7 @@ h1.bnone {
   text-align: center;
   color: var(--color-white);
   padding: 0.25em 0;
-  background-color: #37ab86 /* exception: CVボタン・recruitアクセントグリーン */;
+  background-color: var(--color-accent-cv);
   border-radius: var(--radius-sm);
 }
 
