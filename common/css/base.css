@@ -138,8 +138,6 @@ body {
   --color-gray-950:   #1a1a1a;
   --color-gray-700:   #484848;
   --color-gray-500:   #999999;   /* #949495 を吸収（差: 4/255） */
-  --color-gray-200:   #dddddd;
-  --color-gray-100:   #efefef;
   --color-cyan-400:   #00B4D8;   /* ブランドシアン（#00ABD3 / #37ab86 / #4dbc92 を統合） */
   --color-red-600:    #cc0000;
   /* --- color semantic layer（base 参照） --- */
@@ -147,8 +145,6 @@ body {
   --color-text-muted:    var(--color-gray-500);   /* 補助テキスト（#999/#aaa/#bbb/#555 を統合） */
   --color-brand:         var(--color-cyan-400);   /* ブランドブルー */
   --color-brand-hover:   var(--color-cyan-400);
-  --color-bg-light:      var(--color-gray-100);   /* セクション背景・帯（f0〜f8系・F3F4F5 等を統合） */
-  --color-border:        var(--color-gray-200);   /* ボーダー（#ccc/#eee/#e6e6e6/#B4B4B4 等を統合） */
   --color-ui-dark:       var(--color-gray-700);   /* ボタン・濃いUI（#505050/#555 を統合） */
   --color-ui-mid:        var(--color-gray-500);   /* フッター・ナビ背景（#787878 を統合） */
   --color-error:         var(--color-red-600);    /* エラー文字色（#B70000/#C80C1A を統合） */
@@ -1070,10 +1066,10 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
   background-color: var(--color-ui-mid);
 }
 #mainContents section.bc_G02 {
-  background-color: var(--color-bg-light);
+  background-color: var(--color-white);
 }
 #mainContents section.bc_G03 {
-  background-color: var(--color-bg-light);
+  background-color: var(--color-white);
 }
 #mainContents section.bt_white {
   border-top: 1px solid var(--color-white);
@@ -1384,15 +1380,15 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
   display: block;
   width: 100%;
   padding: 0 20px;
-  border: 1px solid var(--color-border);
-  background-color: var(--color-bg-light);
+  border: 1px solid var(--color-white);
+  background-color: var(--color-white);
   box-sizing: border-box;
   border-radius: var(--radius-sm);
   font-size: var(--font-ui);
   font-weight: 400;
 }
 .c-form-field::placeholder {
-  color: var(--color-border);
+  color: var(--color-white);
 }
 .c-form-field:focus {
   outline: none;
@@ -1486,7 +1482,7 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
   display: block;
   width: 100%;
   padding-bottom: var(--card-space-bottom);
-  border: 1px solid var(--color-bg-light);
+  border: 1px solid var(--color-white);
   border-radius: var(--card-radius);
   background-color: var(--card-bg);
   box-sizing: border-box;
@@ -1896,9 +1892,9 @@ footer #footerBody #pageup a:hover img:nth-child(2) {
   position: relative;
   margin: 30px 0 30px;
   padding: 35px 35px 15px;
-  border-left: 5px solid var(--color-border);
+  border-left: 5px solid var(--color-white);
   box-sizing: border-box;
-  background-color: var(--color-bg-light);
+  background-color: var(--color-white);
 }
 #mainContents .article-shell .article-shell_Sns {
   position: fixed;
@@ -2179,10 +2175,10 @@ display: none;
 }
 #mainContents .table_typ01 table {
   width: 100%;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-white);
 }
 #mainContents .table_typ01 table tr {
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid var(--color-white);
 }
 #mainContents .table_typ01 table tr th {
   width: 122px;
@@ -2224,7 +2220,7 @@ display: none;
   margin: 0 0 30px;
   padding: 40px;
   box-sizing: border-box;
-  background-color: var(--color-bg-light);
+  background-color: var(--color-white);
 }
 #mainContents .indexTyp01 h3 {
   font-size: var(--font-heading-card);
@@ -2324,7 +2320,7 @@ display: none;
   font-size: var(--font-body-small);
 }
 .detail__main_cont .colum_wrap .colum dl {
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-white);
   margin: 0;
   padding: 15px 0;
 }
@@ -2452,7 +2448,7 @@ display: none;
   font-weight: 700;
   padding: 16px 0 0;
   margin: 0 0 16px;
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid var(--color-white);
   box-sizing: border-box;
 }
 
@@ -2462,7 +2458,7 @@ display: none;
   float: left;
   padding: 16px 0 0;
   margin: 0 0 16px;
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid var(--color-white);
   box-sizing: border-box;
 }
 
@@ -2710,7 +2706,7 @@ display: none;
 .worksTyp01 ul li a {
   display: block;
   padding: 6px 7px 8px;
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-white);
   border-radius: var(--card-radius);
   font-size: var(--font-caption);
   color: var(--color-text);
@@ -2819,7 +2815,7 @@ display: none;
   width: 100%;
   height: 720px;
   margin: 0 0 120px;
-  background-color: var(--color-bg-light);
+  background-color: var(--color-white);
   top: -100px;
 }
 .worksTyp03 .column .column_MV {
@@ -2840,7 +2836,7 @@ display: none;
   padding-top: 30px !important;
 }
 .worksTyp03 .column .bx-wrapper .bx-pager.bx-default-pager a {
-  background: var(--color-border) !important;
+  background: var(--color-white) !important;
 }
 .worksTyp03 .column .bx-wrapper .bx-pager.bx-default-pager a:hover,
 .worksTyp03 .column .bx-wrapper .bx-pager.bx-default-pager a.active,
@@ -3000,12 +2996,12 @@ display: none;
   height: 100%;
   padding: 13px 0 0;
   box-sizing: border-box;
-  background-color: var(--color-bg-light);
+  background-color: var(--color-white);
   font-size: var(--font-caption);
 }
 .worksTyp05 ul li.active a,
 .worksTyp05 ul li a:hover {
-  background-color: var(--color-border);
+  background-color: var(--color-white);
   text-decoration: none;
 }
 @media only screen and (max-width: 767px) {
@@ -3030,7 +3026,7 @@ display: none;
   width: 100%;
   margin: 0 0 40px;
   padding: 0 0 40px;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-white);
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -3038,7 +3034,7 @@ display: none;
 .worksTyp06 .column .column_L {
   width: 280px;
   height: 188px;
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-white);
   box-sizing: border-box;
 }
 .worksTyp06 .column .column_L img {
@@ -3238,7 +3234,7 @@ nav#pagination .flLink a:hover {
   font-size: 4.0rem; /* exception: ContactページH1固定 */
   font-weight: 700;
   text-align: center;
-  color: var(--color-bg-light);
+  color: var(--color-white);
   line-height: var(--lh-ui);
 }
 #mainContents .contactTyp01 h2 {
@@ -3254,7 +3250,7 @@ nav#pagination .flLink a:hover {
   width: 100%;
   margin: 30px 0 0;
   padding: 20px 25px;
-  border: 5px solid var(--color-bg-light);
+  border: 5px solid var(--color-white);
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
@@ -3343,7 +3339,7 @@ nav#pagination .flLink a:hover {
 #mainContents .contactTyp02 .download_Select {
   margin: 30px 0 0;
   padding: 30px 0 0;
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid var(--color-white);
 }
 #mainContents .contactTyp02 .checkBox02 {
   padding: 20px 0 30px 0;
@@ -3367,7 +3363,7 @@ nav#pagination .flLink a:hover {
 #mainContents .contactTyp02 table {
   width: 100%;
   margin: 0 0 15px;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-white);
 }
 #mainContents .contactTyp02 table tr {
 }
@@ -3409,8 +3405,8 @@ nav#pagination .flLink a:hover {
   width: 100%;
   height: 60px;
   padding: 0 20px;
-  border: 1px solid var(--color-border);
-  background-color: var(--color-bg-light);
+  border: 1px solid var(--color-white);
+  background-color: var(--color-white);
   box-sizing: border-box;
   border-radius: var(--radius-sm);
   font-size: var(--font-ui);
@@ -3419,7 +3415,7 @@ nav#pagination .flLink a:hover {
 #mainContents .contactTyp02 table td input[type="text"]::placeholder,
 #mainContents .contactTyp02 table td input[type="email"]::placeholder,
 #mainContents .contactTyp02 table td input[type="tel"]::placeholder {
-  color: var(--color-border);
+  color: var(--color-white);
 }
 #mainContents .contactTyp02 table td .formBox {
   position: relative;
@@ -3440,15 +3436,15 @@ nav#pagination .flLink a:hover {
   width: 100%;
   height: 60px;
   padding: 0 20px;
-  border: 1px solid var(--color-border);
-  background-color: var(--color-bg-light);
+  border: 1px solid var(--color-white);
+  background-color: var(--color-white);
   box-sizing: border-box;
   border-radius: var(--radius-sm);
   font-size: var(--font-body-large);
   font-weight: 700;
 }
 #mainContents .contactTyp02 table td select::placeholder {
-  color: var(--color-border);
+  color: var(--color-white);
 }
 #mainContents .contactTyp02 table td textarea {
   -webkit-appearance: none;
@@ -3456,8 +3452,8 @@ nav#pagination .flLink a:hover {
   width: 100%;
   height: 210px;
   padding: 10px 20px;
-  border: 1px solid var(--color-border);
-  background-color: var(--color-bg-light);
+  border: 1px solid var(--color-white);
+  background-color: var(--color-white);
   box-sizing: border-box;
   border-radius: var(--radius-sm);
   resize: none;
@@ -3469,7 +3465,7 @@ nav#pagination .flLink a:hover {
   height: 100px;
 }
 #mainContents .contactTyp02 table td textarea::placeholder {
-  color: var(--color-border);
+  color: var(--color-white);
 }
 
 #mainContents .contactTyp02 .checkBox {
@@ -3521,7 +3517,7 @@ nav#pagination .flLink a:hover {
   #mainContents .contactTyp02 .download_Select {
     margin: 30px 0 0;
     padding: 30px 0 0;
-    border-top: 1px solid var(--color-border);
+    border-top: 1px solid var(--color-white);
   }
   #mainContents .contactTyp02 .checkBox02 {
     padding: 20px 0 30px 0;
@@ -3562,13 +3558,13 @@ nav#pagination .flLink a:hover {
   display: block;
 }
 #mainContents .mw_wp_form_preview .contactTyp02 table {
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid var(--color-white);
 }
 #mainContents .mw_wp_form_preview .contactTyp02 table th span {
   display: none;
 }
 #mainContents .mw_wp_form_preview .contactTyp02 table tr {
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-white);
 }
 #mainContents .mw_wp_form_preview .contactTyp02 table tr th,
 #mainContents .mw_wp_form_preview .contactTyp02 table tr td {
@@ -3583,7 +3579,7 @@ nav#pagination .flLink a:hover {
 #mainContents .contactTyp01 h3 {
   margin: 60px 0 0;
   padding: 20px 0;
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid var(--color-white);
   font-size: var(--font-heading-card);
   font-weight: 700;
 }
@@ -3672,7 +3668,7 @@ nav#pagination .flLink a:hover {
   font-size: var(--font-heading-card);
   font-weight: 700;
   text-align: center;
-  color: var(--color-bg-light);
+  color: var(--color-white);
 }
 #mainContents .downloadTyp01 h2 {
   padding: 20px 0 0;
@@ -3680,7 +3676,7 @@ nav#pagination .flLink a:hover {
   font-size: 6.4rem; /* exception: DownloadページH1固定 */
   font-weight: 700;
   text-align: center;
-  color: var(--color-bg-light);
+  color: var(--color-white);
 }
 #mainContents .downloadTyp01 p {
   width: 640px;
@@ -3804,7 +3800,7 @@ nav#pagination .flLink a:hover {
 .c-heading-bar {
   width: 100%;
   height: 40px;
-  background-color: var(--color-bg-light);
+  background-color: var(--color-white);
   margin-bottom: 20px;
   padding: 4px 0 0 15px;
   text-align: left;
@@ -3884,14 +3880,14 @@ nav#pagination .flLink a:hover {
 .c-info-list {
   display: grid;
   grid-template-columns: 220px 1fr;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-white);
 }
 
 .c-info-list dt,
 .c-info-list dd {
   margin: 0;
   padding: 20px 0;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-white);
 }
 
 .c-info-list dt {
@@ -4021,7 +4017,7 @@ nav#pagination .flLink a:hover {
 
 #tcd a.back_history {
   text-align: center;
-  background-color: var(--color-border);
+  background-color: var(--color-white);
   display: block;
   width: 100%;
   padding: 1em;
@@ -4194,7 +4190,7 @@ nav#pagination .flLink a:hover {
 
 @keyframes blink {
   0%, 34% {
-    color: var(--color-border);
+    color: var(--color-white);
   }
   35%, 100% {
     color: var(--color-error);
@@ -4265,7 +4261,7 @@ ul.social-button-syncer li:nth-last-of-type(1) {
 }
 
 .bg_gy {
-  background: var(--color-bg-light);
+  background: var(--color-white);
 }
 
 .c-container__block + .c-container__block {
@@ -4301,7 +4297,7 @@ ul.social-button-syncer li:nth-last-of-type(1) {
   font-size: var(--font-body-small);
   line-height: 1.75em;
   padding: 0.5em;
-  background-color: var(--color-bg-light);
+  background-color: var(--color-white);
 }
 
 .sub-nav ul li a:hover {
@@ -4309,7 +4305,7 @@ ul.social-button-syncer li:nth-last-of-type(1) {
 }
 
 .sub-nav ul li.current {
-  background-color: var(--color-border);
+  background-color: var(--color-white);
 }
 
 .sub-nav ul li.toCon {
@@ -4378,7 +4374,7 @@ ul.social-button-syncer li:nth-last-of-type(1) {
   font-size: var(--font-body-small);
   line-height: 2em;
   padding: 0.5em;
-  background-color: var(--color-bg-light);
+  background-color: var(--color-white);
 }
 
 .sub-nav-wide ul li a:hover {
@@ -4386,7 +4382,7 @@ ul.social-button-syncer li:nth-last-of-type(1) {
 }
 
 .sub-nav-wide ul li.current {
-  background-color: var(--color-border);
+  background-color: var(--color-white);
 }
 
 .sub-nav-wide ul li.toCon {
@@ -4415,11 +4411,11 @@ ul.social-button-syncer li:nth-last-of-type(1) {
 }
 
 .bg_gy .sub-nav-wide ul li {
-  background-color: var(--color-bg-light);
+  background-color: var(--color-white);
 }
 
 .bg_gy .sub-nav-wide ul li.current {
-  background-color: var(--color-border);
+  background-color: var(--color-white);
 }
 
 #tcd .navigation {
@@ -4439,7 +4435,7 @@ ul.social-button-syncer li:nth-last-of-type(1) {
 }
 
 .sub-nav-4th ul li {
-  border: 1px solid var(--color-bg-light);
+  border: 1px solid var(--color-white);
   display: block;
   float: left;
   font-size: var(--font-caption-small);
@@ -4453,7 +4449,7 @@ ul.social-button-syncer li:nth-last-of-type(1) {
 }
 
 .sub-nav-4th ul li.current {
-  background-color: var(--color-border);
+  background-color: var(--color-white);
 }
 
 /* ==========================================
@@ -4555,7 +4551,7 @@ ul.social-button-syncer li:nth-last-of-type(1) {
   .sub-nav-4th ul li {
     width: 100%;
     border: none;
-    border-bottom: 1px dotted var(--color-bg-light);
+    border-bottom: 1px dotted var(--color-white);
     display: block;
     float: none;
     font-size: var(--font-body-small);
@@ -4631,7 +4627,7 @@ h1.bnone {
 }
 
 .about-crew-list-wrap {
-  background: linear-gradient(var(--color-bg-light), var(--color-white));
+  background: linear-gradient(var(--color-white), var(--color-white));
   padding: 2.5em 0;
 }
 
@@ -4749,7 +4745,7 @@ h1.bnone {
   font-weight: bold;
   padding: 15px 0 0;
   margin: 0 0 15px;
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid var(--color-white);
 }
 
 #tcd .profile dl dd {
@@ -4759,12 +4755,12 @@ h1.bnone {
   float: left;
   padding: 15px 0 0;
   margin: 0 0 15px;
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid var(--color-white);
 }
 
 #tcd .profile dl dd ul li {
   width: 530px;
-  border-top: 1px dotted var(--color-border);
+  border-top: 1px dotted var(--color-white);
   padding: 0.5em 0 0;
 }
 
@@ -4826,7 +4822,7 @@ h1.bnone {
   font-weight: bold;
   padding: 15px 0 0;
   margin: 0 0 15px;
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid var(--color-white);
 }
 
 #tcd .profile-en dl dd {
@@ -4837,7 +4833,7 @@ h1.bnone {
   float: left;
   padding: 15px 0 0;
   margin: 0 0 15px;
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid var(--color-white);
 }
 
 #tcd .profile-en dl dd ul li {
@@ -4882,7 +4878,7 @@ h1.bnone {
 #tcd .client .clientList {
   width: 100%;
   padding: 15px 0;
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid var(--color-white);
 }
 
 #tcd .client .clientList strong {
@@ -4911,7 +4907,7 @@ h1.bnone {
 #tcd .location dl.locationSet {
   padding: 0 0 35px;
   margin: 0 0 35px;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-white);
 }
 
 #tcd .location dl.locationSet dt {
@@ -5081,7 +5077,7 @@ h1.bnone {
   font-size: var(--font-ui);
   font-weight: bold;
   margin: 0 0 2em;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-white);
   padding-bottom: 0.75em;
 }
 
@@ -5126,7 +5122,7 @@ h1.bnone {
   font-size: 3rem;
   color: var(--color-text-muted);
   font-weight: bold;
-  border-bottom: solid 1px var(--color-border);
+  border-bottom: solid 1px var(--color-white);
   margin-bottom: 20px;
 }
 
@@ -5137,7 +5133,7 @@ h1.bnone {
 }
 
 .service-page .gray-box {
-  background-color: var(--color-bg-light);
+  background-color: var(--color-white);
   padding: 20px;
 }
 
@@ -5206,7 +5202,7 @@ ol.serviceEx2 li {
 
 .serviceCase dl dt img {
   width: 100%;
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-white);
 }
 
 .serviceCase dl dd {
@@ -5428,7 +5424,7 @@ dl.task dd {
     float: none;
     padding: 0.5em 0 0;
     margin: 0 0 20px;
-    border-top: 1px solid var(--color-border);
+    border-top: 1px solid var(--color-white);
   }
   #tcd .profile dl dd ul li {
     width: 100%;
@@ -5453,7 +5449,7 @@ dl.task dd {
     float: none;
     padding: 0.5em 0 0;
     margin: 0 0 20px;
-    border-top: 1px solid var(--color-border);
+    border-top: 1px solid var(--color-white);
   }
   #tcd .profile-en dl dl.history dt,
   #tcd .profile-en dl dl.history dd,
@@ -5594,7 +5590,7 @@ dl.task dd {
 /* Cases セクション（チェックリスト + 暗背景） */
 .service-cases {
   background: var(--color-text);
-  color: var(--color-border);
+  color: var(--color-white);
   padding: 3em 3.5em;
 }
 .service-cases h2 {
@@ -5609,7 +5605,7 @@ dl.task dd {
   list-style: none;
   padding-left: 1.4em;
   position: relative;
-  color: var(--color-border);
+  color: var(--color-white);
 }
 .service-cases ul li::before {
   content: "→";
@@ -5626,7 +5622,7 @@ dl.task dd {
 
 /* Process セクション（グレー背景 + ステップ2列） */
 .service-process {
-  background: var(--color-bg-light);
+  background: var(--color-white);
   padding: 2.5em 3.5em 3em;
 }
 .service-process h2 {
@@ -5641,7 +5637,7 @@ dl.task dd {
   display: grid;
   grid-template-columns: 180px 1fr;
   gap: 1em 2em;
-  border-top: 1px dotted var(--color-border);
+  border-top: 1px dotted var(--color-white);
   padding: 1.2em 0;
   align-items: start;
 }
@@ -5657,13 +5653,13 @@ dl.task dd {
   line-height: 1.75;
 }
 .service-step:last-child {
-  border-bottom: 1px dotted var(--color-border);
+  border-bottom: 1px dotted var(--color-white);
 }
 
 /* 目次ナビ (ブランディングとは？等の記事ページ) */
 .service-toc {
-  background: var(--color-bg-light);
-  border: 1px solid var(--color-border);
+  background: var(--color-white);
+  border: 1px solid var(--color-white);
   padding: 1.2em 1.8em;
   margin: 1.5em 0 2.5em;
   display: inline-block;
@@ -5752,7 +5748,7 @@ dl.task dd {
 
 #tcd .top-article div ul li:nth-child(even) {
   text-align: right;
-  border-left: 1px solid var(--color-border);
+  border-left: 1px solid var(--color-white);
 }
 
 #tcd .top-article img {
@@ -5767,7 +5763,7 @@ dl.task dd {
 #tcd .top-new-case {
   margin-top: 8em;
   padding: 3em 0;
-  background-color: var(--color-bg-light);
+  background-color: var(--color-white);
 }
 
 #tcd .top-new-case h2 {
@@ -5780,7 +5776,7 @@ dl.task dd {
 }
 
 #tcd .top-new-case ._c-row__col .thum a img {
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-white);
 }
 
 #tcd .top-new-case ._c-row__col .thum a .corp {
@@ -5806,7 +5802,7 @@ dl.task dd {
   .top-new-case {
     margin-top: 8em;
     padding: 3em 0;
-    background-color: var(--color-bg-light);
+    background-color: var(--color-white);
   }
   .top-new-case ._c-container {
     width: 90% !important;
@@ -6155,7 +6151,7 @@ dl.task dd {
 
 .maga-nav-item {
   padding: 0 0 2rem 3.5rem;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-white);
   box-sizing: border-box;
   margin-top: 2rem;
   position: relative;
@@ -6172,7 +6168,7 @@ dl.task dd {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: var(--color-border);
+  background: var(--color-white);
   position: absolute;
   top: 0;
   left: 0;
@@ -6188,7 +6184,7 @@ dl.task dd {
 
 .maga-nav-recent {
   padding: 0 0 2rem 0;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-white);
   box-sizing: border-box;
   margin-top: 2rem;
   position: relative;
@@ -6218,7 +6214,7 @@ dl.task dd {
 
 .maga-column-item {
   padding: 1rem 0 3.5rem;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-white);
 }
 
 .maga-column-item:last-child {
@@ -6337,7 +6333,7 @@ dl.task dd {
 }
 
 .detail__main_block {
-  border-top: 5px solid var(--color-border);
+  border-top: 5px solid var(--color-white);
   margin-top: 4rem;
 }
 
@@ -6356,7 +6352,7 @@ dl.task dd {
   display: flex;
   justify-content: space-between;
   padding: 1.5rem 0;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-white);
 }
 
 .detail__case:last-child {
@@ -6909,7 +6905,7 @@ body.works-post .works-single {
 
 .blog #recent-posts h3.widget-title {
   padding: 0.5em;
-  background-color: var(--color-bg-light);
+  background-color: var(--color-white);
 }
 
 .blog #recent-posts ul li {
@@ -6919,7 +6915,7 @@ body.works-post .works-single {
   margin-left: 1.5em;
   padding-top: 0.75em;
   padding-bottom: 0.75em;
-  border-top: 1px solid var(--color-bg-light);
+  border-top: 1px solid var(--color-white);
 }
 
 .blog #recent-posts ul li a:link,
@@ -6936,7 +6932,7 @@ body.works-post .works-single {
 }
 
 .blog .colum dl {
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-white);
   margin: 0;
   padding: 15px 0;
 }
@@ -6965,7 +6961,7 @@ body.works-post .works-single {
   font-size: 2.0rem; /* exception: マガジンh1固定 */
   font-weight: bold;
   margin: 0 0 1.5em;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-white);
   padding-bottom: 0.75em;
 }
 
@@ -6990,8 +6986,8 @@ body.works-post .works-single {
 .maga-contents h2.bor {
   font-size: var(--font-ui);
   font-weight: bold;
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
+  border-top: 1px solid var(--color-white);
+  border-bottom: 1px solid var(--color-white);
   background-color: transparent;
   padding: 0.5em;
   margin: 20px 0 1.0em;
@@ -7004,7 +7000,7 @@ body.works-post .works-single {
   padding: 0.25em 0 0.25em 0.5em;
   margin: 40px 0 20px;
   border: none;
-  border-left: 3px solid var(--color-border);
+  border-left: 3px solid var(--color-white);
 }
 
 .maga-contents h3 {

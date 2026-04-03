@@ -1,10 +1,8 @@
 @charset "UTF-8";
 /* top.scss - トップページ専用 */
-
 /* ==========================================
    Top記事 (#tcd article#top)
 =========================================== */
-
 #tcd article#top {
   width: 740px;
   margin: 0 auto 100px;
@@ -50,7 +48,6 @@
 /* ==========================================
    新着ケース (#tcd .new_case)
 =========================================== */
-
 #tcd .new_case {
   margin-top: 8em;
   padding: 3em 0;
@@ -89,20 +86,19 @@
 /* ==========================================
    レスポンシブ（トップページ分）
 =========================================== */
-
 @media (max-width: 480px) {
   .new_case {
     margin-top: 8em;
     padding: 3em 0;
     background-color: var(--color-white);
   }
-
   .new_case ._c-container {
     width: 90% !important;
     margin: 0 auto;
   }
-
   .new_case ._c-row__col {
     margin-bottom: 3em;
   }
 }
+
+/*# sourceMappingURL=top.css.map */

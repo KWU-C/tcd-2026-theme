@@ -36,7 +36,7 @@
 
 #tcd a.back_history {
   text-align: center;
-  background-color: var(--color-border);
+  background-color: var(--color-white);
   display: block;
   width: 100%;
   padding: 1em;
@@ -195,7 +195,7 @@
 
 @keyframes blink {
   0%,
-  34% { color: var(--color-border); }
+  34% { color: var(--color-white); }
   35%,
   100% { color: var(--color-error); }
 }
@@ -270,7 +270,7 @@ ul.social-button-syncer li:nth-last-of-type(1) {
 }
 
 .bg_gy {
-  background: var(--color-bg-light);
+  background: var(--color-white);
 }
 
 .c-container__block + .c-container__block {
@@ -356,7 +356,7 @@ ul.social-button-syncer li:nth-last-of-type(1) {
 
 .recent__sidebar_item {
   padding: 1rem 0;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-white);
   font-size: var(--font-body-small);
 }
 
@@ -423,13 +423,13 @@ ul.social-button-syncer li:nth-last-of-type(1) {
   width: 100%;
   padding: 0.5em 0;
   box-sizing: border-box;
-  background: var(--color-border);
+  background: var(--color-white);
   text-align: center;
   position: relative;
 }
 
 .page__nav_item:first-child {
-  background: var(--color-border);
+  background: var(--color-white);
 }
 
 .page__nav_item:last-child {
@@ -519,7 +519,7 @@ ul.social-button-syncer li:nth-last-of-type(1) {
   font-size: var(--font-body-small);
   line-height: 1.75em;
   padding: 0.5em;
-  background-color: var(--color-bg-light);
+  background-color: var(--color-white);
 }
 
 #nav3rd ul li a:hover {
@@ -527,7 +527,7 @@ ul.social-button-syncer li:nth-last-of-type(1) {
 }
 
 #nav3rd ul li.current {
-  background-color: var(--color-border);
+  background-color: var(--color-white);
 }
 
 #nav3rd ul li.toCon {
@@ -579,7 +579,7 @@ ul.social-button-syncer li:nth-last-of-type(1) {
   font-size: var(--font-body-small);
   line-height: 2em;
   padding: 0.5em;
-  background-color: var(--color-bg-light);
+  background-color: var(--color-white);
 }
 
 #nav3rd_wide ul li a:hover {
@@ -587,7 +587,7 @@ ul.social-button-syncer li:nth-last-of-type(1) {
 }
 
 #nav3rd_wide ul li.current {
-  background-color: var(--color-border);
+  background-color: var(--color-white);
 }
 
 #nav3rd_wide ul li.toCon {
@@ -613,8 +613,8 @@ ul.social-button-syncer li:nth-last-of-type(1) {
 
 #nav3rd_wide ul.menu5 li { width: 20%; }
 
-.bg_gy #nav3rd_wide ul li         { background-color: var(--color-bg-light); }
-.bg_gy #nav3rd_wide ul li.current { background-color: var(--color-border); }
+.bg_gy #nav3rd_wide ul li         { background-color: var(--color-white); }
+.bg_gy #nav3rd_wide ul li.current { background-color: var(--color-white); }
 
 #tcd .navigation {
   margin: 6em 0 4em;
@@ -633,7 +633,7 @@ ul.social-button-syncer li:nth-last-of-type(1) {
 }
 
 #nav4th ul li {
-  border: 1px solid var(--color-bg-light);
+  border: 1px solid var(--color-white);
   display: block;
   float: left;
   font-size: var(--font-caption-small);
@@ -647,7 +647,7 @@ ul.social-button-syncer li:nth-last-of-type(1) {
 }
 
 #nav4th ul li.current {
-  background-color: var(--color-border);
+  background-color: var(--color-white);
 }
 
 /* ==========================================
@@ -713,14 +713,14 @@ ul.social-button-syncer li:nth-last-of-type(1) {
   .page__nav_link {
     display: block;
     padding: .5em 0;
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-white);
     box-sizing: border-box;
   }
 
   .page__nav_parent {
     display: block;
     padding: .5em 0;
-    background: var(--color-border);
+    background: var(--color-white);
   }
 
   .page__nav_parent::after {
@@ -854,7 +854,7 @@ ul.social-button-syncer li:nth-last-of-type(1) {
   #nav4th ul li {
     width: 100%;
     border: none;
-    border-bottom: 1px dotted var(--color-bg-light);
+    border-bottom: 1px dotted var(--color-white);
     display: block;
     float: none;
     font-size: var(--font-body-small);
@@ -933,7 +933,7 @@ h1.bnone {
 }
 
 #crew_list_wrap {
-  background: linear-gradient(var(--color-bg-light), var(--color-white));
+  background: linear-gradient(var(--color-white), var(--color-white));
   padding: 2.5em 0;
 }
 
@@ -1051,7 +1051,7 @@ h1.bnone {
   font-weight: bold;
   padding: 15px 0 0;
   margin: 0 0 15px;
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid var(--color-white);
 }
 
 #tcd .profile dl dd {
@@ -1061,12 +1061,12 @@ h1.bnone {
   float: left;
   padding: 15px 0 0;
   margin: 0 0 15px;
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid var(--color-white);
 }
 
 #tcd .profile dl dd ul li {
   width: 530px;
-  border-top: 1px dotted var(--color-border);
+  border-top: 1px dotted var(--color-white);
   padding: 0.5em 0 0;
 }
 
@@ -1128,7 +1128,7 @@ h1.bnone {
   font-weight: bold;
   padding: 15px 0 0;
   margin: 0 0 15px;
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid var(--color-white);
 }
 
 #tcd .profile-en dl dd {
@@ -1139,7 +1139,7 @@ h1.bnone {
   float: left;
   padding: 15px 0 0;
   margin: 0 0 15px;
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid var(--color-white);
 }
 
 #tcd .profile-en dl dd ul li {
@@ -1185,7 +1185,7 @@ h1.bnone {
 #tcd .client .clientList {
   width: 100%;
   padding: 15px 0;
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid var(--color-white);
 }
 
 #tcd .client .clientList strong {
@@ -1214,7 +1214,7 @@ h1.bnone {
 #tcd .location dl.locationSet {
   padding: 0 0 35px;
   margin: 0 0 35px;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-white);
 }
 
 #tcd .location dl.locationSet dt {
@@ -1380,7 +1380,7 @@ h1.bnone {
   font-size: var(--font-ui);
   font-weight: bold;
   margin: 0 0 2em;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-white);
   padding-bottom: 0.75em;
 }
 
@@ -1425,7 +1425,7 @@ h1.bnone {
   font-size: var(--font-heading-page);
   color: var(--color-text-muted);
   font-weight: bold;
-  border-bottom: solid 1px var(--color-border);
+  border-bottom: solid 1px var(--color-white);
   margin-bottom: 20px;
 }
 
@@ -1436,7 +1436,7 @@ h1.bnone {
 }
 
 #servicePage .gray-box {
-  background-color: var(--color-bg-light);
+  background-color: var(--color-white);
   padding: 20px;
 }
 
@@ -1506,7 +1506,7 @@ ol.serviceEx2 li {
 
 .serviceCase dl dt img {
   width: 100%;
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-white);
 }
 
 .serviceCase dl dd {
@@ -1759,7 +1759,7 @@ dl.task dd {
     float: none;
     padding: 0.5em 0 0;
     margin: 0 0 20px;
-    border-top: 1px solid var(--color-border);
+    border-top: 1px solid var(--color-white);
   }
 
   #tcd .profile dl dd ul li {
@@ -1789,7 +1789,7 @@ dl.task dd {
     float: none;
     padding: 0.5em 0 0;
     margin: 0 0 20px;
-    border-top: 1px solid var(--color-border);
+    border-top: 1px solid var(--color-white);
   }
 
   #tcd .profile-en dl dl.history dt,
@@ -2026,7 +2026,7 @@ dl.task dd {
 /* Cases セクション（チェックリスト + 暗背景） */
 .service-cases {
   background: var(--color-text);
-  color: var(--color-border);
+  color: var(--color-white);
   padding: 3em 3.5em;
 
   h2 {
@@ -2042,7 +2042,7 @@ dl.task dd {
       list-style: none;
       padding-left: 1.4em;
       position: relative;
-      color: var(--color-border);
+      color: var(--color-white);
 
       &::before {
         content: "→";
@@ -2063,7 +2063,7 @@ dl.task dd {
 
 /* Process セクション（グレー背景 + ステップ2列） */
 .service-process {
-  background: var(--color-bg-light);
+  background: var(--color-white);
   padding: 2.5em 3.5em 3em;
 
   h2 {
@@ -2079,7 +2079,7 @@ dl.task dd {
   display: grid;
   grid-template-columns: 180px 1fr;
   gap: 1em 2em;
-  border-top: 1px dotted var(--color-border);
+  border-top: 1px dotted var(--color-white);
   padding: 1.2em 0;
   align-items: start;
 
@@ -2097,14 +2097,14 @@ dl.task dd {
   }
 
   &:last-child {
-    border-bottom: 1px dotted var(--color-border);
+    border-bottom: 1px dotted var(--color-white);
   }
 }
 
 /* 目次ナビ (ブランディングとは？等の記事ページ) */
 .service-toc {
-  background: var(--color-bg-light);
-  border: 1px solid var(--color-border);
+  background: var(--color-white);
+  border: 1px solid var(--color-white);
   padding: 1.2em 1.8em;
   margin: 1.5em 0 2.5em;
   display: inline-block;
