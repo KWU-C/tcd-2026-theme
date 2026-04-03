@@ -2027,6 +2027,8 @@ display: none;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
+  padding-left: 0;
+  margin: 0;
 }
 #mainContents .filter-nav ul li {
   margin: 0 10px 10px 0;
@@ -3795,7 +3797,7 @@ nav#pagination .flLink a:hover {
 .c-heading-bar {
   width: 100%;
   height: 40px;
-  background-color: var(--color-white);
+  background-color: var(--color-gray-500);
   margin-bottom: 20px;
   padding: 4px 0 0 15px;
   text-align: left;
